@@ -49,6 +49,7 @@ export default function Home() {
           <button onClick={() => scrollTo("tentang")}>Tentang</button>
           <button onClick={() => scrollTo("nilai")}>Nilai</button>
           <button onClick={() => scrollTo("sukses")}>Sukses</button>
+          <button onClick={() => scrollTo("testimoni")}>Testimoni</button>
           <button onClick={() => scrollTo("tim")}>Tim</button>
           <button onClick={() => scrollTo("layanan")}>Layanan</button>
           <button onClick={() => scrollTo("kontak")}>Kontak</button>
@@ -56,7 +57,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="tentang" className="text-center py-20 px-8">
+      <section id="tentang" className="scroll-mt-[100px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
   </h2>
@@ -71,7 +72,7 @@ export default function Home() {
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
   </p>
 </section>
-      <section id="nilai" className="bg-white text-[#082846] px-8 py-16">
+      <section id="nilai" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-6 text-center">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
   </h3>
@@ -89,7 +90,7 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="sukses" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+      <section id="sukses" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Cerita Sukses" : "Success Story"}
   </h3>
@@ -109,7 +110,7 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="testimoni" className="bg-white text-[#082846] px-8 py-16">
+      <section id="testimoni" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
@@ -130,7 +131,7 @@ export default function Home() {
   </div>
 </section>
 
-<section id="tim" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+<section id="tim" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
@@ -150,7 +151,7 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="layanan" className="bg-white text-[#082846] px-8 py-16">
+     <section id="layanan" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Layanan Kami" : "Our Services"}
   </h3>
@@ -175,7 +176,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-      <section id="kontak" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+      <section id="kontak" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Hubungi Kami" : "Contact Us"}
   </h3>
