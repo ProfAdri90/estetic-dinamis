@@ -46,13 +46,27 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-lg flex justify-between items-center px-6 py-4">
         <img src="/logo.png" alt="Logo" className="h-[100px] object-contain" />
         <nav className="flex gap-4 text-[#082846] font-semibold">
-          <button onClick={() => scrollTo("tentang")}>Tentang</button>
-          <button onClick={() => scrollTo("nilai")}>Nilai</button>
-          <button onClick={() => scrollTo("sukses")}>Sukses</button>
-          <button onClick={() => scrollTo("testimoni")}>Testimoni</button>
-          <button onClick={() => scrollTo("tim")}>Tim</button>
-          <button onClick={() => scrollTo("layanan")}>Layanan</button>
-          <button onClick={() => scrollTo("kontak")}>Kontak</button>
+          <button onClick={() => scrollTo("tentang")}>
+          {lang === "id" ? "Tentang" : "About"}
+          </button>
+          <button onClick={() => scrollTo("nilai")}>
+          {lang === "id" ? "Nilai" : "Values"}
+          </button>
+          <button onClick={() => scrollTo("sukses")}>
+          {lang === "id" ? "Sukses" : "Success"}
+          </button>
+          <button onClick={() => scrollTo("testimoni")}>
+          {lang === "id" ? "Testimoni" : "Testimonials"}
+          </button>
+          <button onClick={() => scrollTo("tim")}>
+          {lang === "id" ? "Tim" : "Team"}
+          </button>
+          <button onClick={() => scrollTo("layanan")}>
+          {lang === "id" ? "Layanan" : "Services"}
+          </button>
+          <button onClick={() => scrollTo("kontak")}>
+          {lang === "id" ? "Kontak" : "Contact"}
+          </button>
           <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">{lang === "id" ? "ID" : "EN"}</button>
         </nav>
       </header>
