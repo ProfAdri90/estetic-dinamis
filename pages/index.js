@@ -292,7 +292,27 @@ const [menuOpen, setMenuOpen] = useState(false);
     </button>
   </form>
 </section>
-                            <footer className="bg-[#082846] text-white text-center py-6 mt-10">
+                            <a
+  href="https://wa.me/6281318181316"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50 group flex items-center gap-2"
+>
+  {/* Bubble teks yang muncul saat hover */}
+  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-[#25D366] text-sm font-medium px-3 py-1 rounded-full shadow-md">
+    Chat with us
+  </span>
+
+  {/* Icon WhatsApp */}
+  <img
+    src="/whatsapp.png"
+    alt="Chat via WhatsApp"
+    className="w-12 h-12 drop-shadow-lg hover:scale-110 transition-transform duration-300"
+  />
+</a>
+
+  
+  <footer className="bg-[#082846] text-white text-center py-6 mt-10">
   <p className="text-sm">
     &copy; {new Date().getFullYear()} Estetic Communication. All rights reserved.
   </p>
