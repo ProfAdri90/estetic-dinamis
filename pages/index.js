@@ -147,16 +147,7 @@ export default function Home() {
 };
 
 const [menuOpen, setMenuOpen] = useState(false);
-  const chunkArray = (arr, size) => {
-  const result = [];
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
-  }
-  return result;
-};
-
-const testimonialChunks = chunkArray(testimonials, 3); // grup per 3
-
+ 
   return (
    <div className="min-h-screen bg-[#082846] text-white font-sans scroll-smooth overflow-x-hidden w-full">
       <header className="w-full sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-lg flex justify-between items-center px-6 py-4">
@@ -261,29 +252,26 @@ const testimonialChunks = chunkArray(testimonials, 3); // grup per 3
     ))}
   </div>
 </section>
-     <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] px-8 py-16">
+    <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
-
- <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory px-2 max-w-6xl mx-auto">
-  {testimonialChunks.map((chunk, i) => (
-    <div key={i} className="flex flex-col gap-6 w-[360px] snap-start shrink-0 mx-auto">
-      {chunk.map((t, index) => (
-        <div
-          key={index}
-          className="p-6 border-l-4 border-[#d7b940] bg-[#fefefe] shadow-md w-full"
-        >
-          <p className="text-md italic mb-2">"{t.text}"</p>
-          <p className="font-bold text-sm">{t.name}</p>
-          <p className="text-xs text-gray-600">{t.title}</p>
-        </div>
-      ))}
-    </div>
-  ))}
-</div>
+  <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+    {testimonials.map((t, index) => (
+      <motion.div
+        key={index}
+        className="p-6 border-l-4 border-[#d7b940] bg-[#fefefe] shadow-md"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1 }}
+      >
+        <p className="text-md italic mb-2">"{t.text}"</p>
+        <p className="font-bold text-sm">{t.name}</p>
+        <p className="text-xs text-gray-600">{t.title}</p>
+      </motion.div>
+    ))}
+  </div>
 </section>
-
 
 <section id="tim" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
