@@ -98,6 +98,16 @@ export default function Home() {
 };
 
 const [menuOpen, setMenuOpen] = useState(false);
+  const chunkArray = (arr, size) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+};
+
+const testimonialChunks = chunkArray(testimonials, 3); // grup per 3
+
   return (
    <div className="min-h-screen bg-[#082846] text-white font-sans scroll-smooth overflow-x-hidden w-full">
       <header className="w-full sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-lg flex justify-between items-center px-6 py-4">
@@ -207,18 +217,22 @@ const [menuOpen, setMenuOpen] = useState(false);
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
 
-  <div className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory px-2">
-    {testimonials.map((t, index) => (
-      <div
-        key={index}
-        className="min-w-[300px] snap-start shrink-0 bg-[#fefefe] border-l-4 border-[#d7b940] p-6 shadow-md"
-      >
-        <p className="text-md italic mb-2">"{t.text}"</p>
-        <p className="font-bold text-sm">{t.name}</p>
-        <p className="text-xs text-gray-600">{t.title}</p>
-      </div>
-    ))}
-  </div>
+ <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory px-2 max-w-6xl mx-auto">
+  {testimonialChunks.map((chunk, i) => (
+    <div key={i} className="flex flex-col gap-6 min-w-[300px] snap-start shrink-0">
+      {chunk.map((t, index) => (
+        <div
+          key={index}
+          className="p-6 border-l-4 border-[#d7b940] bg-[#fefefe] shadow-md w-full"
+        >
+          <p className="text-md italic mb-2">"{t.text}"</p>
+          <p className="font-bold text-sm">{t.name}</p>
+          <p className="text-xs text-gray-600">{t.title}</p>
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
 </section>
 
 
