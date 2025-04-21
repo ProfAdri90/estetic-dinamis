@@ -72,7 +72,7 @@ export default function Home() {
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
   </p>
 </section>
-      <section id="nilai" className="scroll-mt-[100px] text-center py-20 px-8">
+      <section id="nilai" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-6 text-center">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
   </h3>
