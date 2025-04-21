@@ -102,17 +102,27 @@ const [menuOpen, setMenuOpen] = useState(false);
 
       </header>
     {/* Mobile dropdown menu */}
-{menuOpen && (
-  <div className="md:hidden bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md">
-    <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
-    <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
-    <button onClick={() => scrollTo("sukses")}>{lang === "id" ? "Sukses" : "Success"}</button>
-    <button onClick={() => scrollTo("testimoni")}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
-    <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
-    <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
-    <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
-  </div>
-)}
+<AnimatePresence>
+  {menuOpen && (
+    <motion.div
+      key="dropdown"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.3 }}
+      className="md:hidden bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md"
+    >
+      <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
+      <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
+      <button onClick={() => scrollTo("sukses")}>{lang === "id" ? "Sukses" : "Success"}</button>
+      <button onClick={() => scrollTo("testimoni")}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
+      <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
+      <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
+      <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
+    </motion.div>
+  )}
+</AnimatePresence>
+
 
 
       <section id="tentang" className="scroll-mt-[100px] text-center py-20 px-8">
