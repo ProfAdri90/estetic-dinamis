@@ -202,26 +202,25 @@ const [menuOpen, setMenuOpen] = useState(false);
     ))}
   </div>
 </section>
-      <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
+     <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] px-8 py-16">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
-  <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+
+  <div className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory px-2">
     {testimonials.map((t, index) => (
-      <motion.div
+      <div
         key={index}
-        className="p-6 border-l-4 border-[#d7b940] bg-[#fefefe] shadow-md"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: index * 0.1 }}
+        className="min-w-[300px] snap-start shrink-0 bg-[#fefefe] border-l-4 border-[#d7b940] p-6 shadow-md"
       >
         <p className="text-md italic mb-2">"{t.text}"</p>
         <p className="font-bold text-sm">{t.name}</p>
         <p className="text-xs text-gray-600">{t.title}</p>
-      </motion.div>
+      </div>
     ))}
   </div>
 </section>
+
 
 <section id="tim" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
