@@ -205,13 +205,13 @@ export default function Home() {
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
     <div>
       <h4 className="font-bold text-lg mb-2">Konsultansi</h4>
-      <ul className="list-disc list-inside">
+       <ul className="list-disc list-inside text-left pl-4">
         {services.konsultansi.map((s, i) => <li key={i}>{s}</li>)}
       </ul>
     </div>
     <div>
       <h4 className="font-bold text-lg mb-2">Public & Media Relations</h4>
-      <ul className="list-disc list-inside">
+       <ul className="list-disc list-inside text-left pl-4">
         {services.media.map((s, i) => <li key={i}>{s}</li>)}
       </ul>
     </div>
