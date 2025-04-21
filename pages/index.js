@@ -237,13 +237,16 @@ const [menuOpen, setMenuOpen] = useState(false);
         transition={{ delay: i * 0.2 }}
       >
         {/* FOTO PROFIL TIM */}
-        <img
-      src={person.photo}
-      className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-[#d7b940]"
-    />
+      <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#d7b940] shadow-md">
+  <img
+    src={person.photo}
+    alt={person.name}
+    className="w-full h-full object-cover"
+  />
+</div>
+
 
           {/* NAMA PROFIL TIM */}
-<h4 className="text-xl font-bold mb-1">{person.name}</h4>
         <h4 className="text-xl font-bold mb-1">{person.name}</h4>
         <p className="text-sm font-semibold mb-2 text-[#d7b940]">{person.title}</p>
         <p className="text-sm">{person.desc}</p>
