@@ -71,7 +71,24 @@ export default function Home() {
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
   </p>
 </section>
-      <section id="nilai" className="bg-white text-[#082846] px-8 py-16">{/* Nilai Perusahaan */}</section>
+      <section id="nilai" className="bg-white text-[#082846] px-8 py-16">
+  <h3 className="text-3xl font-bold mb-6 text-center">
+    {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
+  </h3>
+  <div className="flex flex-wrap justify-center gap-4">
+    {values.map((value, index) => (
+      <motion.span
+        key={index}
+        className="bg-[#082846] text-white px-4 py-2 rounded"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.2 }}
+      >
+        {value}
+      </motion.span>
+    ))}
+  </div>
+</section>
       <section id="sukses" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">{/* Cerita Sukses */}</section>
       <section id="tim" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">{/* Tim Kami */}</section>
       <section id="layanan" className="bg-white text-[#082846] px-8 py-16">{/* Layanan */}</section>
