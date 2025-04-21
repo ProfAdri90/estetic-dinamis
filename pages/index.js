@@ -279,18 +279,41 @@ const [menuOpen, setMenuOpen] = useState(false);
     </div>
   </div>
 </section>
-      <section id="kontak" className="scroll-mt-[100px] text-center py-20 px-8">
+       <section id="kontak" className="scroll-mt-[100px] text-white py-20 px-8 bg-[#082846]">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Hubungi Kami" : "Contact Us"}
   </h3>
-  <form className="max-w-xl mx-auto space-y-4">
-    <input type="text" placeholder={lang === "id" ? "Nama" : "Name"} className="w-full px-4 py-2 border rounded" />
-    <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded" />
-    <textarea placeholder={lang === "id" ? "Pesan" : "Message"} rows="5" className="w-full px-4 py-2 border rounded"></textarea>
-    <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold">
-      {lang === "id" ? "Kirim Pesan" : "Send Message"}
-    </button>
-  </form>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto text-sm">
+    {/* Kolom Kiri - Info Kontak */}
+    <div className="space-y-4">
+      <p>
+        📞{" "}
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="underline text-[#25D366] hover:text-[#1DA851]">
+          +62 812-1212-1212
+        </a>
+      </p>
+      <p>
+        📧{" "}
+        <a href="mailto:Communicatewith@estetic.co.id" className="underline text-blue-400 hover:text-blue-200">
+          Communicatewith@estetic.co.id
+        </a>
+      </p>
+      <p>
+        📍 Jl. Pelita Raya Blok P No. 5-6, Tangerang
+      </p>
+    </div>
+
+    {/* Kolom Kanan - Form */}
+    <form className="space-y-4">
+      <input type="text" placeholder={lang === "id" ? "Nama" : "Name"} className="w-full px-4 py-2 border rounded" />
+      <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded" />
+      <textarea placeholder={lang === "id" ? "Pesan" : "Message"} rows="5" className="w-full px-4 py-2 border rounded"></textarea>
+      <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold">
+        {lang === "id" ? "Kirim Pesan" : "Send Message"}
+      </button>
+    </form>
+  </div>
 </section>
                             <a
   href="https://wa.me/62813"
