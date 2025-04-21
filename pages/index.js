@@ -73,36 +73,46 @@ export default function Home() {
       : ["AGM", "IPO", "Exhibition, seminar, workshop", "Talkshow", "New product launch", "Digital marketing", "Advertising"]
 };
 
-
+const [menuOpen, setMenuOpen] = useState(false);
   return (
    <div className="min-h-screen bg-[#082846] text-white font-sans scroll-smooth overflow-x-hidden w-full">
       <header className="w-full sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-lg flex justify-between items-center px-6 py-4">
         <img src="/logo.png" alt="Logo" className="h-[60px] md:h-[100px] object-contain" />
-        <nav className="flex gap-4 text-[#082846] font-semibold">
-          <button onClick={() => scrollTo("tentang")}>
-          {lang === "id" ? "Tentang" : "About"}
-          </button>
-          <button onClick={() => scrollTo("nilai")}>
-          {lang === "id" ? "Nilai" : "Values"}
-          </button>
-          <button onClick={() => scrollTo("sukses")}>
-          {lang === "id" ? "Sukses" : "Success"}
-          </button>
-          <button onClick={() => scrollTo("testimoni")}>
-          {lang === "id" ? "Testimoni" : "Testimonials"}
-          </button>
-          <button onClick={() => scrollTo("tim")}>
-          {lang === "id" ? "Tim" : "Team"}
-          </button>
-          <button onClick={() => scrollTo("layanan")}>
-          {lang === "id" ? "Layanan" : "Services"}
-          </button>
-          <button onClick={() => scrollTo("kontak")}>
-          {lang === "id" ? "Kontak" : "Contact"}
-          </button>
-          <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">{lang === "id" ? "ID" : "EN"}</button>
-        </nav>
+        {/* Desktop Nav */}
+  <nav className="hidden md:flex gap-4 text-[#082846] font-semibold">
+  <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
+  <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
+  <button onClick={() => scrollTo("sukses")}>{lang === "id" ? "Sukses" : "Success"}</button>
+  <button onClick={() => scrollTo("testimoni")}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
+  <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
+  <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
+  <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
+</nav>
+
+    {/* Mobile Hamburger */}
+  <div className="md:hidden flex items-center gap-2">
+  <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">
+    {lang === "id" ? "ID" : "EN"}
+    </button>
+  <button onClick={() => setMenuOpen(!menuOpen)} className="text-[#082846] text-3xl font-bold">
+    ☰
+  </button>
+</div>
+
       </header>
+    {/* Mobile dropdown menu */}
+{menuOpen && (
+  <div className="md:hidden bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md">
+    <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
+    <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
+    <button onClick={() => scrollTo("sukses")}>{lang === "id" ? "Sukses" : "Success"}</button>
+    <button onClick={() => scrollTo("testimoni")}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
+    <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
+    <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
+    <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
+  </div>
+)}
+
 
       <section id="tentang" className="scroll-mt-[100px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
