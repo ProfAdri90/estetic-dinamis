@@ -109,7 +109,26 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="tim" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">{/* Tim Kami */}</section>
+      <section id="tim" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+  <h3 className="text-3xl font-bold mb-10 text-center">
+    {lang === "id" ? "Tim Kami" : "Our Team"}
+  </h3>
+  <div className="flex flex-col gap-8 max-w-4xl mx-auto">
+    {team.map((person, i) => (
+      <motion.div
+        key={i}
+        className="bg-white p-6 rounded shadow-md"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: i * 0.2 }}
+      >
+        <h4 className="text-xl font-bold mb-1">{person.name}</h4>
+        <p className="text-sm font-semibold mb-2 text-[#d7b940]">{person.title}</p>
+        <p className="text-sm">{person.desc}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
       <section id="layanan" className="bg-white text-[#082846] px-8 py-16">{/* Layanan */}</section>
       <section id="kontak" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">{/* Form Kontak */}</section>
     </div>
