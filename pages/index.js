@@ -87,6 +87,7 @@ const [menuOpen, setMenuOpen] = useState(false);
   <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
   <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
   <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
+  <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">{lang === "id" ? "ID" : "EN"}</button>
 </nav>
 
     {/* Mobile Hamburger */}
