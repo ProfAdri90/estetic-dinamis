@@ -56,7 +56,21 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="tentang" className="text-center py-20 px-8">{/* Konten Tentang */}</section>
+      <section id="tentang" className="text-center py-20 px-8">
+  <h2 className="text-4xl font-semibold mb-6">
+    {lang === "id" ? "Tentang Estetic" : "About Estetic"}
+  </h2>
+  <p className="max-w-4xl mx-auto leading-relaxed text-lg">
+    {lang === "id"
+      ? "Estetic Communication adalah perusahaan konsultan komunikasi yang berdiri sejak tahun 1997, berkomitmen untuk menjadi mitra strategis dalam membangun reputasi dan kepercayaan publik. Dengan pengalaman panjang dalam public relations, media relations, dan event management, kami telah menjadi bagian dari berbagai proyek komunikasi nasional dari sektor korporasi, pemerintahan, hingga organisasi publik."
+      : "Estetic Communication is a communication consultancy established in 1997, committed to being a strategic partner in building public trust and reputation. With a long-standing experience in public relations, media relations, and event management, we’ve been involved in numerous national-level communication projects across corporate, government, and public sectors."}
+  </p>
+  <p className="max-w-4xl mx-auto mt-6 leading-relaxed text-lg">
+    {lang === "id"
+      ? "Kini Estetic berada dalam fase transformasi generasi kedua, menggabungkan pengalaman konvensional dengan pendekatan komunikasi modern berbasis data dan teknologi."
+      : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
+  </p>
+</section>
       <section id="nilai" className="bg-white text-[#082846] px-8 py-16">{/* Nilai Perusahaan */}</section>
       <section id="sukses" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">{/* Cerita Sukses */}</section>
       <section id="tim" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">{/* Tim Kami */}</section>
