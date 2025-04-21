@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
 
 export default function Home() {
   const [lang, setLang] = useState("id");
