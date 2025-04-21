@@ -10,44 +10,28 @@ export default function Home() {
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
-  const values = [lang === "id"
-    ? ["Adaptif", "Profesionalisme", "Kreativitas Strategis", "Kolaboratif", "Terpercaya", "Berkelanjutan"]
-    : ["Adaptive", "Professionalism", "Strategic Creativity", "Collaborative", "Trusted", "Sustainable"]];
+  const values = lang === "id"
+  ? ["Adaptif", "Profesionalisme", "Kreativitas Strategis", "Kolaboratif", "Terpercaya", "Berkelanjutan"]
+  : ["Adaptive", "Professionalism", "Strategic Creativity", "Collaborative", "Trusted", "Sustainable"];
+
   const successStory = [
-    { year: 1997, text: "Menangani kasus Bentoel Group" },
-    { year: 1998, text: "Krisis komunikasi Bank Bali" },
-    { year: 2000, text: "Menangani media relation Mayora Group" },
-    { year: 2004, text: "Kasus penolakan reklamasi PIK – Agung Podomoro" },
-    { year: 2013, text: "Krisis komunikasi lahan Teluk Jambe – Karawang" },
-    { year: 2014, text: "Reklamasi Pantura Jakarta – APL" },
-    { year: 2016, text: "Serah terima apartemen Antasari 45 – Cowell Dev" },
-    { year: 2019, text: "Pemulihan reputasi Saigon Delight – kasus keracunan" },
-    { year: 2025, text: "Transformasi Estetic generasi baru" }
-  ];
+  { year: 1997, text: lang === "id" ? "Menangani kasus Bentoel Group" : "Handled Bentoel Group case" },
+  { year: 1998, text: lang === "id" ? "Krisis komunikasi Bank Bali" : "Bank Bali communication crisis" },
+  { year: 2000, text: lang === "id" ? "Menangani media relation Mayora Group" : "Handled media relation for Mayora Group" },
+  { year: 2004, text: lang === "id" ? "Kasus penolakan reklamasi PIK – Agung Podomoro" : "Reclamation rejection case PIK – Agung Podomoro" },
+  { year: 2013, text: lang === "id" ? "Krisis komunikasi lahan Teluk Jambe – Karawang" : "Land communication crisis Teluk Jambe – Karawang" },
+  { year: 2014, text: lang === "id" ? "Reklamasi Pantura Jakarta – APL" : "North Coast Jakarta reclamation – APL" },
+  { year: 2016, text: lang === "id" ? "Serah terima apartemen Antasari 45 – Cowell Dev" : "Apartment handover Antasari 45 – Cowell Dev" },
+  { year: 2019, text: lang === "id" ? "Pemulihan reputasi Saigon Delight – kasus keracunan" : "Reputation recovery of Saigon Delight – food poisoning case" },
+  { year: 2025, text: lang === "id" ? "Transformasi Estetic generasi baru" : "Estetic transformation for the new generation" }
+];
+
 
   const testimonials = [
-  {
-    name: "Andre Sukendra Atmadja",
-    title: lang === "id" ? "Direktur Utama PT Mayora Indah Tbk" : "President Director of PT Mayora Indah Tbk",
-    text: lang === "id"
-      ? "Jasa yang ditawarkan memang sesuai dengan keperluan Mayora sebagai Perusahaan yang memiliki banyak produk, kualitas yang ditawarkan sungguh luar biasa"
-      : "The services offered are exactly what Mayora needs as a company with many products, and the quality is truly outstanding."
-  },
-  {
-    name: "Tri Wahyuni",
-    title: lang === "id" ? "Corporate Secretary PT Duta Pertiwi Nusantara Tbk" : "Corporate Secretary of PT Duta Pertiwi Nusantara Tbk",
-    text: lang === "id"
-      ? "Estetic menawarkan hal yang kami butuhkan dalam segi media relation dan pelayanan manajemen event"
-      : "Estetic provided exactly what we needed in terms of media relations and event management services."
-  },
-  {
-    name: "Ariesman Widjaja",
-    title: lang === "id" ? "Ex Direktur Utama PT Agung Podomoro Land Tbk" : "Former President Director of PT Agung Podomoro Land Tbk",
-    text: lang === "id"
-      ? "Satu kata untuk Estetic, Lanjutkan!"
-      : "One word for Estetic: Keep it up!"
-  }
-];
+    { name: "Andre Sukendra Atmadja", title: "Direktur Utama PT Mayora Indah Tbk", text: "Jasa yang ditawarkan memang sesuai dengan keperluan Mayora sebagai Perusahaan yang memiliki banyak produk, kualitas yang ditawarkan sungguh luar biasa" },
+    { name: "Tri Wahyuni", title: "Corporate Secretary PT Duta Pertiwi Nusantara Tbk", text: "Estetic menawarkan hal yang kami butuhkan dalam segi media relation dan pelayanan manajemen event" },
+    { name: "Ariesman Widjaja", title: "Ex Direktur Utama PT Agung Podomoro Land Tbk", text: "Satu kata untuk Estetic, Lanjutkan!" }
+  ];
 
   const team = [
     { name: "Profesor Adri", title: lang === "id" ? "Direktur Utama" : "President Director", desc: lang === "id" ? "Aktif dalam dunia kehumasan sejak 2012 hingga kini." : "Active in the world of public relations since 2012 until now." },
@@ -66,17 +50,32 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-lg flex justify-between items-center px-6 py-4">
         <img src="/logo.png" alt="Logo" className="h-[100px] object-contain" />
         <nav className="flex gap-4 text-[#082846] font-semibold">
-          <button onClick={() => scrollTo("tentang")}>Tentang</button>
-          <button onClick={() => scrollTo("nilai")}>Nilai</button>
-          <button onClick={() => scrollTo("sukses")}>Sukses</button>
-          <button onClick={() => scrollTo("tim")}>Tim</button>
-          <button onClick={() => scrollTo("layanan")}>Layanan</button>
-          <button onClick={() => scrollTo("kontak")}>Kontak</button>
+          <button onClick={() => scrollTo("tentang")}>
+          {lang === "id" ? "Tentang" : "About"}
+          </button>
+          <button onClick={() => scrollTo("nilai")}>
+          {lang === "id" ? "Nilai" : "Values"}
+          </button>
+          <button onClick={() => scrollTo("sukses")}>
+          {lang === "id" ? "Sukses" : "Success"}
+          </button>
+          <button onClick={() => scrollTo("testimoni")}>
+          {lang === "id" ? "Testimoni" : "Testimonials"}
+          </button>
+          <button onClick={() => scrollTo("tim")}>
+          {lang === "id" ? "Tim" : "Team"}
+          </button>
+          <button onClick={() => scrollTo("layanan")}>
+          {lang === "id" ? "Layanan" : "Services"}
+          </button>
+          <button onClick={() => scrollTo("kontak")}>
+          {lang === "id" ? "Kontak" : "Contact"}
+          </button>
           <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">{lang === "id" ? "ID" : "EN"}</button>
         </nav>
       </header>
 
-      <section id="tentang" className="text-center py-20 px-8">
+      <section id="tentang" className="scroll-mt-[100px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
   </h2>
@@ -92,9 +91,9 @@ export default function Home() {
   </p>
 </section>
       <section id="nilai" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
-      <h3 className="text-3xl font-bold mb-6 text-center">
-       {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
-      </h3>
+  <h3 className="text-3xl font-bold mb-6 text-center">
+    {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
+  </h3>
   <div className="flex flex-wrap justify-center gap-4">
     {values.map((value, index) => (
       <motion.span
@@ -109,7 +108,7 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="sukses" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+      <section id="sukses" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Cerita Sukses" : "Success Story"}
   </h3>
@@ -129,7 +128,7 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="testimoni" className="bg-white text-[#082846] px-8 py-16">
+      <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
@@ -150,7 +149,7 @@ export default function Home() {
   </div>
 </section>
 
-<section id="tim" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+<section id="tim" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
@@ -170,7 +169,7 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="layanan" className="bg-white text-[#082846] px-8 py-16">
+     <section id="layanan" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Layanan Kami" : "Our Services"}
   </h3>
@@ -195,7 +194,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-      <section id="kontak" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+      <section id="kontak" className="scroll-mt-[100px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Hubungi Kami" : "Contact Us"}
   </h3>
@@ -211,4 +210,3 @@ export default function Home() {
     </div>
   );
 }
-
