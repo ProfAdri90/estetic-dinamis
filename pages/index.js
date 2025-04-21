@@ -75,7 +75,7 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-[#082846] text-white font-sans scroll-smooth">
+   <div className="min-h-screen bg-[#082846] text-white font-sans scroll-smooth overflow-x-hidden w-full">
       <header className="w-full sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-lg flex justify-between items-center px-6 py-4">
         <img src="/logo.png" alt="Logo" className="h-[60px] md:h-[100px] object-contain" />
         <nav className="flex gap-4 text-[#082846] font-semibold">
