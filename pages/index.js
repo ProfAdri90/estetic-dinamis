@@ -28,10 +28,29 @@ export default function Home() {
 
 
   const testimonials = [
-    { name: "Andre Sukendra Atmadja", title: "Direktur Utama PT Mayora Indah Tbk", text: "Jasa yang ditawarkan memang sesuai dengan keperluan Mayora sebagai Perusahaan yang memiliki banyak produk, kualitas yang ditawarkan sungguh luar biasa" },
-    { name: "Tri Wahyuni", title: "Corporate Secretary PT Duta Pertiwi Nusantara Tbk", text: "Estetic menawarkan hal yang kami butuhkan dalam segi media relation dan pelayanan manajemen event" },
-    { name: "Ariesman Widjaja", title: "Ex Direktur Utama PT Agung Podomoro Land Tbk", text: "Satu kata untuk Estetic, Lanjutkan!" }
-  ];
+  {
+    name: "Andre Sukendra Atmadja",
+    title: lang === "id" ? "Direktur Utama PT Mayora Indah Tbk" : "President Director of PT Mayora Indah Tbk",
+    text: lang === "id"
+      ? "Jasa yang ditawarkan memang sesuai dengan keperluan Mayora sebagai Perusahaan yang memiliki banyak produk, kualitas yang ditawarkan sungguh luar biasa"
+      : "The services offered are exactly what Mayora needs as a company with many products, and the quality is truly outstanding."
+  },
+  {
+    name: "Tri Wahyuni",
+    title: lang === "id" ? "Corporate Secretary PT Duta Pertiwi Nusantara Tbk" : "Corporate Secretary of PT Duta Pertiwi Nusantara Tbk",
+    text: lang === "id"
+      ? "Estetic menawarkan hal yang kami butuhkan dalam segi media relation dan pelayanan manajemen event"
+      : "Estetic provided exactly what we needed in terms of media relations and event management services."
+  },
+  {
+    name: "Ariesman Widjaja",
+    title: lang === "id" ? "Ex Direktur Utama PT Agung Podomoro Land Tbk" : "Former President Director of PT Agung Podomoro Land Tbk",
+    text: lang === "id"
+      ? "Satu kata untuk Estetic, Lanjutkan!"
+      : "One word for Estetic: Keep it up!"
+  }
+];
+
 
   const team = [
     { name: "Profesor Adri", title: lang === "id" ? "Direktur Utama" : "President Director", desc: lang === "id" ? "Aktif dalam dunia kehumasan sejak 2012 hingga kini." : "Active in the world of public relations since 2012 until now." },
