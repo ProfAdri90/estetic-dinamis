@@ -293,7 +293,7 @@ const [menuOpen, setMenuOpen] = useState(false);
   </form>
 </section>
                             <a
-  href="https://wa.me/6281318181316"
+  href="https://wa.me/62813"
   target="_blank"
   rel="noopener noreferrer"
   className="fixed bottom-6 right-6 z-50 group flex items-center gap-2"
