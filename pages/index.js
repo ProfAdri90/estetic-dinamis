@@ -61,7 +61,7 @@ export default function Home() {
     desc: lang === "id"
       ? "Aktif dalam dunia kehumasan sejak 2012 hingga kini."
       : "Active in the world of public relations since 2012 until now.",
-    photo: "/team/adri.png"
+    photo: "/team/pro.png"
   },
   {
     name: "Meidita Sari H",
@@ -69,7 +69,7 @@ export default function Home() {
     desc: lang === "id"
       ? "Sejak 2015 aktif dalam pengembangan bisnis dan ide."
       : "Active in business development and ideation since 2015.",
-    photo: "/team/meidita.png"
+    photo: "/team/didit.png"
   },
   {
     name: "Desti Indri Parawansa",
