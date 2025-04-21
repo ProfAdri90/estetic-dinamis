@@ -79,7 +79,7 @@ const [menuOpen, setMenuOpen] = useState(false);
       <header className="w-full sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-lg flex justify-between items-center px-6 py-4">
         <img src="/logo.png" alt="Logo" className="h-[60px] md:h-[100px] object-contain" />
         {/* Desktop Nav */}
-  <nav className="hidden md:flex gap-4 text-[#082846] font-semibold">
+  <nav className="hidden md:flex gap-4 text-white drop-shadow-md font-semibold">
   <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
   <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
   <button onClick={() => scrollTo("sukses")}>{lang === "id" ? "Sukses" : "Success"}</button>
