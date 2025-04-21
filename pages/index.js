@@ -261,20 +261,32 @@ useEffect(() => {
     <section className="bg-white text-[#082846] py-20 px-8">
   <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
     <div>
-      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.client}</h4>
-      <p className="mt-2 text-lg">Klien</p>
+      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+      {counts.client}
+      <span className="ml-1 text-2xl align-top">+</span>
+      </h4>
+      <p className="mt-2 text-lg">Client</p>
     </div>
     <div>
-      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.kegiatan}</h4>
-      <p className="mt-2 text-lg">Media Partner</p>
+      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+      {counts.kegiatan}
+      <span className="ml-1 text-2xl align-top">+</span>
+      </h4>
+      <p className="mt-2 text-lg">Kegiatan PR</p>
     </div>
     <div>
-      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.jurnalis}</h4>
+      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+      {counts.jurnalis}
+      <span className="ml-1 text-2xl align-top">+</span>
+      </h4>
       <p className="mt-2 text-lg">Jurnalis</p>
     </div>
     <div>
-      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.rilis}</h4>
-      <p className="mt-2 text-lg">Rilis Publikasi</p>
+      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+      {counts.rilis}
+      <span className="ml-1 text-2xl align-top">+</span>
+      </h4>
+      <p className="mt-2 text-lg">Publikasi Rilis</p>
     </div>
   </div>
 </section>
