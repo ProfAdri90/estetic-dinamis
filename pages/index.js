@@ -109,7 +109,28 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="tim" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+      <section id="testimoni" className="bg-white text-[#082846] px-8 py-16">
+  <h3 className="text-3xl font-bold mb-10 text-center">
+    {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
+  </h3>
+  <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+    {testimonials.map((t, index) => (
+      <motion.div
+        key={index}
+        className="p-6 border-l-4 border-[#d7b940] bg-[#fefefe] shadow-md"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1 }}
+      >
+        <p className="text-md italic mb-2">"{t.text}"</p>
+        <p className="font-bold text-sm">{t.name}</p>
+        <p className="text-xs text-gray-600">{t.title}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+<section id="tim" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
