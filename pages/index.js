@@ -10,7 +10,10 @@ export default function Home() {
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
-  const values = ["Adaptif", "Profesionalisme", "Kreativitas Strategis", "Kolaboratif", "Terpercaya", "Berkelanjutan"];
+  const values = lang === "id"
+  ? ["Adaptif", "Profesionalisme", "Kreativitas Strategis", "Kolaboratif", "Terpercaya", "Berkelanjutan"]
+  : ["Adaptive", "Professionalism", "Strategic Creativity", "Collaborative", "Trusted", "Sustainable"];
+
   const successStory = [
     { year: 1997, text: "Menangani kasus Bentoel Group" },
     { year: 1998, text: "Krisis komunikasi Bank Bali" },
