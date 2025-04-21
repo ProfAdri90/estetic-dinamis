@@ -55,10 +55,32 @@ export default function Home() {
 
 
   const team = [
-    { name: "Profesor Adri", title: lang === "id" ? "Direktur Utama" : "President Director", desc: lang === "id" ? "Aktif dalam dunia kehumasan sejak 2012 hingga kini." : "Active in the world of public relations since 2012 until now." },
-    { name: "Meidita Sari H", title: lang === "id" ? "Manager Pengembangan Bisnis" : "Business Development Manager", desc: lang === "id" ? "Sejak 2015 aktif dalam pengembangan bisnis dan ide." : "Active in business development and ideation since 2015." },
-    { name: "Desti Indri Parawansa", title: lang === "id" ? "Direktur Keuangan" : "Finance Director", desc: lang === "id" ? "Aktif sejak 2016 dalam pengelolaan keuangan di sektor swasta dan pemerintah." : "Active since 2016 in financial management in both private and government sectors." }
-  ];
+  {
+    name: "Profesor Adri",
+    title: lang === "id" ? "Direktur Utama" : "President Director",
+    desc: lang === "id"
+      ? "Aktif dalam dunia kehumasan sejak 2012 hingga kini."
+      : "Active in the world of public relations since 2012 until now.",
+    photo: "/team/adri.png"
+  },
+  {
+    name: "Meidita Sari H",
+    title: lang === "id" ? "Manager Pengembangan Bisnis" : "Business Development Manager",
+    desc: lang === "id"
+      ? "Sejak 2015 aktif dalam pengembangan bisnis dan ide."
+      : "Active in business development and ideation since 2015.",
+    photo: "/team/meidita.png"
+  },
+  {
+    name: "Desti Indri Parawansa",
+    title: lang === "id" ? "Direktur Keuangan" : "Finance Director",
+    desc: lang === "id"
+      ? "Aktif sejak 2016 dalam pengelolaan keuangan di sektor swasta dan pemerintah."
+      : "Active since 2016 in financial management in both private and government sectors.",
+    photo: "/team/desti.png"
+  }
+];
+
 
   const services = {
   konsultansi:
@@ -214,6 +236,14 @@ const [menuOpen, setMenuOpen] = useState(false);
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: i * 0.2 }}
       >
+        {/* FOTO PROFIL TIM */}
+        <img
+          src={person.photo}
+          alt={person.name}
+        className="w-24 h-24 object-cover rounded-full mx-auto mb-4"
+    />
+          {/* NAMA PROFIL TIM */}
+<h4 className="text-xl font-bold mb-1">{person.name}</h4>
         <h4 className="text-xl font-bold mb-1">{person.name}</h4>
         <p className="text-sm font-semibold mb-2 text-[#d7b940]">{person.title}</p>
         <p className="text-sm">{person.desc}</p>
