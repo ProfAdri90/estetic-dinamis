@@ -147,6 +147,14 @@ export default function Home() {
 };
 
 const [menuOpen, setMenuOpen] = useState(false);
+  const [currentTesti, setCurrentTesti] = useState(0);
+  const nextTesti = () => {
+  setCurrentTesti((prev) => (prev + 1) % testimonials.length);
+};
+
+const prevTesti = () => {
+  setCurrentTesti((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+};
  
   return (
    <div className="min-h-screen bg-[#082846] text-white font-sans scroll-smooth overflow-x-hidden w-full">
@@ -253,25 +261,42 @@ const [menuOpen, setMenuOpen] = useState(false);
   </div>
 </section>
     <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
-  <h3 className="text-3xl font-bold mb-10 text-center">
+  <h3 className="text-3xl font-bold mb-10">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
-  <div className="flex flex-col gap-6 max-w-4xl mx-auto">
-    {testimonials.map((t, index) => (
-      <motion.div
-        key={index}
-        className="p-6 border-l-4 border-[#d7b940] bg-[#fefefe] shadow-md"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: index * 0.1 }}
+
+  <div className="max-w-xl mx-auto">
+    <motion.div
+      key={currentTesti}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+      className="p-6 border-l-4 border-[#d7b940] bg-[#fefefe] shadow-md"
+    >
+      <p className="text-md italic mb-4">"{testimonials[currentTesti].text}"</p>
+      <p className="font-bold text-sm">{testimonials[currentTesti].name}</p>
+      <p className="text-xs text-gray-600">{testimonials[currentTesti].title}</p>
+    </motion.div>
+
+    {/* Tombol navigasi */}
+    <div className="flex justify-center gap-4 mt-6">
+      <button
+        onClick={prevTesti}
+        className="px-4 py-2 border border-[#d7b940] text-[#082846] rounded hover:bg-[#d7b940] hover:text-white transition"
       >
-        <p className="text-md italic mb-2">"{t.text}"</p>
-        <p className="font-bold text-sm">{t.name}</p>
-        <p className="text-xs text-gray-600">{t.title}</p>
-      </motion.div>
-    ))}
+        ←
+      </button>
+      <button
+        onClick={nextTesti}
+        className="px-4 py-2 border border-[#d7b940] text-[#082846] rounded hover:bg-[#d7b940] hover:text-white transition"
+      >
+        →
+      </button>
+    </div>
   </div>
 </section>
+
 
 <section id="tim" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
