@@ -157,7 +157,7 @@ const prevTesti = () => {
 };
  const [counts, setCounts] = useState({
   client: 0,
-  kegiatan PR: 0,
+  kegiatan: 0,
   jurnalis: 0,
   rilis: 0
 });
@@ -165,7 +165,7 @@ const prevTesti = () => {
 useEffect(() => {
   const targets = {
     client: 50,
-    kegiatan PR: 500,
+    kegiatan: 500,
     jurnalis: 500,
     rilis: 2000
   };
@@ -264,7 +264,7 @@ useEffect(() => {
       <p className="mt-2 text-lg">Klien</p>
     </div>
     <div>
-      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.media}</h4>
+      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.kegiatan}</h4>
       <p className="mt-2 text-lg">Media Partner</p>
     </div>
     <div>
