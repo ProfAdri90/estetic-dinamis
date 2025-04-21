@@ -110,7 +110,7 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="testimoni" className="scroll-mt-[100px] text-center py-20 px-8">
+      <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
@@ -131,7 +131,7 @@ export default function Home() {
   </div>
 </section>
 
-<section id="tim" className="scroll-mt-[100px] text-center py-20 px-8">
+<section id="tim" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
