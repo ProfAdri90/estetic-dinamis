@@ -67,35 +67,35 @@ export default function Home() {
     },
     {
   name: "Irman Gusman",
-  title: "Anggota DPD RI",
+  title: lang === "id" ? "Anggota DPD RI" : "Senator Indonesian Republic",
   text: lang === "id"
     ? "Estetic Communication adalah mitra strategis yang mampu menerjemahkan visi lembaga menjadi narasi publik yang kuat dan kredibel."
     : "Estetic Communication is a strategic partner capable of transforming institutional vision into a strong and credible public narrative."
 },
 {
   name: "Sastri Bakry",
-  title: "Penulis dan Budayawan",
+  title: lang === "id" ? "Penulis & Budayawan" : "Writer and cultural figure",
   text: lang === "id"
     ? "Estetic menunjukkan pemahaman yang mendalam terhadap dinamika budaya dan komunikasi, menjadikannya relevan di tengah arus perubahan zaman."
     : "Estetic demonstrates deep understanding of cultural and communication dynamics, making it highly relevant amid the tides of change."
 },
 {
   name: "Tommy Sasangka",
-  title: "Wartawan Senior",
+  title: lang === "id" ? "Wartawan Senior" : "Senior Journalist",
   text: lang === "id"
     ? "Estetic memiliki kepekaan jurnalistik yang jarang dimiliki oleh lembaga komunikasi lainnya, menjadikannya mitra terpercaya dalam mengelola citra dan isu."
     : "Estetic possesses a journalistic sensitivity rarely found in other communication firms, making it a trusted partner in managing image and issues."
 },
 {
   name: "Stefanus Pramono",
-  title: "Pimpinan Redaksi Tempo",
+  title: lang === "id" ? "Pimpinan Redaksi Tempo" : "Editor in Chief of Tempo",
   text: lang === "id"
     ? "Kolaborasi dengan Estetic selalu berjalan profesional dan berbasis data, sesuatu yang kami nilai sangat penting dalam industri media."
     : "Collaboration with Estetic is always professional and data-driven — a value we consider crucial in the media industry."
 },
 {
   name: "Imron Mahrus",
-  title: "Ketua Komisi Informasi Provinsi Banten",
+  title: lang === "id" ? "Ketua Komisi Informasi Provinsi Banten" : "Chairman of the Banten Province Information Commission",
   text: lang === "id"
     ? "Estetic konsisten dalam menyuarakan keterbukaan informasi publik dengan pendekatan komunikasi yang edukatif dan strategis."
     : "Estetic consistently champions public information transparency through educational and strategic communication approaches."
