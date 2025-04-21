@@ -129,7 +129,31 @@ export default function Home() {
     ))}
   </div>
 </section>
-      <section id="layanan" className="bg-white text-[#082846] px-8 py-16">{/* Layanan */}</section>
+      <section id="layanan" className="bg-white text-[#082846] px-8 py-16">
+  <h3 className="text-3xl font-bold mb-10 text-center">
+    {lang === "id" ? "Layanan Kami" : "Our Services"}
+  </h3>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div>
+      <h4 className="font-bold text-lg mb-2">Konsultansi</h4>
+      <ul className="list-disc list-inside">
+        {services.konsultansi.map((s, i) => <li key={i}>{s}</li>)}
+      </ul>
+    </div>
+    <div>
+      <h4 className="font-bold text-lg mb-2">Public & Media Relations</h4>
+      <ul className="list-disc list-inside">
+        {services.media.map((s, i) => <li key={i}>{s}</li>)}
+      </ul>
+    </div>
+    <div>
+      <h4 className="font-bold text-lg mb-2">Special Event Management</h4>
+      <ul className="list-disc list-inside">
+        {services.event.map((s, i) => <li key={i}>{s}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
       <section id="kontak" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">{/* Form Kontak */}</section>
     </div>
   );
