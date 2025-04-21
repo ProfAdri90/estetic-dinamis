@@ -292,12 +292,13 @@ const [menuOpen, setMenuOpen] = useState(false);
     </button>
   </form>
 </section>
-    </div>
-    <footer className="bg-[#082846] text-white text-center py-6 mt-10">
+                            <footer className="bg-[#082846] text-white text-center py-6 mt-10">
   <p className="text-sm">
     &copy; {new Date().getFullYear()} Estetic Communication. All rights reserved.
   </p>
 </footer>
+    </div>
+    
 
   );
 }
