@@ -155,7 +155,42 @@ const [menuOpen, setMenuOpen] = useState(false);
 const prevTesti = () => {
   setCurrentTesti((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 };
- 
+ const [counts, setCounts] = useState({
+  client: 0,
+  kegiatan PR: 0,
+  jurnalis: 0,
+  rilis: 0
+});
+
+useEffect(() => {
+  const targets = {
+    client: 50,
+    kegiatan PR: 500,
+    jurnalis: 500,
+    rilis: 2000
+  };
+
+  const interval = setInterval(() => {
+    setCounts((prev) => {
+      const next = { ...prev };
+      let updated = false;
+
+      for (let key in targets) {
+        if (next[key] < targets[key]) {
+          next[key] += Math.ceil(targets[key] / 100); // nambah cepat
+          if (next[key] > targets[key]) next[key] = targets[key];
+          updated = true;
+        }
+      }
+
+      if (!updated) clearInterval(interval);
+      return next;
+    });
+  }, 30); // tiap 30ms
+
+  return () => clearInterval(interval);
+}, []);
+
   return (
    <div className="min-h-screen bg-[#082846] text-white font-sans scroll-smooth overflow-x-hidden w-full">
       <header className="w-full sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-lg flex justify-between items-center px-6 py-4">
@@ -222,6 +257,27 @@ const prevTesti = () => {
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
   </p>
 </section>
+    <section className="bg-white text-[#082846] py-20 px-8">
+  <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div>
+      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.client}</h4>
+      <p className="mt-2 text-lg">Klien</p>
+    </div>
+    <div>
+      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.media}</h4>
+      <p className="mt-2 text-lg">Media Partner</p>
+    </div>
+    <div>
+      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.jurnalis}</h4>
+      <p className="mt-2 text-lg">Jurnalis</p>
+    </div>
+    <div>
+      <h4 className="text-4xl font-bold text-[#d7b940]">{counts.rilis}</h4>
+      <p className="mt-2 text-lg">Rilis Publikasi</p>
+    </div>
+  </div>
+</section>
+
       <section id="nilai" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-6 text-center">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
