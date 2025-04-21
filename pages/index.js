@@ -217,7 +217,7 @@ export default function Home() {
     </div>
     <div>
       <h4 className="font-bold text-lg mb-2">Special Event Management</h4>
-      <ul className="list-disc list-inside">
+      <ul className="list-disc list-inside text-left pl-4">
         {services.event.map((s, i) => <li key={i}>{s}</li>)}
       </ul>
     </div>
