@@ -175,7 +175,19 @@ export default function Home() {
     </div>
   </div>
 </section>
-      <section id="kontak" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">{/* Form Kontak */}</section>
+      <section id="kontak" className="bg-[#f9f9f9] text-[#082846] px-8 py-16">
+  <h3 className="text-3xl font-bold mb-10 text-center">
+    {lang === "id" ? "Hubungi Kami" : "Contact Us"}
+  </h3>
+  <form className="max-w-xl mx-auto space-y-4">
+    <input type="text" placeholder={lang === "id" ? "Nama" : "Name"} className="w-full px-4 py-2 border rounded" />
+    <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded" />
+    <textarea placeholder={lang === "id" ? "Pesan" : "Message"} rows="5" className="w-full px-4 py-2 border rounded"></textarea>
+    <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold">
+      {lang === "id" ? "Kirim Pesan" : "Send Message"}
+    </button>
+  </form>
+</section>
     </div>
   );
 }
