@@ -50,7 +50,21 @@ export default function Home() {
     text: lang === "id"
       ? "Satu kata untuk Estetic, Lanjutkan!"
       : "One word for Estetic: Keep it up!"
-  }
+  },
+    {
+    name: "Herman Sutanta",
+    title: lang === "id" ? "Manajer Legal PT Agung Podomoro Land Tbk" : "Legal Manager of PT Agung Podomoro Land Tbk",
+    text: lang === "id"
+      ? "Konslutan PR yang diisi orang-orang hebat"
+      : "Public relations consultant filled with great people"
+  },
+    {
+    name: "Junih Gunawan",
+    title: lang === "id" ? "Sekretaris Perusahaan PT Mayora Indah Tbk" : "Corporate Secretary of PT Mayora Indah Tbk",
+    text: lang === "id"
+      ? "Salah satu perusahaan PR terbaik di Indonesia"
+      : "One of the best PR companies in Indonesia"
+    }
 ];
 
 
@@ -219,7 +233,7 @@ const testimonialChunks = chunkArray(testimonials, 3); // grup per 3
 
  <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory px-2 max-w-6xl mx-auto">
   {testimonialChunks.map((chunk, i) => (
-    <div key={i} className="flex flex-col gap-6 min-w-[300px] snap-start shrink-0">
+    <div key={i} className="flex flex-col gap-6 w-[360px] snap-start shrink-0 mx-auto">
       {chunk.map((t, index) => (
         <div
           key={index}
