@@ -15,16 +15,17 @@ export default function Home() {
   : ["Adaptive", "Professionalism", "Strategic Creativity", "Collaborative", "Trusted", "Sustainable"];
 
   const successStory = [
-    { year: 1997, text: "Menangani kasus Bentoel Group" },
-    { year: 1998, text: "Krisis komunikasi Bank Bali" },
-    { year: 2000, text: "Menangani media relation Mayora Group" },
-    { year: 2004, text: "Kasus penolakan reklamasi PIK – Agung Podomoro" },
-    { year: 2013, text: "Krisis komunikasi lahan Teluk Jambe – Karawang" },
-    { year: 2014, text: "Reklamasi Pantura Jakarta – APL" },
-    { year: 2016, text: "Serah terima apartemen Antasari 45 – Cowell Dev" },
-    { year: 2019, text: "Pemulihan reputasi Saigon Delight – kasus keracunan" },
-    { year: 2025, text: "Transformasi Estetic generasi baru" }
-  ];
+  { year: 1997, text: lang === "id" ? "Menangani kasus Bentoel Group" : "Handled Bentoel Group case" },
+  { year: 1998, text: lang === "id" ? "Krisis komunikasi Bank Bali" : "Bank Bali communication crisis" },
+  { year: 2000, text: lang === "id" ? "Menangani media relation Mayora Group" : "Handled media relation for Mayora Group" },
+  { year: 2004, text: lang === "id" ? "Kasus penolakan reklamasi PIK – Agung Podomoro" : "Reclamation rejection case PIK – Agung Podomoro" },
+  { year: 2013, text: lang === "id" ? "Krisis komunikasi lahan Teluk Jambe – Karawang" : "Land communication crisis Teluk Jambe – Karawang" },
+  { year: 2014, text: lang === "id" ? "Reklamasi Pantura Jakarta – APL" : "North Coast Jakarta reclamation – APL" },
+  { year: 2016, text: lang === "id" ? "Serah terima apartemen Antasari 45 – Cowell Dev" : "Apartment handover Antasari 45 – Cowell Dev" },
+  { year: 2019, text: lang === "id" ? "Pemulihan reputasi Saigon Delight – kasus keracunan" : "Reputation recovery of Saigon Delight – food poisoning case" },
+  { year: 2025, text: lang === "id" ? "Transformasi Estetic generasi baru" : "Estetic transformation for the new generation" }
+];
+
 
   const testimonials = [
     { name: "Andre Sukendra Atmadja", title: "Direktur Utama PT Mayora Indah Tbk", text: "Jasa yang ditawarkan memang sesuai dengan keperluan Mayora sebagai Perusahaan yang memiliki banyak produk, kualitas yang ditawarkan sungguh luar biasa" },
