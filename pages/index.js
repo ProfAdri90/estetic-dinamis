@@ -238,10 +238,10 @@ const [menuOpen, setMenuOpen] = useState(false);
       >
         {/* FOTO PROFIL TIM */}
         <img
-          src={person.photo}
-          alt={person.name}
-        className="w-24 h-24 object-cover rounded-full mx-auto mb-4"
+      src={person.photo}
+      className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-[#d7b940]"
     />
+
           {/* NAMA PROFIL TIM */}
 <h4 className="text-xl font-bold mb-1">{person.name}</h4>
         <h4 className="text-xl font-bold mb-1">{person.name}</h4>
