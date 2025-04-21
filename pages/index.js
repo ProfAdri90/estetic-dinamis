@@ -142,8 +142,8 @@ export default function Home() {
       : ["Press conference", "Press tour", "Press release management", "Press gathering", "Media visit", "Information management", "Opinion building", "Social media management"],
   event:
     lang === "id"
-      ? ["RUPS", "IPO", "Pameran, seminar, workshop", "Talkshow", "Peluncuran produk baru", "Pemasaran digital", "Periklanan"]
-      : ["AGM", "IPO", "Exhibition, seminar, workshop", "Talkshow", "New product launch", "Digital marketing", "Advertising"]
+      ? ["RUPS", "Pameran, seminar, workshop", "Talkshow", "Peluncuran produk baru", "Pemasaran digital", "Periklanan"]
+      : ["General Meeting", "Exhibition, seminar, workshop", "Talkshow", "New product launch", "Digital marketing", "Advertising"]
 };
 
 const [menuOpen, setMenuOpen] = useState(false);
@@ -335,19 +335,25 @@ const prevTesti = () => {
   </h3>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
     <div>
-      <h4 className="font-bold text-lg mb-2">Konsultansi</h4>
+      <h4 className="font-bold text-lg mb-2">
+      {lang === "id" ? "Konsultansi" : "Consultancy"}
+      </h4>
        <ul className="list-disc list-inside text-left pl-4">
         {services.konsultansi.map((s, i) => <li key={i}>{s}</li>)}
       </ul>
     </div>
     <div>
-      <h4 className="font-bold text-lg mb-2">Public & Media Relations</h4>
+      <h4 className="font-bold text-lg mb-2">
+      {lang === "id" ? "Public & Media Relations" : "Public & Media Relations"}
+      </h4>
        <ul className="list-disc list-inside text-left pl-4">
         {services.media.map((s, i) => <li key={i}>{s}</li>)}
       </ul>
     </div>
     <div>
-      <h4 className="font-bold text-lg mb-2">Special Event Management</h4>
+      <h4 className="font-bold text-lg mb-2">
+      {lang === "id" ? "Manajemen Event Khusus" : "Special Event Management"}
+      </h4>
       <ul className="list-disc list-inside text-left pl-4">
         {services.event.map((s, i) => <li key={i}>{s}</li>)}
       </ul>
