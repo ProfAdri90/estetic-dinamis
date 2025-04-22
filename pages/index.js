@@ -240,13 +240,6 @@ useEffect(() => {
   )}
 </AnimatePresence>
 
-    /*<section className="h-[2000px] bg-green-100 text-black p-6">
-  <h2>TEST SCROLL AREA</h2>
-  <p>Scroll ke bawah dan pastiin header tetap kelihatan</p>
-</section>*/
-
-
-
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
