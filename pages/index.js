@@ -256,7 +256,10 @@ useEffect(() => {
   )}
 </AnimatePresence>
 
-<section className="hero-bg h-screen flex flex-col justify-center items-center text-white text-center px-4">
+<section
+  id="hero"
+  className="hero-bg relative z-0 h-screen flex flex-col justify-center items-center text-white text-center px-4"
+>
   <h1 className="text-5xl font-bold mb-4">Estetic Communication</h1>
   <p className="max-w-xl text-lg">
     {lang === "id"
