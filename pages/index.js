@@ -273,7 +273,7 @@ useEffect(() => {
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
   </p>
 </section>
-    <section className="scroll-mt-[180px] bg-white text-[#082846]text-center py-20 px-8">
+    <section className="scroll-mt-[180px] text-[#082846]text-center py-20 px-8">
   <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
     <div>
       <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
