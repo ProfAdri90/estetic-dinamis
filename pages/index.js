@@ -262,18 +262,7 @@ useEffect(() => {
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
   </h2>
-  <p className="max-w-4xl mx-auto leading-relaxed text-lg">
-    {lang === "id"
-      ? "Estetic Communication adalah perusahaan konsultan komunikasi yang berdiri sejak tahun 1997, berkomitmen untuk menjadi mitra strategis dalam membangun reputasi dan kepercayaan publik. Dengan pengalaman panjang dalam public relations, media relations, dan event management, kami telah menjadi bagian dari berbagai proyek komunikasi nasional dari sektor korporasi, pemerintahan, hingga organisasi publik."
-      : "Estetic Communication is a communication consultancy established in 1997, committed to being a strategic partner in building public trust and reputation. With a long-standing experience in public relations, media relations, and event management, we’ve been involved in numerous national-level communication projects across corporate, government, and public sectors."}
-  </p>
-  <p className="max-w-4xl mx-auto mt-6 leading-relaxed text-lg">
-    {lang === "id"
-      ? "Kini Estetic berada dalam fase transformasi generasi kedua, menggabungkan pengalaman konvensional dengan pendekatan komunikasi modern berbasis data dan teknologi."
-      : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
-  </p>
-</section>
-    <section className="scroll-mt-[180px] text-[#082846]text-center py-20 px-8">
+     <section className="scroll-mt-[180px] text-[#082846]text-center py-20 px-8">
   <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
     <div>
       <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
@@ -305,6 +294,18 @@ useEffect(() => {
     </div>
   </div>
 </section>
+  <p className="max-w-4xl mx-auto leading-relaxed text-lg">
+    {lang === "id"
+      ? "Estetic Communication adalah perusahaan konsultan komunikasi yang berdiri sejak tahun 1997, berkomitmen untuk menjadi mitra strategis dalam membangun reputasi dan kepercayaan publik. Dengan pengalaman panjang dalam public relations, media relations, dan event management, kami telah menjadi bagian dari berbagai proyek komunikasi nasional dari sektor korporasi, pemerintahan, hingga organisasi publik."
+      : "Estetic Communication is a communication consultancy established in 1997, committed to being a strategic partner in building public trust and reputation. With a long-standing experience in public relations, media relations, and event management, we’ve been involved in numerous national-level communication projects across corporate, government, and public sectors."}
+  </p>
+  <p className="max-w-4xl mx-auto mt-6 leading-relaxed text-lg">
+    {lang === "id"
+      ? "Kini Estetic berada dalam fase transformasi generasi kedua, menggabungkan pengalaman konvensional dengan pendekatan komunikasi modern berbasis data dan teknologi."
+      : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
+  </p>
+</section>
+   
 
       <section id="nilai" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-6 text-center">
