@@ -197,39 +197,65 @@ useEffect(() => {
     
     {/* STICKY HEADER */}
     <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-md flex justify-between items-center px-6 py-4">
-      <img src="/logo.png" alt="Logo" className="h-[80px] object-contain" />
+  <img src="/logo.png" alt="Logo" className="h-[80px] object-contain" />
 
-      {/* Desktop Menu */}
-      <nav className="hidden md:flex gap-4 text-white font-semibold drop-shadow">
-        {/* tombol navigasi... */}
-      </nav>
+  {/* Desktop Menu */}
+  <nav className="hidden md:flex gap-4 text-white font-semibold drop-shadow">
+    <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
+    <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
+    <button onClick={() => scrollTo("sukses")}>{lang === "id" ? "Sukses" : "Success"}</button>
+    <button onClick={() => scrollTo("testimoni")}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
+    <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
+    <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
+    <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
+    <button
+      onClick={switchLang}
+      className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded"
+    >
+      {lang === "id" ? "ID" : "EN"}
+    </button>
+  </nav>
 
-      {/* Mobile */}
-      <div className="md:hidden flex items-center gap-2">
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="text-[#082846] text-3xl font-bold"
-        >
-          ☰
-        </button>
-      </div>
-    </header>
+  {/* Mobile Menu */}
+  <div className="md:hidden flex items-center gap-2">
+    <button
+      onClick={switchLang}
+      className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded"
+    >
+      {lang === "id" ? "ID" : "EN"}
+    </button>
+    <button
+      onClick={() => setMenuOpen(!menuOpen)}
+      className="text-[#082846] text-3xl font-bold"
+    >
+      ☰
+    </button>
+  </div>
+</header>
+
 
     {/* DROPDOWN */}
-    <AnimatePresence>
-      {menuOpen && (
-        <motion.div
-          key="dropdown"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
-          className="md:hidden bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-40"
-        >
-          {/* tombol nav mobile */}
-        </motion.div>
-      )}
-    </AnimatePresence>
+   <AnimatePresence>
+  {menuOpen && (
+    <motion.div
+      key="dropdown"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.3 }}
+      className="md:hidden bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-40 fixed top-[100px] left-0 right-0"
+    >
+      <button onClick={() => { scrollTo("tentang"); setMenuOpen(false); }}>{lang === "id" ? "Tentang" : "About"}</button>
+      <button onClick={() => { scrollTo("nilai"); setMenuOpen(false); }}>{lang === "id" ? "Nilai" : "Values"}</button>
+      <button onClick={() => { scrollTo("sukses"); setMenuOpen(false); }}>{lang === "id" ? "Sukses" : "Success"}</button>
+      <button onClick={() => { scrollTo("testimoni"); setMenuOpen(false); }}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
+      <button onClick={() => { scrollTo("tim"); setMenuOpen(false); }}>{lang === "id" ? "Tim" : "Team"}</button>
+      <button onClick={() => { scrollTo("layanan"); setMenuOpen(false); }}>{lang === "id" ? "Layanan" : "Services"}</button>
+      <button onClick={() => { scrollTo("kontak"); setMenuOpen(false); }}>{lang === "id" ? "Kontak" : "Contact"}</button>
+    </motion.div>
+  )}
+</AnimatePresence>
+
 
 
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
