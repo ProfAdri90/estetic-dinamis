@@ -191,6 +191,23 @@ useEffect(() => {
 
   return () => clearInterval(interval);
 }, []);
+const [showCounter, setShowCounter] = useState(false);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setShowCounter(entry.isIntersecting);
+    },
+    { threshold: 0.5 }
+  );
+
+  const section = document.getElementById("tentang");
+  if (section) observer.observe(section);
+
+  return () => {
+    if (section) observer.unobserve(section);
+  };
+}, []);
 
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
@@ -262,38 +279,38 @@ useEffect(() => {
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
   </h2>
-     <section className="scroll-mt-[180px] text-[#082846]text-center py-20 px-8">
-  <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+{showCounter && (
+  <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center my-10">
     <div>
       <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-      {counts.client}
-      <span className="ml-1 text-2xl align-top">+</span>
+        {counts.client}
+        <span className="ml-1 text-2xl align-top">+</span>
       </h4>
-      <p className="mt-2 text-lg">Client</p>
+      <p className="mt-2 text-lg">{lang === "id" ? "Klien" : "Clients"}</p>
     </div>
     <div>
       <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-      {counts.kegiatan}
-      <span className="ml-1 text-2xl align-top">+</span>
+        {counts.kegiatan}
+        <span className="ml-1 text-2xl align-top">+</span>
       </h4>
-      <p className="mt-2 text-lg">Kegiatan PR</p>
+      <p className="mt-2 text-lg">{lang === "id" ? "Kegiatan PR" : "PR Activities"}</p>
     </div>
     <div>
       <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-      {counts.jurnalis}
-      <span className="ml-1 text-2xl align-top">+</span>
+        {counts.jurnalis}
+        <span className="ml-1 text-2xl align-top">+</span>
       </h4>
-      <p className="mt-2 text-lg">Jurnalis</p>
+      <p className="mt-2 text-lg">{lang === "id" ? "Jurnalis" : "Journalists"}</p>
     </div>
     <div>
       <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-      {counts.rilis}
-      <span className="ml-1 text-2xl align-top">+</span>
+        {counts.rilis}
+        <span className="ml-1 text-2xl align-top">+</span>
       </h4>
-      <p className="mt-2 text-lg">Publikasi Rilis</p>
+      <p className="mt-2 text-lg">{lang === "id" ? "Publikasi Rilis" : "Press Releases"}</p>
     </div>
   </div>
-</section>
+)}
   <p className="max-w-4xl mx-auto leading-relaxed text-lg">
     {lang === "id"
       ? "Estetic Communication adalah perusahaan konsultan komunikasi yang berdiri sejak tahun 1997, berkomitmen untuk menjadi mitra strategis dalam membangun reputasi dan kepercayaan publik. Dengan pengalaman panjang dalam public relations, media relations, dan event management, kami telah menjadi bagian dari berbagai proyek komunikasi nasional dari sektor korporasi, pemerintahan, hingga organisasi publik."
