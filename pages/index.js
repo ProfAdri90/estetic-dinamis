@@ -194,41 +194,43 @@ useEffect(() => {
 
   return (
   <div className="relative min-h-screen font-sans text-white scroll-smooth overflow-x-hidden bg-[#082846] w-full">
-      <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-md flex justify-between items-center px-6 py-4 backdrop-blur-md">
-        <img src="/logo.png" alt="Logo" className="h-[100px] md:h-[140px] object-contain" />
-        {/* Desktop Nav */}
-  <nav className="hidden md:flex gap-4 text-white drop-shadow-md font-semibold">
-  <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
-  <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
-  <button onClick={() => scrollTo("sukses")}>{lang === "id" ? "Sukses" : "Success"}</button>
-  <button onClick={() => scrollTo("testimoni")}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
-  <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
-  <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
-  <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
-  <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">{lang === "id" ? "ID" : "EN"}</button>
-</nav>
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-md flex justify-between items-center px-6 py-4">
+  <img src="/logo.png" alt="Logo" className="h-[100px] md:h-[140px] object-contain" />
 
-    {/* Mobile Hamburger */}
+  {/* Desktop Nav */}
+  <nav className="hidden md:flex gap-4 text-white drop-shadow-md font-semibold">
+    <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
+    <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
+    <button onClick={() => scrollTo("sukses")}>{lang === "id" ? "Sukses" : "Success"}</button>
+    <button onClick={() => scrollTo("testimoni")}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
+    <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
+    <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
+    <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
+    <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">{lang === "id" ? "ID" : "EN"}</button>
+  </nav>
+
+  {/* Mobile Nav */}
   <div className="md:hidden flex items-center gap-2">
-  <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">
-    {lang === "id" ? "ID" : "EN"}
+    <button onClick={switchLang} className="bg-[#d7b940] text-[#082846] px-2 py-1 rounded">
+      {lang === "id" ? "ID" : "EN"}
     </button>
-  <button onClick={() => setMenuOpen(!menuOpen)} className="text-[#082846] text-3xl font-bold">
-    ☰
-  </button>
-</div>
-      </header>
-   {/* Dropdown menu PISAH dari header */}
+    <button onClick={() => setMenuOpen(!menuOpen)} className="text-[#082846] text-3xl font-bold">
+      ☰
+    </button>
+  </div>
+</header>
+
+{/* Mobile Dropdown – ditempatkan langsung setelah header */}
 <AnimatePresence>
   {menuOpen && (
-<motion.div
-  key="dropdown"
-  initial={{ opacity: 0, y: -10 }}
-  animate={{ opacity: 1, y: 0 }}
-  exit={{ opacity: 0, y: -10 }}
-  transition={{ duration: 0.3 }}
-  className="fixed top-[140px] left-0 right-0 bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-[100]"
->
+    <motion.div
+      key="mobile-nav"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.2 }}
+      className="md:hidden bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-40"
+    >
       <button onClick={() => { scrollTo("tentang"); setMenuOpen(false); }}>{lang === "id" ? "Tentang" : "About"}</button>
       <button onClick={() => { scrollTo("nilai"); setMenuOpen(false); }}>{lang === "id" ? "Nilai" : "Values"}</button>
       <button onClick={() => { scrollTo("sukses"); setMenuOpen(false); }}>{lang === "id" ? "Sukses" : "Success"}</button>
