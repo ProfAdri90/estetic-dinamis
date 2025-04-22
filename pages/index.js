@@ -165,7 +165,7 @@ const prevTesti = () => {
 
 useEffect(() => {
   const targets = {
-    client: 25,
+    client: 45,
     kegiatan: 500,
     jurnalis: 500,
     rilis: 2000
@@ -178,7 +178,7 @@ useEffect(() => {
 
       for (let key in targets) {
         if (next[key] < targets[key]) {
-          next[key] += Math.ceil(targets[key] / 100); // nambah cepat
+          next[key] += Math.ceil(targets[key] / 80); // nambah cepat
           if (next[key] > targets[key]) next[key] = targets[key];
           updated = true;
         }
