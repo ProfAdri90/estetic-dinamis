@@ -240,6 +240,10 @@ useEffect(() => {
 </AnimatePresence>
       </header>
    
+<section className="h-[2000px] bg-green-100 text-black p-6">
+  <h2>TEST SCROLL AREA</h2>
+  <p>Scroll ke bawah dan pastiin header tetap kelihatan</p>
+</section>
 
 
 
