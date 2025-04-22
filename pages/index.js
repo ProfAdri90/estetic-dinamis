@@ -256,23 +256,15 @@ useEffect(() => {
   )}
 </AnimatePresence>
 
-<section
-  className="relative h-screen w-full overflow-hidden flex items-center justify-center text-center text-white"
-  style={{ backgroundColor: "#082846" }}
->
-  <div className="absolute inset-0 animate-fade bg-cover bg-center bg-no-repeat hero-bg" />
-
-  <div className="relative z-10 px-6">
-    <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-md">
-      Estetic Communication
-    </h1>
-    <p className="text-lg md:text-xl max-w-3xl mx-auto drop-shadow-sm">
-      {lang === "id"
-        ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan anda sampai dengan tepat, berdampak, dan bernilai."
-        : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, effectively, and meaningfully."}
-    </p>
-  </div>
+<section className="hero-bg h-screen flex flex-col justify-center items-center text-white text-center px-4">
+  <h1 className="text-5xl font-bold mb-4">Estetic Communication</h1>
+  <p className="max-w-xl text-lg">
+    {lang === "id"
+      ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
+      : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
+  </p>
 </section>
+
 
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
