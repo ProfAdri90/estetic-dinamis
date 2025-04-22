@@ -283,18 +283,18 @@ useEffect(() => {
   <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
 
   {/* Konten */}
-  <div className="relative h-[160px] md:h-[190px] w-auto mx-auto mb-1">
+  <div className="flex flex-col items-center justify-center mb-4">
   <img
     src="/logo.png"
     alt="Estetic Logo"
-    className="absolute inset-0 h-full w-auto object-contain mx-auto"
+    className="h-[220px] md:h-[280px] object-contain mb-2 drop-shadow-lg"
   />
-  <p className="max-w-xl text-center text-lg font-medium drop-shadow leading-tight">
+  <p className="max-w-xl text-center text-lg font-medium drop-shadow">
     {lang === "id"
       ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
       : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
   </p>
-  </div>
+</div>
 </section>
 
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
