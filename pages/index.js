@@ -191,6 +191,15 @@ useEffect(() => {
 
   return () => clearInterval(interval);
 }, []);
+const heroImages = ["/bg1.jpg", "/bg2.jpg", "/bg3.jpg", "/bg4.jpg"];
+const [heroIndex, setHeroIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setHeroIndex((prev) => (prev + 1) % heroImages.length);
+  }, 5000); // ganti gambar tiap 5 detik
+  return () => clearInterval(interval);
+}, []);
 
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
@@ -256,23 +265,37 @@ useEffect(() => {
   )}
 </AnimatePresence>
 
-<section
-  id="hero"
-  className="hero-bg relative z-0 h-screen flex flex-col justify-center items-center text-white text-center px-4"
->
- {/* Ganti h1 dengan logo */}
-  <img
-    src="/logo.png"
-    alt="Estetic Communication"
-    className="w-[320px] mb-4 drop-shadow-lg"
-  />
-  <p className="max-w-xl text-lg md:text-xl font-medium bg-black/40 px-4 py-2 rounded-md">
-    {lang === "id"
-      ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
-      : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
-  </p>
-</section>
+<section className="relative h-screen flex flex-col justify-center items-center text-white text-center px-4 overflow-hidden">
+  {/* Background Crossfade */}
+  {heroImages.map((img, idx) => (
+    <motion.img
+      key={img}
+      src={img}
+      alt=""
+      className="absolute inset-0 w-full h-full object-cover"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: idx === heroIndex ? 1 : 0 }}
+      transition={{ duration: 1 }}
+    />
+  ))}
 
+  {/* Overlay agar teks lebih terbaca */}
+  <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+
+  {/* Konten */}
+  <div className="relative z-20">
+    <img
+      src="/logo.png"
+      alt="Estetic Logo"
+      className="h-28 md:h-36 mx-auto mb-4 drop-shadow-lg"
+    />
+    <p className="max-w-xl mx-auto text-lg font-medium drop-shadow">
+      {lang === "id"
+        ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
+        : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
+    </p>
+  </div>
+</section>
 
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
