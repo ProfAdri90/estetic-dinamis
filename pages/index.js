@@ -221,14 +221,14 @@ useEffect(() => {
    {/* Dropdown menu PISAH dari header */}
 <AnimatePresence>
   {menuOpen && (
-    <motion.div
-      key="dropdown"
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.3 }}
-      className="fixed top-[100px] left-0 right-0 bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-[100]"
-    >
+<motion.div
+  key="dropdown"
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: -10 }}
+  transition={{ duration: 0.3 }}
+  className="fixed top-[140px] left-0 right-0 bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-[100]"
+>
       <button onClick={() => { scrollTo("tentang"); setMenuOpen(false); }}>{lang === "id" ? "Tentang" : "About"}</button>
       <button onClick={() => { scrollTo("nilai"); setMenuOpen(false); }}>{lang === "id" ? "Nilai" : "Values"}</button>
       <button onClick={() => { scrollTo("sukses"); setMenuOpen(false); }}>{lang === "id" ? "Sukses" : "Success"}</button>
@@ -256,7 +256,7 @@ useEffect(() => {
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
   </p>
 </section>
-    <section className="bg-white text-[#082846] py-20 px-8">
+    <section className="scroll-mt-[180px] bg-white text-[#082846]text-center py-20 px-8">
   <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
     <div>
       <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
