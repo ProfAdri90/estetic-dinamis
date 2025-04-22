@@ -289,7 +289,6 @@ useEffect(() => {
     alt="Estetic Logo"
     className="absolute inset-0 h-full w-auto object-contain mx-auto"
   />
-</div>
   <p className="max-w-xl text-center text-lg font-medium drop-shadow leading-tight">
     {lang === "id"
       ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
