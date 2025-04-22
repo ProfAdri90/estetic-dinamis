@@ -1,7 +1,14 @@
-@tailwind base; @tailwind components; @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tambahkan di bawah sini */
 .hero-bg {
-  animation: heroSlide 20s infinite;
-  background-image: url('/bg1.jpg'); /* ini default, nanti ganti di JS kalau perlu */
+  animation: heroSlide 20s infinite ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('/bg1.jpg'); /* fallback */
 }
 
 @keyframes heroSlide {
