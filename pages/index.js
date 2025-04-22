@@ -287,7 +287,7 @@ useEffect(() => {
  <img
   src="/logo.png"
   alt="Estetic Logo"
-  className="h-72 md:h-96 mx-auto drop-shadow-2xl object-contain"
+  className="h-40 md:h-48 mx-auto mb-2 drop-shadow-lg"
 />
   <p className="max-w-xl text-center text-lg font-medium drop-shadow leading-tight">
     {lang === "id"
