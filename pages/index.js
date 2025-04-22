@@ -171,6 +171,12 @@ useEffect(() => {
     rilis: 2000
   };
 
+  if (!showCounter) {
+    // Reset ke 0 saat keluar dari area
+    setCounts({ client: 0, kegiatan: 0, jurnalis: 0, rilis: 0 });
+    return;
+  }
+
   const interval = setInterval(() => {
     setCounts((prev) => {
       const next = { ...prev };
@@ -178,7 +184,7 @@ useEffect(() => {
 
       for (let key in targets) {
         if (next[key] < targets[key]) {
-          next[key] += Math.ceil(targets[key] / 100); // nambah cepat
+          next[key] += Math.ceil(targets[key] / 100); // bisa atur speed
           if (next[key] > targets[key]) next[key] = targets[key];
           updated = true;
         }
@@ -187,10 +193,11 @@ useEffect(() => {
       if (!updated) clearInterval(interval);
       return next;
     });
-  }, 30); // tiap 30ms
+  }, 30); // bisa atur durasi
 
   return () => clearInterval(interval);
-}, []);
+}, [showCounter]);
+
 const [showCounter, setShowCounter] = useState(false);
 
 useEffect(() => {
