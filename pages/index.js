@@ -284,11 +284,11 @@ useEffect(() => {
 
   {/* Konten */}
   <div className="flex flex-col items-center justify-center -space-y-1 md:-space-y-2">
-  <img
-    src="/logo.png"
-    alt="Estetic Logo"
-    className="h-72 md:h-96 mx-auto drop-shadow-2xl"
-  />
+ <img
+  src="/logo.png"
+  alt="Estetic Logo"
+  className="h-72 md:h-96 mx-auto drop-shadow-2xl object-contain"
+/>
   <p className="max-w-xl text-center text-lg font-medium drop-shadow leading-tight">
     {lang === "id"
       ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
