@@ -285,10 +285,10 @@ useEffect(() => {
   {/* Konten */}
   <div className="relative z-20">
     <img
-      src="/logo.png"
-      alt="Estetic Logo"
-      className="h-28 md:h-36 mx-auto mb-4 drop-shadow-lg"
-    />
+  src="/logo.png"
+  alt="Estetic Logo"
+  className="h-40 md:h-56 mx-auto mb-6 drop-shadow-lg"
+/>
     <p className="max-w-xl mx-auto text-lg font-medium drop-shadow">
       {lang === "id"
         ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
