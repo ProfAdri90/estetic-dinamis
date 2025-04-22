@@ -294,8 +294,6 @@ useEffect(() => {
       ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
       : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
   </p>
-</div>
-
   </div>
 </section>
 
