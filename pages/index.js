@@ -217,7 +217,8 @@ useEffect(() => {
     ☰
   </button>
 </div>
-     {/* Mobile dropdown menu */}
+      </header>
+   {/* Dropdown menu PISAH dari header */}
 <AnimatePresence>
   {menuOpen && (
     <motion.div
@@ -226,7 +227,7 @@ useEffect(() => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="md:hidden bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md"
+      className="md:hidden fixed top-[100px] w-full bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-40"
     >
       <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
       <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
@@ -238,12 +239,11 @@ useEffect(() => {
     </motion.div>
   )}
 </AnimatePresence>
-      </header>
-   
-<section className="h-[2000px] bg-green-100 text-black p-6">
+    </div>
+/*<section className="h-[2000px] bg-green-100 text-black p-6">
   <h2>TEST SCROLL AREA</h2>
   <p>Scroll ke bawah dan pastiin header tetap kelihatan</p>
-</section>
+</section>*/
 
 
 
