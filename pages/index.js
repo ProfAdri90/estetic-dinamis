@@ -165,7 +165,7 @@ const prevTesti = () => {
 
 useEffect(() => {
   const targets = {
-    client: 50,
+    client: 25,
     kegiatan: 500,
     jurnalis: 500,
     rilis: 2000
