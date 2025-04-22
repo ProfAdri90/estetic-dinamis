@@ -217,9 +217,7 @@ useEffect(() => {
     ☰
   </button>
 </div>
-
-      </header>
-    {/* Mobile dropdown menu */}
+     {/* Mobile dropdown menu */}
 <AnimatePresence>
   {menuOpen && (
     <motion.div
@@ -240,6 +238,8 @@ useEffect(() => {
     </motion.div>
   )}
 </AnimatePresence>
+      </header>
+   
 
 
 
