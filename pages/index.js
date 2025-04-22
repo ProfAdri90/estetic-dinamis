@@ -227,7 +227,7 @@ useEffect(() => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="md:hidden fixed top-[100px] w-full bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-40"
+      className="fixed top-[100px] left-0 right-0 bg-white text-[#082846] px-6 py-4 flex flex-col gap-2 shadow-md z-[100]"
     >
       <button onClick={() => scrollTo("tentang")}>{lang === "id" ? "Tentang" : "About"}</button>
       <button onClick={() => scrollTo("nilai")}>{lang === "id" ? "Nilai" : "Values"}</button>
@@ -239,6 +239,7 @@ useEffect(() => {
     </motion.div>
   )}
 </AnimatePresence>
+
 
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
