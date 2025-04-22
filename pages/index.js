@@ -260,8 +260,13 @@ useEffect(() => {
   id="hero"
   className="hero-bg relative z-0 h-screen flex flex-col justify-center items-center text-white text-center px-4"
 >
-  <h1 className="text-5xl font-bold mb-4">Estetic Communication</h1>
-  <p className="max-w-xl text-lg">
+ {/* Ganti h1 dengan logo */}
+  <img
+    src="/logo.png"
+    alt="Estetic Communication"
+    className="w-[320px] mb-4 drop-shadow-lg"
+  />
+  <p className="max-w-xl text-lg md:text-xl font-medium bg-black/40 px-4 py-2 rounded-md">
     {lang === "id"
       ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
       : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
