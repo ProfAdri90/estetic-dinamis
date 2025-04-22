@@ -287,8 +287,8 @@ useEffect(() => {
     <img
   src="/logo.png"
   alt="Estetic Logo"
-  className="h-64 md:h-80 mx-auto mb-1 drop-shadow-2xl"
-/>
+  className="h-72 md:h-96 mx-auto mb-2 drop-shadow-2xl"
+  />
     <p className="max-w-xl mx-auto text-lg font-medium drop-shadow">
       {lang === "id"
         ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
