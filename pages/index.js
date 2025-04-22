@@ -156,7 +156,8 @@ export default function Home() {
 const prevTesti = () => {
   setCurrentTesti((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 };
- const [counts, setCounts] = useState({
+ const [showCounter, setShowCounter] = useState(false);
+const [counts, setCounts] = useState({
   client: 0,
   kegiatan: 0,
   jurnalis: 0,
@@ -164,18 +165,34 @@ const prevTesti = () => {
 });
 
 useEffect(() => {
+  const section = document.getElementById("counter");
+  if (!section) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setShowCounter(true);
+      } else {
+        setShowCounter(false);
+        setCounts({ client: 0, kegiatan: 0, jurnalis: 0, rilis: 0 }); // reset angka
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(section);
+  return () => observer.disconnect();
+}, []);
+
+useEffect(() => {
+  if (!showCounter) return;
+
   const targets = {
     client: 25,
     kegiatan: 500,
     jurnalis: 500,
     rilis: 2000
   };
-
-  if (!showCounter) {
-    // Reset ke 0 saat keluar dari area
-    setCounts({ client: 0, kegiatan: 0, jurnalis: 0, rilis: 0 });
-    return;
-  }
 
   const interval = setInterval(() => {
     setCounts((prev) => {
@@ -184,7 +201,7 @@ useEffect(() => {
 
       for (let key in targets) {
         if (next[key] < targets[key]) {
-          next[key] += Math.ceil(targets[key] / 100); // bisa atur speed
+          next[key] += Math.ceil(targets[key] / 100);
           if (next[key] > targets[key]) next[key] = targets[key];
           updated = true;
         }
@@ -193,10 +210,11 @@ useEffect(() => {
       if (!updated) clearInterval(interval);
       return next;
     });
-  }, 30); // bisa atur durasi
+  }, 30);
 
   return () => clearInterval(interval);
 }, [showCounter]);
+
 
 const [showCounter, setShowCounter] = useState(false);
 
@@ -286,38 +304,40 @@ useEffect(() => {
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
   </h2>
-{showCounter && (
-  <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center my-10">
-    <div>
-      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-        {counts.client}
-        <span className="ml-1 text-2xl align-top">+</span>
-      </h4>
-      <p className="mt-2 text-lg">{lang === "id" ? "Klien" : "Clients"}</p>
+<section id="counter" className="bg-white text-[#082846] py-20 px-8">
+  {showCounter && (
+    <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center my-10">
+      <div>
+        <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+          {counts.client}
+          <span className="ml-1 text-2xl align-top">+</span>
+        </h4>
+        <p className="mt-2 text-lg">{lang === "id" ? "Klien" : "Clients"}</p>
+      </div>
+      <div>
+        <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+          {counts.kegiatan}
+          <span className="ml-1 text-2xl align-top">+</span>
+        </h4>
+        <p className="mt-2 text-lg">{lang === "id" ? "Kegiatan PR" : "PR Activities"}</p>
+      </div>
+      <div>
+        <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+          {counts.jurnalis}
+          <span className="ml-1 text-2xl align-top">+</span>
+        </h4>
+        <p className="mt-2 text-lg">{lang === "id" ? "Jurnalis" : "Journalists"}</p>
+      </div>
+      <div>
+        <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+          {counts.rilis}
+          <span className="ml-1 text-2xl align-top">+</span>
+        </h4>
+        <p className="mt-2 text-lg">{lang === "id" ? "Publikasi Rilis" : "Press Releases"}</p>
+      </div>
     </div>
-    <div>
-      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-        {counts.kegiatan}
-        <span className="ml-1 text-2xl align-top">+</span>
-      </h4>
-      <p className="mt-2 text-lg">{lang === "id" ? "Kegiatan PR" : "PR Activities"}</p>
-    </div>
-    <div>
-      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-        {counts.jurnalis}
-        <span className="ml-1 text-2xl align-top">+</span>
-      </h4>
-      <p className="mt-2 text-lg">{lang === "id" ? "Jurnalis" : "Journalists"}</p>
-    </div>
-    <div>
-      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-        {counts.rilis}
-        <span className="ml-1 text-2xl align-top">+</span>
-      </h4>
-      <p className="mt-2 text-lg">{lang === "id" ? "Publikasi Rilis" : "Press Releases"}</p>
-    </div>
-  </div>
-)}
+  )}
+</section>
   <p className="max-w-4xl mx-auto leading-relaxed text-lg">
     {lang === "id"
       ? "Estetic Communication adalah perusahaan konsultan komunikasi yang berdiri sejak tahun 1997, berkomitmen untuk menjadi mitra strategis dalam membangun reputasi dan kepercayaan publik. Dengan pengalaman panjang dalam public relations, media relations, dan event management, kami telah menjadi bagian dari berbagai proyek komunikasi nasional dari sektor korporasi, pemerintahan, hingga organisasi publik."
