@@ -283,13 +283,13 @@ useEffect(() => {
   <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
 
   {/* Konten */}
-  <div className="flex flex-col items-center justify-center mb-4">
+ <div className="flex flex-col items-center justify-center space-y-0 leading-none">
   <img
     src="/logo.png"
     alt="Estetic Logo"
-    className="h-[220px] md:h-[280px] object-contain mb-2 drop-shadow-lg"
+    className="h-[220px] md:h-[280px] object-contain drop-shadow-lg"
   />
-  <p className="max-w-xl text-center text-lg font-medium drop-shadow">
+  <p className="max-w-xl text-center text-lg font-medium drop-shadow mt-[-10px]">
     {lang === "id"
       ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
       : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
