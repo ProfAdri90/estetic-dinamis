@@ -243,7 +243,7 @@ useEffect(() => {
 
 
 
-      <section id="tentang" className="scroll-mt-[140px] text-center py-20 px-8">
+      <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
   </h2>
@@ -291,7 +291,7 @@ useEffect(() => {
   </div>
 </section>
 
-      <section id="nilai" className="scroll-mt-[140px] bg-white text-[#082846] text-center py-20 px-8">
+      <section id="nilai" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-6 text-center">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
   </h3>
@@ -309,7 +309,7 @@ useEffect(() => {
     ))}
   </div>
 </section>
-      <section id="sukses" className="scroll-mt-[140px] text-center py-20 px-8">
+      <section id="sukses" className="scroll-mt-[180px] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Cerita Sukses" : "Success Story"}
   </h3>
@@ -329,7 +329,7 @@ useEffect(() => {
     ))}
   </div>
 </section>
-    <section id="testimoni" className="scroll-mt-[140px] bg-white text-[#082846] text-center py-20 px-8">
+    <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
@@ -367,7 +367,7 @@ useEffect(() => {
 </section>
 
 
-<section id="tim" className="scroll-mt-[140px] bg-white text-[#082846] text-center py-20 px-8">
+<section id="tim" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
@@ -429,7 +429,7 @@ useEffect(() => {
     </div>
   </div>
 </section>
-       <section id="kontak" className="scroll-mt-[140px] text-white py-20 px-8 bg-[#082846]">
+       <section id="kontak" className="scroll-mt-[180px] text-white py-20 px-8 bg-[#082846]">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Hubungi Kami" : "Contact Us"}
   </h3>
