@@ -193,7 +193,7 @@ useEffect(() => {
 }, []);
 
   return (
-   <div className="relative min-h-screen bg-[#082846] text-white font-sans scroll-smooth overflow-x-hidden w-full">
+  <div className="relative min-h-screen font-sans text-white scroll-smooth overflow-x-hidden bg-[#082846] w-full">
       <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-md flex justify-between items-center px-6 py-4 backdrop-blur-md">
         <img src="/logo.png" alt="Logo" className="h-[100px] md:h-[140px] object-contain" />
         {/* Desktop Nav */}
