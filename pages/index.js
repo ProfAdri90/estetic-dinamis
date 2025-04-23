@@ -284,20 +284,18 @@ useEffect(() => {
 
   {/* Overlay agar teks lebih terbaca */}
  <div className="flex flex-col items-center justify-center gap-2 mt-4">
-  <div className="relative z-20 flex flex-col items-center">
+  <div className="relative z-[30] flex flex-col items-center">
     <img
       src="/logo.png"
       alt="Estetic Logo"
-      className="h-full w-auto object-contain mx-auto"
+      className="h-36 md:h-44 mb-2 drop-shadow-xl"
     />
-  </div>
-  <p className="max-w-xl text-lg drop-shadow">
+    <p className="max-w-xl text-lg font-medium text-[#082846] drop-shadow-md">
       {lang === "id"
         ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
         : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
     </p>
-</div>
-
+  </div>
 </section>
 
 
