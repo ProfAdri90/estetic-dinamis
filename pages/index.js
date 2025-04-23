@@ -579,42 +579,40 @@ useEffect(() => {
   </div>
 </section>
 
-       <section id="kontak" className="scroll-mt-[180px] text-white py-20 px-8 bg-[#082846]">
-  <h3 className="text-3xl font-bold mb-10 text-center">
-    {lang === "id" ? "Hubungi Kami" : "Contact Us"}
-  </h3>
-
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto text-sm">
-    {/* Kolom Kiri - Info Kontak */}
-    <div className="space-y-4">
-      <p>
-        📞{" "}
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="underline text-[#25D366] hover:text-[#1DA851]">
-          +62 812-1212-1212
-        </a>
-      </p>
-      <p>
-        📧{" "}
-        <a href="mailto:Communicatewith@estetic.co.id" className="underline text-blue-400 hover:text-blue-200">
-          Communicatewith@estetic.co.id
-        </a>
-      </p>
-      <p>
-        📍 Jl. Pelita Raya Blok P No. 5-6, Tangerang
-      </p>
-    </div>
-
-    {/* Kolom Kanan - Form */}
-    <form className="space-y-4">
-      <input type="text" placeholder={lang === "id" ? "Nama" : "Name"} className="w-full px-4 py-2 border rounded" />
-      <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded" />
-      <textarea placeholder={lang === "id" ? "Pesan" : "Message"} rows="5" className="w-full px-4 py-2 border rounded"></textarea>
-      <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold">
-        {lang === "id" ? "Kirim Pesan" : "Send Message"}
-      </button>
-    </form>
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+  {/* Kolom 1: Gambar */}
+  <div>
+    <img src="/assets/hub.png" alt="Office" className="w-full h-auto rounded shadow" />
   </div>
-</section>
+
+  {/* Kolom 2: Info Kontak */}
+  <div className="space-y-4">
+    <div className="flex items-start gap-3">
+      <img src="/assets/phone.png" alt="Phone" className="w-6 h-6 mt-1" />
+      <p>+62 812-1212-1212</p>
+    </div>
+    <div className="flex items-start gap-3">
+      <img src="/assets/email.png" alt="Email" className="w-6 h-6 mt-1" />
+      <p>Communicatewith@estetic.co.id</p>
+    </div>
+    <div className="flex items-start gap-3">
+      <img src="/assets/map.png" alt="Map" className="w-6 h-6 mt-1" />
+      <p>Jl. Pelita Raya Blok P No. 5-6, Tangerang</p>
+    </div>
+  </div>
+
+  {/* Kolom 3: Form Kontak */}
+  <form className="space-y-4">
+    <input type="text" placeholder="Nama" className="w-full px-4 py-2 border rounded" />
+    <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded" />
+    <input type="text" placeholder="Subjek" className="w-full px-4 py-2 border rounded" />
+    <textarea placeholder="Pesan" rows="5" className="w-full px-4 py-2 border rounded"></textarea>
+    <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold">
+      Kirim Pesan
+    </button>
+  </form>
+</div>
+
                             <a
   href="https://wa.me/62813"
   target="_blank"
