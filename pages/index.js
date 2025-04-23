@@ -9,6 +9,14 @@ export default function Home() {
   const switchLang = () => setLang(lang === "id" ? "en" : "id");
   const heroImages = ["/bg1.jpg", "/bg2.jpg", "/bg3.jpg", "/bg4.jpg"];
   const [heroIndex, setHeroIndex] = useState(0);
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setHeroIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+  }, 5000); // ganti gambar setiap 5 detik
+
+  return () => clearInterval(interval);
+}, []);
+
   const scrollTo = (id) => {
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: "smooth" });
