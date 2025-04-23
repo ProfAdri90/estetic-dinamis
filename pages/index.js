@@ -280,7 +280,7 @@ useEffect(() => {
   ))}
 
   {/* Layering Gelap */}
-  <div className="absolute inset-0 bg-black/60 z-10"></div>
+  <div className="absolute inset-0 bg-black/60 z-10"> </div>
 
   {/* Overlay agar teks lebih terbaca */}
  <div className="flex flex-col items-center justify-center gap-2 mt-4">
