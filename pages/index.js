@@ -378,55 +378,7 @@ useEffect(() => {
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
   </p>
 </section>
-   import React from "react";
-
-const mediaPartners = [
-  { name: "kompas", url: "#" },
-  { name: "beritasatu", url: "#" },
-  { name: "tempo", url: "#" },
-  { name: "antaranews", url: "#" },
-  { name: "kontan", url: "#" },
-  { name: "republika", url: "#" },
-  { name: "metrotvnews", url: "#" },
-  { name: "suaramerdeka", url: "#" },
-  { name: "kumparan", url: "#" },
-  { name: "bisnis", url: "#" },
-  { name: "bisnispro", url: "#" },
-  { name: "mediaindo", url: "#" },
-  { name: "tribunnews", url: "https://www.tribunnews.com/tribunners/2016/05/24/terkait-reklamasi-teluk-jakarta-investor-membutuhkan-kepastian-hukum" },
-  { name: "detik", url: "#" },
-  { name: "liputan62", url: "#" }
-];
-
-const PartnerMedia = ({ lang = "id" }) => {
-  return (
-    <section className="scroll-mt-[180px] py-20 px-6 bg-white text-center text-[#082846]">
-      <h3 className="text-3xl font-bold mb-10">
-        {lang === "id" ? "Partner Media" : "Media Partners"}
-      </h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-7xl mx-auto">
-        {mediaPartners.map((media, i) => (
-          <a
-            key={i}
-            href={media.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center"
-          >
-            <img
-              src={`/media-logos/${media.name}.png`}
-              alt={media.name}
-              className="h-10 object-contain hover:scale-110 transition duration-300"
-              onError={(e) => (e.target.src = `/media-logos/${media.name}.jpg`)}
-            />
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-export default PartnerMedia;
+  
 
       <section id="nilai" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-6 text-center">
