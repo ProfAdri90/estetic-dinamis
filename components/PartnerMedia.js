@@ -25,8 +25,8 @@ export default function PartnerMedia({ lang }) {
   return (
     <section id="partner-media" className="py-16 bg-[#082846] text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-10">
-          Partner Media
+        <<h2 className="text-2xl md:text-4xl font-semibold text-center mb-10">
+          {lang === 'en' ? 'Media Partners' : 'Partner Media'}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
           {mediaPartners.map((media, index) => (
