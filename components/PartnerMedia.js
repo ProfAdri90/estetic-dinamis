@@ -9,7 +9,7 @@ export default function PartnerMedia({ lang }) {
     { name: "kontan", url: "https://investasi.kontan.co.id/news/mayora-indah-myor-meluncurkan-produk-cokelat-baru-simak-rekomendasi-sahamnya" },
     { name: "republika", url: "https://news.republika.co.id/berita/obdvhk330/reklamasi-bisa-pulihkan-kualitas-teluk-jakarta-ini-kata-pakar" },
     { name: "metrotvnews", url: "https://www.medcom.id/nasional/metro/GNlJOzPk-gerindra-beri-sinyal-lanjutkan-reklamasi" },
-    { name: "kumparan", url: "#" },
+    { name: "kumparan", url: "https://kumparan.com/kumparanbisnis/hasil-rups-mayora-tebar-dividen-rp-469-miliar-dan-tambah-direksi-1yMNoCBl9Dn/1" },
     { name: "bisnis", url: "https://market.bisnis.com/read/20220622/192/1546513/duta-pertiwi-nusantara-dpns-bagi-dividen-rp15-per-saham-bulan-depan" },
     { name: "bisnispro", url: "https://bisnispro.id/bongkar-pasang-papan-reklame-di-pos-pol-harmoni-dan-lapangan-banteng-jakarta-pusat-ada-apa/" },
     {
