@@ -225,7 +225,7 @@ useEffect(() => {
         observer.unobserve(section);
       }
     },
-    { threshold: 0.6 }
+    { threshold: 0.2 }
   );
 
   observer.observe(section);
