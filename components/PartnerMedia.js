@@ -9,7 +9,6 @@ export default function PartnerMedia({ lang }) {
     { name: "kontan", url: "#" },
     { name: "republika", url: "#" },
     { name: "metrotvnews", url: "#" },
-    { name: "sindonews", url: "#" },
     { name: "kumparan", url: "#" },
     { name: "bisnis", url: "#" },
     { name: "bisnispro", url: "#" },
