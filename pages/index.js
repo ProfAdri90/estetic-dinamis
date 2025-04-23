@@ -579,47 +579,60 @@ useEffect(() => {
   </div>
 </section>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start px-4 py-16 bg-[#d7b940] text-[#082846]">
-  {/* Kolom 1: Gambar */}
-  <div>
-    <img src="/assets/contact/hub.png" alt="Office" className="w-full h-auto rounded-3xl shadow-lg" />
-  </div>
+   <section className="bg-[#d7b940] text-[#082846] py-16 px-4">
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
-  {/* Kolom 2: Judul + Info Kontak */}
-  <div className="space-y-6">
-    <div>
-      <h2 className="text-2xl md:text-3xl font-bold mb-1">Hubungi Kami / Contact Us</h2>
-      <p className="font-handwriting text-[#082846] text-base md:text-lg">
-        helping public figures & brands build trust with bold communication
-      </p>
+      {/* Kolom 1: Gambar */}
+      <div>
+        <img src="/assets/hub.png" alt="Office" className="w-full h-auto rounded-3xl shadow-lg" />
+      </div>
+
+      {/* Kolom 2: Judul + Info Kontak */}
+      <div className="space-y-6">
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold mb-1 text-[#082846]">
+            Hubungi Kami / Contact Us
+          </h2>
+          <p className="text-base md:text-lg text-[#082846] font-[cursive] italic">
+            helping public figures & brands build trust with bold communication
+          </p>
+        </div>
+        <div className="space-y-4 mt-4">
+          <div className="flex items-start gap-3">
+            <img src="/assets/phone.png" alt="Phone" className="w-6 h-6 mt-1 invert-0 filter brightness-0 saturate-100 sepia-100 hue-rotate-[170deg]" />
+            <p>+62 812-1212-1212</p>
+          </div>
+          <div className="flex items-start gap-3">
+            <img src="/assets/email.png" alt="Email" className="w-6 h-6 mt-1 invert-0 filter brightness-0 saturate-100 sepia-100 hue-rotate-[170deg]" />
+            <p>Communicatewith@estetic.co.id</p>
+          </div>
+          <div className="flex items-start gap-3">
+            <img src="/assets/map.png" alt="Map" className="w-6 h-6 mt-1 invert-0 filter brightness-0 saturate-100 sepia-100 hue-rotate-[170deg]" />
+            <p>Jl. Pelita Raya Blok P No. 5-6, Tangerang</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Kolom 3: Form Kontak */}
+      <form className="space-y-4">
+        <input type="text" placeholder="Nama" className="w-full px-4 py-2 border rounded" />
+        <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded" />
+        <input type="text" placeholder="Subjek" className="w-full px-4 py-2 border rounded" />
+        <textarea placeholder="Pesan" rows="5" className="w-full px-4 py-2 border rounded"></textarea>
+        <button type="submit" className="bg-[#082846] text-[#d7b940] px-6 py-2 rounded font-bold">
+          Kirim Pesan
+        </button>
+      </form>
     </div>
-    <div className="space-y-4 mt-4">
-      <div className="flex items-start gap-3">
-        <img src="/assets/contact/phone.png" alt="Phone" className="w-6 h-6 mt-1" />
-        <p>+62 812-1212-1212</p>
-      </div>
-      <div className="flex items-start gap-3">
-        <img src="/assets/contact/email.png" alt="Email" className="w-6 h-6 mt-1" />
-        <p>Communicatewith@estetic.co.id</p>
-      </div>
-      <div className="flex items-start gap-3">
-        <img src="/assets/contact/map.png" alt="Map" className="w-6 h-6 mt-1" />
-        <p>Jl. Pelita Raya Blok P No. 5-6, Tangerang</p>
-      </div>
+
+    {/* Logo Estetic */}
+    <div className="flex justify-center mt-12">
+      <img src="/logo.png" alt="Estetic Logo" className="h-20 w-auto" />
     </div>
   </div>
+</section>
 
-  {/* Kolom 3: Form */}
-  <form className="space-y-4">
-    <input type="text" placeholder="Nama" className="w-full px-4 py-2 border rounded" />
-    <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded" />
-    <input type="text" placeholder="Subjek" className="w-full px-4 py-2 border rounded" />
-    <textarea placeholder="Pesan" rows="5" className="w-full px-4 py-2 border rounded"></textarea>
-    <button type="submit" className="bg-[#082846] text-[#d7b940] px-6 py-2 rounded font-bold">
-      Kirim Pesan
-    </button>
-  </form>
-</div>
 
                             <a
   href="https://wa.me/62813"
