@@ -280,21 +280,22 @@ useEffect(() => {
   ))}
 
   {/* Overlay agar teks lebih terbaca */}
-  <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
-
-  {/* Konten */}
- <div className="relative h-[120px] md:h-[150px] w-auto mx-auto mb-2">
-  <img
-    src="/logo.png"
-    alt="Estetic Logo"
-    className="absolute inset-0 h-full w-auto object-contain mx-auto"
-  />
-  <p className="max-w-xl text-center text-lg font-medium drop-shadow mt-[-10px]">
+ <div className="flex flex-col items-center justify-center gap-2 mt-4">
+  <div className="relative h-[120px] md:h-[150px] w-auto">
+    <img
+      src="/logo.png"
+      alt="Estetic Logo"
+      className="h-full w-auto object-contain mx-auto"
+    />
+  </div>
+  
+  <p className="max-w-xl text-center text-lg font-medium drop-shadow">
     {lang === "id"
       ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
       : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
   </p>
 </div>
+
 </section>
 
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
