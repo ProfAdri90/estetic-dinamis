@@ -471,37 +471,85 @@ useEffect(() => {
     ))}
   </div>
 </section>
-     <section id="layanan" className="scroll-mt-[140px] text-center py-20 px-8">
-  <h3 className="text-3xl font-bold mb-10 text-center">
+     <section id="layanan" className="scroll-mt-[180px] text-center py-20 px-8 bg-white text-[#082846]">
+  <h3 className="text-3xl font-bold mb-12">
     {lang === "id" ? "Layanan Kami" : "Our Services"}
   </h3>
+
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <div>
-      <h4 className="font-bold text-lg mb-2">
-      {lang === "id" ? "Konsultansi" : "Consultancy"}
+    {/* 1. Strategic Communication */}
+    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <h4 className="text-xl font-bold mb-2">
+        {lang === "id" ? "Komunikasi Strategis" : "Strategic Communication"}
       </h4>
-       <ul className="list-disc list-inside text-left pl-4">
-        {services.konsultansi.map((s, i) => <li key={i}>{s}</li>)}
+      <ul className="list-disc list-inside text-sm text-left text-[#333]">
+        <li>{lang === "id" ? "Strategi komunikasi perusahaan" : "Corporate comm strategy"}</li>
+        <li>{lang === "id" ? "Manajemen isu & krisis" : "Issue & crisis management"}</li>
+        <li>{lang === "id" ? "Hubungan dengan pemangku kepentingan" : "Stakeholder engagement"}</li>
       </ul>
     </div>
-    <div>
-      <h4 className="font-bold text-lg mb-2">
-      {lang === "id" ? "Public & Media Relations" : "Public & Media Relations"}
+
+    {/* 2. Media Relations */}
+    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <h4 className="text-xl font-bold mb-2">
+        {lang === "id" ? "Hubungan Media" : "Media Relations"}
       </h4>
-       <ul className="list-disc list-inside text-left pl-4">
-        {services.media.map((s, i) => <li key={i}>{s}</li>)}
+      <ul className="list-disc list-inside text-sm text-left text-[#333]">
+        <li>{lang === "id" ? "Manajemen press release" : "Press release management"}</li>
+        <li>{lang === "id" ? "Media gathering & press tour" : "Media gathering & tour"}</li>
+        <li>{lang === "id" ? "Media visit & public exposure" : "Media visit & public exposure"}</li>
       </ul>
     </div>
-    <div>
-      <h4 className="font-bold text-lg mb-2">
-      {lang === "id" ? "Manajemen Event Khusus" : "Special Event Management"}
+
+    {/* 3. Digital PR */}
+    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <h4 className="text-xl font-bold mb-2">
+        {lang === "id" ? "Digital PR & Konten" : "Digital PR & Content"}</h4>
+      <ul className="list-disc list-inside text-sm text-left text-[#333]">
+        <li>{lang === "id" ? "Manajemen sosial media" : "Social media management"}</li>
+        <li>{lang === "id" ? "Pembuatan konten & kampanye digital" : "Content & digital campaign"}</li>
+        <li>{lang === "id" ? "Pembangunan opini & reputasi online" : "Online reputation building"}</li>
+      </ul>
+    </div>
+
+    {/* 4. Event Management */}
+    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <h4 className="text-xl font-bold mb-2">
+        {lang === "id" ? "Manajemen Acara" : "Event Management"}
       </h4>
-      <ul className="list-disc list-inside text-left pl-4">
-        {services.event.map((s, i) => <li key={i}>{s}</li>)}
+      <ul className="list-disc list-inside text-sm text-left text-[#333]">
+        <li>{lang === "id" ? "Peluncuran produk" : "Product launching"}</li>
+        <li>{lang === "id" ? "Pameran & workshop" : "Exhibition & workshop"}</li>
+        <li>{lang === "id" ? "RUPS & konferensi" : "AGM & conferences"}</li>
+      </ul>
+    </div>
+
+    {/* 5. Government & Investor Relations */}
+    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <h4 className="text-xl font-bold mb-2">
+        {lang === "id" ? "Relasi Pemerintah & Investor" : "Gov & Investor Relations"}
+      </h4>
+      <ul className="list-disc list-inside text-sm text-left text-[#333]">
+        <li>{lang === "id" ? "Hubungan pemerintah" : "Government relations"}</li>
+        <li>{lang === "id" ? "Hubungan investor" : "Investor relations"}</li>
+        <li>{lang === "id" ? "Public affairs" : "Public affairs"}</li>
+      </ul>
+    </div>
+
+    {/* 6. Crisis Communication */}
+    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <h4 className="text-xl font-bold mb-2">
+        {lang === "id" ? "Krisis & Isu" : "Crisis & Issues"}
+      </h4>
+      <ul className="list-disc list-inside text-sm text-left text-[#333]">
+        <li>{lang === "id" ? "Perencanaan komunikasi krisis" : "Crisis communication planning"}</li>
+        <li>{lang === "id" ? "Manajemen reputasi & mitigasi" : "Reputation mitigation"}</li>
+        <li>{lang === "id" ? "Penanganan media & statement" : "Media handling & statement"}</li>
       </ul>
     </div>
   </div>
 </section>
+
        <section id="kontak" className="scroll-mt-[180px] text-white py-20 px-8 bg-[#082846]">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Hubungi Kami" : "Contact Us"}
