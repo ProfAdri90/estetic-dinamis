@@ -471,80 +471,82 @@ useEffect(() => {
     ))}
   </div>
 </section>
-     <section id="layanan" className="scroll-mt-[180px] text-center py-20 px-8 bg-white text-[#082846]">
-  <h3 className="text-3xl font-bold mb-12">
+    <section id="layanan" className="scroll-mt-[140px] text-center py-20 px-8 bg-white text-[#082846]">
+  <h3 className="text-3xl font-bold mb-10">
     {lang === "id" ? "Layanan Kami" : "Our Services"}
   </h3>
-
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
     {/* 1. Strategic Communication */}
-    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+    <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
+      <img src="/services/strategic.png" alt="Strategic" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
         {lang === "id" ? "Komunikasi Strategis" : "Strategic Communication"}
       </h4>
-      <ul className="list-disc list-inside text-sm text-left text-[#333]">
-        <li>{lang === "id" ? "Strategi komunikasi perusahaan" : "Corporate comm strategy"}</li>
-        <li>{lang === "id" ? "Manajemen isu & krisis" : "Issue & crisis management"}</li>
-        <li>{lang === "id" ? "Hubungan dengan pemangku kepentingan" : "Stakeholder engagement"}</li>
+      <ul className="list-disc pl-5 text-sm space-y-1">
+        <li>{lang === "id" ? "Perencanaan PR & Komunikasi" : "PR & Communication Planning"}</li>
+        <li>{lang === "id" ? "Pembangunan Narasi Korporat" : "Corporate Narrative Building"}</li>
+        <li>{lang === "id" ? "Manajemen Krisis" : "Crisis Management"}</li>
+        <li>{lang === "id" ? "Pemetaan Pemangku Kepentingan" : "Stakeholder Mapping"}</li>
+        <li>{lang === "id" ? "Hubungan Pemerintah & Urusan Publik" : "Public Affairs & Government Relations"}</li>
       </ul>
     </div>
 
-    {/* 2. Media Relations */}
-    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+    {/* 2. Media Relations & Reputation */}
+    <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
+      <img src="/services/media.png" alt="Media" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
-        {lang === "id" ? "Hubungan Media" : "Media Relations"}
+        {lang === "id" ? "Media & Reputasi" : "Media Relations & Reputation"}
       </h4>
-      <ul className="list-disc list-inside text-sm text-left text-[#333]">
-        <li>{lang === "id" ? "Manajemen press release" : "Press release management"}</li>
-        <li>{lang === "id" ? "Media gathering & press tour" : "Media gathering & tour"}</li>
-        <li>{lang === "id" ? "Media visit & public exposure" : "Media visit & public exposure"}</li>
+      <ul className="list-disc pl-5 text-sm space-y-1">
+        <li>{lang === "id" ? "Penempatan Media (earned/paid)" : "Media Placement (earned/paid)"}</li>
+        <li>{lang === "id" ? "Pelatihan Media" : "Media Training"}</li>
+        <li>{lang === "id" ? "Konferensi/Gathering Pers" : "Press Conference / Gathering"}</li>
+        <li>{lang === "id" ? "Monitoring Media" : "Media Monitoring"}</li>
+        <li>{lang === "id" ? "Penanganan Framing & Isu" : "Journalistic Framing & Issue Handling"}</li>
       </ul>
     </div>
 
-    {/* 3. Digital PR */}
-    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+    {/* 3. Digital & Content PR */}
+    <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
+      <img src="/services/digital.png" alt="Digital" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
-        {lang === "id" ? "Digital PR & Konten" : "Digital PR & Content"}</h4>
-      <ul className="list-disc list-inside text-sm text-left text-[#333]">
-        <li>{lang === "id" ? "Manajemen sosial media" : "Social media management"}</li>
-        <li>{lang === "id" ? "Pembuatan konten & kampanye digital" : "Content & digital campaign"}</li>
-        <li>{lang === "id" ? "Pembangunan opini & reputasi online" : "Online reputation building"}</li>
-      </ul>
-    </div>
-
-    {/* 4. Event Management */}
-    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
-      <h4 className="text-xl font-bold mb-2">
-        {lang === "id" ? "Manajemen Acara" : "Event Management"}
+        {lang === "id" ? "Digital & Konten PR" : "Digital & Content PR"}
       </h4>
-      <ul className="list-disc list-inside text-sm text-left text-[#333]">
-        <li>{lang === "id" ? "Peluncuran produk" : "Product launching"}</li>
-        <li>{lang === "id" ? "Pameran & workshop" : "Exhibition & workshop"}</li>
-        <li>{lang === "id" ? "RUPS & konferensi" : "AGM & conferences"}</li>
+      <ul className="list-disc pl-5 text-sm space-y-1">
+        <li>{lang === "id" ? "PR Digital & SEO-PR" : "Digital PR & SEO-PR"}</li>
+        <li>{lang === "id" ? "Manajemen Media Sosial" : "Social Media Management"}</li>
+        <li>{lang === "id" ? "Strategi Influencer/KOL" : "Influencer / KOL Strategy"}</li>
+        <li>{lang === "id" ? "Produksi Multimedia" : "Multimedia Production (video, infographics, etc)"}</li>
       </ul>
     </div>
 
-    {/* 5. Government & Investor Relations */}
-    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+    {/* 4. Event & Activation */}
+    <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
+      <img src="/services/event.png" alt="Event" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
-        {lang === "id" ? "Relasi Pemerintah & Investor" : "Gov & Investor Relations"}
+        {lang === "id" ? "Event & Aktivasi" : "Event & Activation"}
       </h4>
-      <ul className="list-disc list-inside text-sm text-left text-[#333]">
-        <li>{lang === "id" ? "Hubungan pemerintah" : "Government relations"}</li>
-        <li>{lang === "id" ? "Hubungan investor" : "Investor relations"}</li>
-        <li>{lang === "id" ? "Public affairs" : "Public affairs"}</li>
+      <ul className="list-disc pl-5 text-sm space-y-1">
+        <li>{lang === "id" ? "Peluncuran Produk/Jasa" : "Launching Product/Service"}</li>
+        <li>{lang === "id" ? "Brand Activation & Roadshow" : "Brand Activation & Roadshow"}</li>
+        <li>{lang === "id" ? "Townhall / RUPS" : "Townhall / RUPS"}</li>
+        <li>{lang === "id" ? "Expo, Seminar, Talkshow" : "Expo, Seminar, Talkshow"}</li>
       </ul>
     </div>
 
-    {/* 6. Crisis Communication */}
-    <div className="bg-[#f9f9f9] rounded-xl shadow-md p-6 hover:shadow-lg transition">
+    {/* 5. Investor & Internal Communication */}
+    <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
+      <img src="/services/investor.png" alt="Investor" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
-        {lang === "id" ? "Krisis & Isu" : "Crisis & Issues"}
+        {lang === "id" ? "Investor & Komunikasi Internal" : "Investor & Internal Communications"}
       </h4>
-      <ul className="list-disc list-inside text-sm text-left text-[#333]">
-        <li>{lang === "id" ? "Perencanaan komunikasi krisis" : "Crisis communication planning"}</li>
-        <li>{lang === "id" ? "Manajemen reputasi & mitigasi" : "Reputation mitigation"}</li>
-        <li>{lang === "id" ? "Penanganan media & statement" : "Media handling & statement"}</li>
+      <ul className="list-disc pl-5 text-sm space-y-1">
+        <li>{lang === "id" ? "Materi Hubungan Investor" : "Investor Relations Decks"}</li>
+        <li>{lang === "id" ? "Newsletter Internal" : "Internal Newsletter"}</li>
+        <li>{lang === "id" ? "Laporan ESG & Keberlanjutan" : "ESG & Sustainability Reports"}</li>
+        <li>{lang === "id" ? "Employer Branding" : "Employer Branding"}</li>
+        <li>{lang === "id" ? "Strategi Komunikasi IPO" : "Development of IPO Communication Strategies"}</li>
+        <li>{lang === "id" ? "Manajemen Komunikasi Keuangan & IPO" : "Management of IPO and Financial Communications"}</li>
       </ul>
     </div>
   </div>
