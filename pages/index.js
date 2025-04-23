@@ -283,7 +283,7 @@ useEffect(() => {
   <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
 
   {/* Konten (logo + teks) HARUS z-20 */}
- <div className="relative h-28 md:h-44 w-auto mx-auto mb-2">
+ <div className="relative h-28 md:h-44 z-30 w-auto mx-auto mb-2">
   <img
     src="/logo.png"
     alt="Estetic Logo"
