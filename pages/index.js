@@ -291,12 +291,11 @@ useEffect(() => {
       className="h-full w-auto object-contain mx-auto"
     />
   </div>
-  
-  <p className="max-w-xl text-center text-lg font-medium drop-shadow">
-    {lang === "id"
-      ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
-      : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
-  </p>
+  <p className="max-w-xl text-lg drop-shadow">
+      {lang === "id"
+        ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
+        : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
+    </p>
 </div>
 
 </section>
