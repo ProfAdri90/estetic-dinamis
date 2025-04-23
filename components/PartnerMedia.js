@@ -12,36 +12,40 @@ export default function PartnerMedia({ lang }) {
     { name: "kumparan", url: "#" },
     { name: "bisnis", url: "#" },
     { name: "bisnispro", url: "#" },
-    { name: "tribunnews", url: "https://www.tribunnews.com/tribunners/2016/05/24/terkait-reklamasi-teluk-jakarta-investor-membutuhkan-kepastian-hukum" },
+    {
+      name: "tribunnews",
+      url: "https://www.tribunnews.com/tribunners/2016/05/24/terkait-reklamasi-teluk-jakarta-investor-membutuhkan-kepastian-hukum",
+    },
     { name: "mediaindo", url: "#" },
     { name: "suara", url: "#" },
     { name: "detik", url: "#" },
-    { name: "liputan62", url: "#" }
+    { name: "liputan62", url: "#" },
   ];
 
   return (
-    <section className="scroll-mt-[140px] py-16 px-4 bg-white text-[#082846] text-center">
-      <h3 className="text-2xl font-bold mb-6">
-        {lang === "id" ? "Partner Media" : "Media Partners"}
-      </h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-center items-center max-w-6xl mx-auto">
-        {mediaPartners.map((media) => (
-          <a
-            key={media.name}
-            href={media.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-105 transition"
-          >
-            <img
-              src={`/media-logos/${media.name}.png`}
-              alt={media.name}
-              className="h-10 object-contain mx-auto"
-            />
-          </a>
-        ))}
+    <section id="partner-media" className="py-16 bg-[#082846] text-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center mb-10">
+          Partner Media
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+          {mediaPartners.map((media, index) => (
+            <a
+              key={index}
+              href={media.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white rounded-2xl p-4 flex items-center justify-center shadow-md hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src={`/media-logos/${media.name}.png`}
+                alt={media.name}
+                className="max-h-16 w-auto object-contain"
+              />
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
