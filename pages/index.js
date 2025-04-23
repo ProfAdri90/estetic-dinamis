@@ -171,6 +171,14 @@ const prevTesti = () => {
   jurnalis: 0,
   rilis: 0
 });
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentTesti((prev) => (prev + 1) % testimonials.length);
+  }, 5000); // Ganti testimoni setiap 5 detik
+
+  return () => clearInterval(interval);
+}, [testimonials.length]);
+  
 const [showCounter, setShowCounter] = useState(false);
 
 useEffect(() => {
@@ -429,7 +437,6 @@ useEffect(() => {
       <p className="text-xs text-gray-600">{testimonials[currentTesti].title}</p>
     </motion.div>
 
-    {/* Tombol navigasi */}
     <div className="flex justify-center gap-4 mt-6">
       <button
         onClick={prevTesti}
@@ -446,6 +453,7 @@ useEffect(() => {
     </div>
   </div>
 </section>
+
 
 
 <section id="tim" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
