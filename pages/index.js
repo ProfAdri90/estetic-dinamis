@@ -280,15 +280,18 @@ useEffect(() => {
   ))}
 
   {/* Overlay transparan di atas background */}
-  <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+  <div className="absolute inset-0 bg-black bg-opacity-35 z-10" />
 
   {/* Konten (logo + teks) HARUS z-20 */}
   <div className="relative z-20 flex flex-col items-center">
-    <img
-      src="/logo.png"
-      alt="Estetic Logo"
-      className="h-36 md:h-44 mb-2 drop-shadow-xl"
-    />
+   <img
+  src="/logo.png"
+  alt="Estetic Logo"
+  className="h-36 md:h-44 mb-2"
+  style={{
+    filter: "drop-shadow(0 0 20px rgba(215, 185, 64, 0.8)) drop-shadow(0 0 40px rgba(215, 185, 64, 0.5))",
+  }}
+/>
     <p className="text-lg md:text-xl max-w-2xl drop-shadow-lg px-4">
       {lang === "id"
         ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
