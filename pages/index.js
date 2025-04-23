@@ -220,19 +220,27 @@ useEffect(() => {
 
   const observer = new IntersectionObserver(
     ([entry]) => {
-      if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+      if (entry.isIntersecting) {
         setShowCounter(true);
         observer.unobserve(section);
       }
     },
-    { threshold: 0.2 }
+    {
+      rootMargin: "-100px 0px", // offset atas dikurangi 100px
+      threshold: 0.1, // cukup 10% terlihat
+    }
   );
 
   observer.observe(section);
 
   return () => observer.disconnect();
 }, []);
-
+  // Fallback trigger untuk mobile (jaga-jaga observer ga ke-trigger)
+useEffect(() => {
+  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+    setTimeout(() => setShowCounter(true), 2000); // nyala otomatis setelah 2 detik
+  }
+}, []);
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
     
