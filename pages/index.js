@@ -279,8 +279,24 @@ useEffect(() => {
     />
   ))}
 
-  {/* Overlay warna gold transparan */}
-  <div className="absolute inset-0 bg-[#d7b940]/60 z-10" />
+  {/* Layering Gelap */}
+  <div className="absolute inset-0 bg-black/45 z-10"></div>
+
+  {/* Konten Utama - Logo & Teks */}
+  <div className="relative z-20 flex flex-col items-center">
+    <img
+      src="/logo.png"
+      alt="Estetic Logo"
+      className="h-36 md:h-44 mb-2 drop-shadow-xl"
+    />
+    <p className="max-w-xl text-lg drop-shadow text-[#d7b940] font-medium">
+      {lang === "id"
+        ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
+        : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
+    </p>
+  </div>
+</section>
+
 
   {/* Overlay agar teks lebih terbaca */}
  <div className="flex flex-col items-center justify-center gap-2 mt-4">
