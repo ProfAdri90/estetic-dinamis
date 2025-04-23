@@ -265,40 +265,38 @@ useEffect(() => {
   )}
 </AnimatePresence>
 
-<section className="relative h-screen flex justify-center items-center text-white text-center px-4">
-  {/* Background Image */}
+<section className="relative h-screen flex flex-col justify-center items-center text-white text-center px-4 overflow-hidden">
+  {/* Background image loop */}
   {heroImages.map((img, idx) => (
     <motion.img
       key={img}
       src={img}
       alt=""
-      className="absolute inset-0 w-full h-full object-cover"
+      className="absolute inset-0 w-full h-full object-cover z-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: idx === heroIndex ? 1 : 0 }}
       transition={{ duration: 1 }}
     />
   ))}
 
-  {/* Layering Gelap */}
-  <div className="absolute inset-0 bg-[#d7b940]/30 z-10"></div>
+  {/* Overlay transparan di atas background */}
+  <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
 
-  {/* Overlay agar teks lebih terbaca */}
- <div className="flex flex-col items-center justify-center gap-2 mt-4">
-  <div className="relative z-30 flex flex-col items-center">
+  {/* Konten (logo + teks) HARUS z-20 */}
+  <div className="relative z-20 flex flex-col items-center">
     <img
       src="/logo.png"
       alt="Estetic Logo"
-      className="h-full w-auto object-contain mx-auto"
+      className="h-36 md:h-44 mb-2 drop-shadow-xl"
     />
-  </div>
-  <p className="max-w-xl text-lg font-medium text-[#ffffff] drop-shadow-md">
+    <p className="text-lg md:text-xl max-w-2xl drop-shadow-lg px-4">
       {lang === "id"
         ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
         : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
     </p>
-</div>
-
+  </div>
 </section>
+
 
 
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
