@@ -478,7 +478,7 @@ useEffect(() => {
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
     {/* 1. Strategic Communication */}
     <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
-      <img src="/services/strategic.png" alt="Strategic" className="h-16 mb-4" />
+      <img src="/service-icons/strategic.png" alt="Strategic" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
         {lang === "id" ? "Komunikasi Strategis" : "Strategic Communication"}
       </h4>
@@ -493,7 +493,7 @@ useEffect(() => {
 
     {/* 2. Media Relations & Reputation */}
     <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
-      <img src="/services/media.png" alt="Media" className="h-16 mb-4" />
+      <img src="/service-icons/media.png" alt="Media" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
         {lang === "id" ? "Media & Reputasi" : "Media Relations & Reputation"}
       </h4>
@@ -508,7 +508,7 @@ useEffect(() => {
 
     {/* 3. Digital & Content PR */}
     <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
-      <img src="/services/digital.png" alt="Digital" className="h-16 mb-4" />
+      <img src="/service-icons/digital.png" alt="Digital" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
         {lang === "id" ? "Digital & Konten PR" : "Digital & Content PR"}
       </h4>
@@ -522,7 +522,7 @@ useEffect(() => {
 
     {/* 4. Event & Activation */}
     <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
-      <img src="/services/event.png" alt="Event" className="h-16 mb-4" />
+      <img src="/service-icons/event.png" alt="Event" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
         {lang === "id" ? "Event & Aktivasi" : "Event & Activation"}
       </h4>
@@ -536,7 +536,7 @@ useEffect(() => {
 
     {/* 5. Investor & Internal Communication */}
     <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
-      <img src="/services/investor.png" alt="Investor" className="h-16 mb-4" />
+      <img src="/service-icons/investor.png" alt="Investor" className="h-16 mb-4" />
       <h4 className="text-xl font-bold mb-2">
         {lang === "id" ? "Investor & Komunikasi Internal" : "Investor & Internal Communications"}
       </h4>
