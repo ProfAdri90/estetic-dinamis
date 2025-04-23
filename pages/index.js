@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PartnerMedia from "@/components/PartnerMedia";
 /*import { useState } from "react";*/
 /*import { motion } from "framer-motion";*/
 import { motion, AnimatePresence } from "framer-motion";
@@ -376,6 +377,8 @@ useEffect(() => {
     {lang === "id"
       ? "Kini Estetic berada dalam fase transformasi generasi kedua, menggabungkan pengalaman konvensional dengan pendekatan komunikasi modern berbasis data dan teknologi."
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
+    {/* PARTNER MEDIA */}
+  <PartnerMedia lang={lang} />
   </p>
 </section>
   
