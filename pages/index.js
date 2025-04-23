@@ -279,8 +279,8 @@ useEffect(() => {
     />
   ))}
 
-  {/* Layering Gelap */}
-  <div className="absolute inset-0 bg-black/60 z-10"></div>
+  {/* Overlay warna gold transparan */}
+  <div className="absolute inset-0 bg-[#d7b940]/60 z-10" />
 
   {/* Overlay agar teks lebih terbaca */}
  <div className="flex flex-col items-center justify-center gap-2 mt-4">
@@ -291,12 +291,12 @@ useEffect(() => {
       className="h-full w-auto object-contain mx-auto"
     />
   </div>
-  <p className="max-w-xl text-lg drop-shadow">
+   <p className="max-w-xl text-lg drop-shadow text-[#082846] font-medium">
       {lang === "id"
         ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
         : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
     </p>
-</div>
+  </div>
 
 </section>
 
