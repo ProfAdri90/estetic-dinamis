@@ -164,11 +164,13 @@ const prevTesti = () => {
 });
 
 useEffect(() => {
+  if (!showCounter) return;
+
   const targets = {
     client: 45,
     kegiatan: 500,
     jurnalis: 500,
-    rilis: 2000
+    rilis: 2000,
   };
 
   const interval = setInterval(() => {
@@ -178,7 +180,7 @@ useEffect(() => {
 
       for (let key in targets) {
         if (next[key] < targets[key]) {
-          next[key] += Math.ceil(targets[key] / 80); // nambah cepat
+          next[key] += Math.ceil(targets[key] / 80);
           if (next[key] > targets[key]) next[key] = targets[key];
           updated = true;
         }
@@ -187,13 +189,15 @@ useEffect(() => {
       if (!updated) clearInterval(interval);
       return next;
     });
-  }, 30); // tiap 30ms
+  }, 30);
 
   return () => clearInterval(interval);
-}, []);
+}, [showCounter]);
+
 const heroImages = ["/bg1.jpg", "/bg2.jpg", "/bg3.jpg", "/bg4.jpg"];
 const [heroIndex, setHeroIndex] = useState(0);
 
+const [showCounter, setShowCounter] = useState(false);
 useEffect(() => {
   const section = document.getElementById("tentang");
 
