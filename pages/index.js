@@ -284,12 +284,12 @@ useEffect(() => {
 
   {/* Konten (logo + teks) HARUS z-20 */}
   <div className="relative z-20 flex flex-col items-center">
-   <img
+  <img
   src="/logo.png"
   alt="Estetic Logo"
   className="h-36 md:h-44 mb-2"
   style={{
-    filter: "drop-shadow(0 0 20px rgba(215, 185, 64, 0.8)) drop-shadow(0 0 40px rgba(215, 185, 64, 0.5))",
+    filter: "drop-shadow(0 0 10px rgba(215, 185, 64, 0.4)) drop-shadow(0 0 20px rgba(215, 185, 64, 0.3))",
   }}
 />
     <p className="text-lg md:text-xl max-w-2xl drop-shadow-lg px-4">
