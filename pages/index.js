@@ -279,6 +279,9 @@ useEffect(() => {
     />
   ))}
 
+{/* Layer gelap biar teks kebaca */}
+  <div className="absolute inset-0 bg-black/60 z-10"></div>
+
   {/* Overlay agar teks lebih terbaca */}
  <div className="flex flex-col items-center justify-center gap-2 mt-4">
   <div className="relative h-[120px] md:h-[150px] w-auto">
