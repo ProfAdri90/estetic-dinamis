@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Home() {
   const [lang, setLang] = useState("id");
   const switchLang = () => setLang(lang === "id" ? "en" : "id");
-
+  const heroImages = ["/bg1.jpg", "/bg2.jpg", "/bg3.jpg", "/bg4.jpg"];
+  const [heroIndex, setHeroIndex] = useState(0);
   const scrollTo = (id) => {
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: "smooth" });
@@ -214,7 +215,6 @@ useEffect(() => {
 
   return () => observer.disconnect();
 }, []);
-
 
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
