@@ -2,24 +2,24 @@ import React from "react";
 
 export default function PartnerMedia({ lang }) {
   const mediaPartners = [
-    { name: "kompas", url: "#" },
-    { name: "beritasatu", url: "#" },
-    { name: "tempo", url: "#" },
-    { name: "antaranews", url: "#" },
-    { name: "kontan", url: "#" },
-    { name: "republika", url: "#" },
-    { name: "metrotvnews", url: "#" },
+    { name: "kompas", url: "https://www.kompas.tv/nasional/201190/dibatalkan-sepihak-pemenang-tender-baju-dinas-dprd-kota-tangerang-akan-ajukan-gugatan" },
+    { name: "beritasatu", url: "https://www.beritasatu.com/news/420005/reklamasi-pantai-utara-jakarta-untuk-kepentingan-warga" },
+    { name: "tempo", url: "https://www.tempo.co/arsip/reklamasi-teluk-jakarta-ini-saran-pakar-lingkungan-untuk-anies-909033" },
+    { name: "antaranews", url: "https://www.antaranews.com/berita/2772345/pembangunan-apartemen-the-maj-residences-bekasi-tetap-berjalan" },
+    { name: "kontan", url: "https://investasi.kontan.co.id/news/mayora-indah-myor-meluncurkan-produk-cokelat-baru-simak-rekomendasi-sahamnya" },
+    { name: "republika", url: "https://news.republika.co.id/berita/obdvhk330/reklamasi-bisa-pulihkan-kualitas-teluk-jakarta-ini-kata-pakar" },
+    { name: "metrotvnews", url: "https://www.medcom.id/nasional/metro/GNlJOzPk-gerindra-beri-sinyal-lanjutkan-reklamasi" },
     { name: "kumparan", url: "#" },
-    { name: "bisnis", url: "#" },
-    { name: "bisnispro", url: "#" },
+    { name: "bisnis", url: "https://market.bisnis.com/read/20220622/192/1546513/duta-pertiwi-nusantara-dpns-bagi-dividen-rp15-per-saham-bulan-depan" },
+    { name: "bisnispro", url: "https://bisnispro.id/bongkar-pasang-papan-reklame-di-pos-pol-harmoni-dan-lapangan-banteng-jakarta-pusat-ada-apa/" },
     {
       name: "tribunnews",
       url: "https://www.tribunnews.com/tribunners/2016/05/24/terkait-reklamasi-teluk-jakarta-investor-membutuhkan-kepastian-hukum",
     },
-    { name: "mediaindo", url: "#" },
-    { name: "suara", url: "#" },
-    { name: "detik", url: "#" },
-    { name: "liputan62", url: "#" },
+    { name: "mediaindo", url: "https://epaper.mediaindonesia.com/detail/penggunaan-air-tanah-dalam-tenggelamkan-jakarta" },
+    { name: "suara", url: "https://www.medcom.id/nasional/metro/GNlJOzPk-gerindra-beri-sinyal-lanjutkan-reklamasi" },
+    { name: "detik", url: "https://food.detik.com/berita-boga/d-4847333/kasus-keracunan-makanan-di-jakarta-pihak-resto-dan-mal-beri-klarifikasi" },
+    { name: "liputan62", url: "https://www.liputan6.com/bisnis/read/4168749/the-maj-residences-hunian-dengan-filosofi-jepang-di-bekasi-barat" },
   ];
 
   return (
