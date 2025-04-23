@@ -162,6 +162,7 @@ const prevTesti = () => {
   jurnalis: 0,
   rilis: 0
 });
+const [showCounter, setShowCounter] = useState(false);
 
 useEffect(() => {
   if (!showCounter) return;
@@ -194,32 +195,26 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, [showCounter]);
 
-const heroImages = ["/bg1.jpg", "/bg2.jpg", "/bg3.jpg", "/bg4.jpg"];
-const [heroIndex, setHeroIndex] = useState(0);
-
-const [showCounter, setShowCounter] = useState(false);
+// Observer untuk aktifin showCounter
 useEffect(() => {
   const section = document.getElementById("tentang");
-
   if (!section) return;
 
   const observer = new IntersectionObserver(
     ([entry]) => {
-      // Ini pastikan dia scroll beneran ke bagian "tentang"
       if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
         setShowCounter(true);
-        observer.unobserve(section); // supaya cuma sekali jalan
+        observer.unobserve(section);
       }
     },
-    {
-      threshold: 0.6, // lebih dari 60% masuk viewport baru trigger
-    }
+    { threshold: 0.6 }
   );
 
   observer.observe(section);
 
-  return () => observer.disconnect(); // cleanup
+  return () => observer.disconnect();
 }, []);
+
 
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
