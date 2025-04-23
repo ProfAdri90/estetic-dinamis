@@ -206,7 +206,7 @@ useEffect(() => {
     
     {/* STICKY HEADER */}
     <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-md flex justify-between items-center px-6 py-4">
-  <img src="/logo.png" alt="Logo" className="h-[80px] object-contain" />
+  <img src="/logo.png" alt="Logo" className="h-16 md:h-20 lg:h-24 object-contain"/>
 
   {/* Desktop Menu */}
   <nav className="hidden md:flex gap-4 text-white font-semibold drop-shadow">
@@ -283,11 +283,11 @@ useEffect(() => {
   <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
 
   {/* Konten */}
- <div className="flex flex-col items-center justify-center space-y-0 leading-none">
+ <div className="relative h-[120px] md:h-[150px] w-auto mx-auto mb-2">
   <img
     src="/logo.png"
     alt="Estetic Logo"
-    className="h-[220px] md:h-[280px] object-contain drop-shadow-lg"
+    className="absolute inset-0 h-full w-auto object-contain mx-auto"
   />
   <p className="max-w-xl text-center text-lg font-medium drop-shadow mt-[-10px]">
     {lang === "id"
