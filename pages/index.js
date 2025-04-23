@@ -206,7 +206,7 @@ useEffect(() => {
     
     {/* STICKY HEADER */}
     <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-[#082846] shadow-md flex justify-between items-center px-6 py-4">
-  <img src="/logo.png" alt="Logo" className="h-16 md:h-20 lg:h-24 object-contain"/>
+  <img src="/logo.png" alt="Logo" className="h-[60px] md:h-[90px] object-contain"/>
 
   {/* Desktop Menu */}
   <nav className="hidden md:flex gap-4 text-white font-semibold drop-shadow">
