@@ -583,21 +583,18 @@ useEffect(() => {
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
 
     {/* Kolom 1: Gambar Estetik Full Height */}
-    <div className="h-full">
-      <img src="/assets/hub.png" alt="Ilustrasi" className="w-full h-full " />
-    </div>
+   <div className="space-y-4">
+  <h2 className="text-3xl font-bold text-[#082846]">
+    {lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}
+  </h2>
+  <img src="/assets/hub.png" alt="Office" className="w-full h-auto rounded-3xl shadow-lg object-cover" />
+</div>
 
     {/* Kolom 2: Info Kontak */}
-    <div className="space-y-8">
-      <div>
-        <h2 className="text-3xl font-bold mb-2">{lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}</h2>
-  <p
-  className="text-2xl font-bold italic drop-shadow-md"
-  style={{ fontFamily: '"Dancing Script", cursive' }}
->
+   
+ <p className="text-xl md:text-2xl font-extrabold text-[#d7b940] drop-shadow-md leading-snug">
   Helping brands tell stories that people believe & remember, with an aesthetic way
 </p>
-
 
       </div>
       <div className="space-y-6 text-base">
