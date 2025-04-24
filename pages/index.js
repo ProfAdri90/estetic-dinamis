@@ -459,23 +459,32 @@ useEffect(() => {
     ))}
   </div>
 </section>
-      <section id="sukses" className="scroll-mt-[180px] text-center py-20 px-8">
+      <section id="sukses" className="scroll-mt-[180px] text-center py-20 px-8 bg-white text-[#082846]">
   <h3 className="text-3xl font-bold mb-10 text-center">
-    {lang === "id" ? "Cerita Sukses" : "Success Story"}
+    {lang === "id" ? "Cerita Sukses" : "Success Stories"}
   </h3>
-  <div className="flex flex-col gap-6 max-w-3xl mx-auto">
+
+  <div className="flex flex-col gap-10 max-w-5xl mx-auto">
     {successStory.map((item, index) => (
-      <motion.div
+      <div
         key={index}
-        className="border-l-4 border-[#d7b940] pl-4 relative"
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ delay: index * 0.1 }}
+        className={`flex flex-col md:flex-row items-center gap-6 ${
+          index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
       >
-        <div className="absolute left-[-12px] top-1 w-4 h-4 bg-[#d7b940] rounded-full"></div>
-        <p className="text-sm font-bold mb-1">{item.year}</p>
-        <p>{item.text}</p>
-      </motion.div>
+        {/* Titik tahun */}
+        <div className="flex-shrink-0 text-[#d7b940] text-3xl font-bold">
+          {item.year}
+        </div>
+
+        {/* Garis penghubung */}
+        <div className="hidden md:block w-10 h-1 bg-[#d7b940] rounded" />
+
+        {/* Teks cerita */}
+        <div className="flex-1 bg-[#f9f9f9] p-4 rounded-xl shadow-md text-left">
+          <p>{item.text}</p>
+        </div>
+      </div>
     ))}
   </div>
 </section>
