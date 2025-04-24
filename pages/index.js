@@ -579,60 +579,61 @@ useEffect(() => {
   </div>
 </section>
 
- <section id="kontak" className="bg-white text-[#082846] py-20 px-4">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+ <section className="bg-white text-[#082846] py-20 px-4" id="kontak">
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
 
-    {/* Kolom 1: Gambar Estetik Full Height */}
-   <div className="space-y-4">
-  <h2 className="text-3xl font-bold text-[#082846]">
-    {lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}
-  </h2>
-  <img src="/assets/hub.png" alt="Office" className="w-full h-auto rounded-3xl shadow-lg object-cover" />
-</div>
+      {/* Kolom 1: Gambar Estetik + Judul */}
+      <div className="space-y-4">
+        <h2 className="text-3xl font-bold text-[#082846]">
+          {lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}
+        </h2>
+        <img src="/assets/hub.png" alt="Office" className="w-full h-auto rounded-3xl shadow-lg object-cover" />
+      </div>
 
-    {/* Kolom 2: Info Kontak */}
-   
- <p className="text-xl md:text-2xl font-extrabold text-[#d7b940] drop-shadow-md leading-snug">
-  Helping brands tell stories that people believe & remember, with an aesthetic way
-</p>
-
-      </div>
-      <div className="space-y-6 text-base">
-      <div className="flex items-start gap-4">
-        <img src="/assets/phone.png" alt="Phone" className="w-6 h-6 mt-1" />
-        <p>+62 812-1212-1212</p>
-      </div>
-      <div className="flex items-start gap-4">
-        <img src="/assets/email.png" alt="Email" className="w-6 h-6 mt-1" />
-        <p>Communicatewith@estetic.co.id</p>
-      </div>
-      <div className="flex items-start gap-4">
-        <img src="/assets/map.png" alt="Map" className="w-6 h-6 mt-1" />
-        <p>Jl. Pelita Raya Blok P No. 5-6, Tangerang</p>
+      {/* Kolom 2: Info Kontak + Tagline */}
+      <div className="space-y-6">
+        <p className="text-xl md:text-2xl font-extrabold text-[#d7b940] drop-shadow-md leading-snug">
+          Helping brands tell stories that people believe & remember, with an aesthetic way
+        </p>
+        <div className="space-y-6 text-base">
+          <div className="flex items-start gap-4">
+            <img src="/assets/phone.png" alt="Phone" className="w-6 h-6 mt-1" />
+            <p>+62 812-1212-1212</p>
+          </div>
+          <div className="flex items-start gap-4">
+            <img src="/assets/email.png" alt="Email" className="w-6 h-6 mt-1" />
+            <p>Communicatewith@estetic.co.id</p>
+          </div>
+          <div className="flex items-start gap-4">
+            <img src="/assets/map.png" alt="Map" className="w-6 h-6 mt-1" />
+            <p>Jl. Pelita Raya Blok P No. 5-6, Tangerang</p>
+          </div>
         </div>
       </div>
+
+      {/* Kolom 3: Form Kontak */}
+      <form className="space-y-4">
+        <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
+        <input type="email" placeholder="Email" className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
+        <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
+        <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]"></textarea>
+        <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
+          {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
+        </button>
+      </form>
     </div>
 
-    {/* Kolom 3: Form Kontak */}
-    <form className="space-y-4">
-      <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940] text-[#082846]" />
-      <input type="email" placeholder="Email" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940] text-[#082846]" />
-      <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940] text-[#082846]" />
-      <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940] text-[#082846]"></textarea>
-      <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
-        {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
-      </button>
-    </form>
-  </div>
-
-  {/* CTA & Logo */}
-  <div className="text-center mt-16">
-    <p className="text-lg font-medium italic text-[#082846]">Let’s build your story together.</p>
-    <div className="flex justify-center mt-6">
-      <img src="/logo.png" alt="Estetic Logo" className="h-20 w-auto" />
+    {/* CTA & Logo */}
+    <div className="text-center mt-16">
+      <p className="text-lg font-medium italic text-[#082846]">Let’s build your story together.</p>
+      <div className="flex justify-center mt-6">
+        <img src="/logo.png" alt="Estetic Logo" className="h-20 w-auto" />
+      </div>
     </div>
   </div>
 </section>
+
 
 
                             <a
