@@ -657,26 +657,28 @@ useEffect(() => {
 </section>
 
 
-
-{showCTA && (
-  <motion.a
-    href="https://wa.me/62813"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="fixed bottom-6 right-6 z-50"
-    initial={{ opacity: 0, x: 100 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.4, ease: "easeOut" }}
-  >
+<AnimatePresence>
+  {showCTA && (
+    <motion.a
+      key="whatsappCTA"
+      href="https://wa.me/62813"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50"
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 100 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
     <img
       src="/whatsapp.png"
       alt="Chat via WhatsApp"
-      style={{ width: "100px", height: "100px" }}
+      style={{ width: "105px", height: "105px" }}
       className="drop-shadow-lg rounded-full object-contain"
     />
   </motion.a>
 )}
-
+</AnimatePresence>
 
   
   <footer className="bg-[#082846] text-white text-center py-6 mt-10">
