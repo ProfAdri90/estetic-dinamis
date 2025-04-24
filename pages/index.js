@@ -459,46 +459,32 @@ useEffect(() => {
     ))}
   </div>
 </section>
-  <section id="sukses" class="relative py-20 bg-white text-[#082846]">
-  <h3 class="text-3xl font-bold mb-16 text-center">
+ <section id="sukses" className="relative py-20 bg-white text-[#082846]">
+  <h3 className="text-3xl font-bold mb-16 text-center">
     Cerita Sukses Kami
   </h3>
 
-  <div class="relative max-w-6xl mx-auto">
-    /* Wrapper untuk anak tangga*/
-    <div class="flex flex-col space-y-12">
-      /* Contoh 6 step (bisa diperbanyak dengan loop jika pakai React/JSX) */
-
-      <div class="relative w-full md:w-[70%] bg-[#f7e77f] py-4 px-6 rounded-xl shadow-lg ml-0">
-        <h4 class="font-bold text-lg text-[#d7b940]">1997</h4>
-        <p>Menangani kasus Bentoel Group</p>
-      </div>
-
-      <div class="relative w-full md:w-[70%] bg-[#e1e4f2] py-4 px-6 rounded-xl shadow-lg ml-auto">
-        <h4 class="font-bold text-lg text-[#3a4f6a]">1998</h4>
-        <p>Krisis komunikasi Bank Bali</p>
-      </div>
-
-      <div class="relative w-full md:w-[70%] bg-[#f7e77f] py-4 px-6 rounded-xl shadow-lg ml-0">
-        <h4 class="font-bold text-lg text-[#d7b940]">2000</h4>
-        <p>Menangani media relation Mayora Group</p>
-      </div>
-
-      <div class="relative w-full md:w-[70%] bg-[#e1e4f2] py-4 px-6 rounded-xl shadow-lg ml-auto">
-        <h4 class="font-bold text-lg text-[#3a4f6a]">2004</h4>
-        <p>Kasus penolakan reklamasi PIK – Agung Podomoro</p>
-      </div>
-
-      <div class="relative w-full md:w-[70%] bg-[#f7e77f] py-4 px-6 rounded-xl shadow-lg ml-0">
-        <h4 class="font-bold text-lg text-[#d7b940]">2013</h4>
-        <p>Krisis komunikasi lahan Teluk Jambe – Karawang</p>
-      </div>
-
-      <div class="relative w-full md:w-[70%] bg-[#e1e4f2] py-4 px-6 rounded-xl shadow-lg ml-auto">
-        <h4 class="font-bold text-lg text-[#3a4f6a]">2025</h4>
-        <p>Transformasi Estetic generasi baru</p>
-      </div>
-    </div>
+  <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-10">
+    {successStory.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 30, x: index % 2 === 0 ? -20 : 20 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 0.6, delay: index * 0.2 }}
+        viewport={{ once: true }}
+        className={`relative p-6 rounded-2xl shadow-xl border-l-4 ${
+          index % 2 === 0
+            ? 'md:col-start-1 border-[#d7b940]'
+            : 'md:col-start-2 border-[#3a4f6a]'
+        } bg-gradient-to-br from-white to-gray-100`}
+      >
+        <div className="flex items-center gap-4 mb-2">
+          <div className="text-2xl font-bold text-[#d7b940]">{item.year}</div>
+          <div className="h-[2px] flex-1 bg-[#d7b940]" />
+        </div>
+        <p className="text-sm md:text-base">{item.text}</p>
+      </motion.div>
+    ))}
   </div>
 </section>
 
