@@ -596,17 +596,17 @@ useEffect(() => {
         </p>
       </div>
       <div className="space-y-6 text-base">
-        <div className="flex items-center gap-4">
-          <svg className="w-6 h-6 text-[#082846]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5h2a2 2 0 012 2v2a2 2 0 01-2 2H3m0 4h2a2 2 0 012 2v2a2 2 0 01-2 2H3m4-16h14M7 20h14M7 4v16"></path></svg>
-          <span>+62 812-1212-1212</span>
-        </div>
-        <div className="flex items-center gap-4">
-          <svg className="w-6 h-6 text-[#082846]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m0 0v4m0-4V8"></path></svg>
-          <span>Communicatewith@estetic.co.id</span>
-        </div>
-        <div className="flex items-center gap-4">
-          <svg className="w-6 h-6 text-[#082846]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2z"></path><path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z"></path></svg>
-          <span>Jl. Pelita Raya Blok P No. 5-6, Tangerang</span>
+      <div className="flex items-start gap-4">
+        <img src="/assets/phone.png" alt="Phone" className="w-6 h-6 mt-1" />
+        <p>+62 812-1212-1212</p>
+      </div>
+      <div className="flex items-start gap-4">
+        <img src="/assets/email.png" alt="Email" className="w-6 h-6 mt-1" />
+        <p>Communicatewith@estetic.co.id</p>
+      </div>
+      <div className="flex items-start gap-4">
+        <img src="/assets/map.png" alt="Map" className="w-6 h-6 mt-1" />
+        <p>Jl. Pelita Raya Blok P No. 5-6, Tangerang</p>
         </div>
       </div>
     </div>
