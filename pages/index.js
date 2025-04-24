@@ -614,10 +614,16 @@ useEffect(() => {
       </div>
 
       {/* Kolom 2: Info Kontak + Tagline */}
-      <div className="space-y-6">
-        <p className="text-xl md:text-2xl font-extrabold text-[#d7b940] drop-shadow-md leading-snug">
-          Helping brands tell stories that people believe & remember, with an aesthetic way
-        </p>
+     <p
+  className="text-xl md:text-2xl font-extrabold text-[#d7b940] drop-shadow-md leading-snug"
+  style={{
+    WebkitTextStroke: "0.8px #082846", // outline biru dongker
+    color: "#d7b940",
+  }}
+>
+        Helping brands tell stories that people believe & remember, with an aesthetic way
+      </p>
+
         <div className="space-y-6 text-base">
           <div className="flex items-start gap-4">
             <img src="/assets/phone.png" alt="Phone" className="w-6 h-6 mt-1" />
