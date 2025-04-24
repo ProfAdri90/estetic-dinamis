@@ -368,50 +368,12 @@ useEffect(() => {
         ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
         : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
     </p>
-    <section className="relative h-screen flex flex-col justify-center items-center text-white text-center overflow-hidden">
-  {/* Background Slideshow */}
-  {heroImages.map((img, idx) => (
-    <motion.img
-      key={img}
-      src={img}
-      alt=""
-      className="absolute inset-0 w-full h-full object-cover z-0"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: idx === heroIndex ? 1 : 0 }}
-      transition={{ duration: 1 }}
-    />
-  ))}
-
-  {/* Overlay Transparan */}
-  <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
-
-  {/* Konten Utama Hero */}
-  <div className="relative z-30 flex flex-col items-center text-center px-4 space-y-3">
-    <img
-      src="/logo.png"
-      alt="Estetic Logo"
-      className="h-28 md:h-44 w-auto object-contain drop-shadow-lg"
-      style={{
-        filter:
-          "drop-shadow(0 0 10px rgba(215, 185, 64, 0.4)) drop-shadow(0 0 20px rgba(215, 185, 64, 0.3))",
-      }}
-    />
-    <h1 className="text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg">
-      Since 1997
-    </h1>
-    <h2 className="text-xl md:text-2xl font-semibold drop-shadow-md">
-      Shaping Reputation | Building Trust | Through Generations
-    </h2>
-    <p className="text-lg md:text-xl italic font-['Dancing_Script',cursive] mt-2 text-[#d7b940] drop-shadow">
-      helping brands tell stories that people believe & remember
-    </p>
-
-    {/* CTA Scroll Down */}
+  {/* CTA Show More Here */}
     <div
       onClick={() => scrollTo("tentang")}
-      className="mt-8 flex items-center gap-2 cursor-pointer text-[#d7b940] font-medium hover:underline transition"
+      className="mt-4 flex items-center gap-2 cursor-pointer text-[#d7b940] font-medium hover:underline transition"
     >
-      {lang === "id" ? "Lihat ke bawah" : "Scroll Down"}
+      {lang === "id" ? "Lihat ke bawah" : "Show More About Estetic"}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="w-4 h-4"
@@ -424,7 +386,6 @@ useEffect(() => {
     </div>
   </div>
 </section>
-
 
 
       <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
