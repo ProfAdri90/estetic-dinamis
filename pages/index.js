@@ -460,57 +460,52 @@ useEffect(() => {
   </div>
 </section>
 <section id="sukses" className="bg-white text-[#082846] py-20">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 items-center">
-    
-    {/* Kolom 1: Judul + Narasi */}
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 items-start">
+
+    {/* Kolom 1: Judul dan Narasi */}
     <div className="space-y-6">
       <h3 className="text-3xl md:text-4xl font-bold">
         {lang === 'id' ? 'Cerita Sukses Kami' : 'Our Success Journey'}
       </h3>
-      <p className="text-base md:text-lg leading-relaxed text-[#082846]">
+      <p className="text-base md:text-lg leading-relaxed">
         {lang === 'id'
-          ? 'Dalam lebih dari dua dekade perjalanan kami, Estetic telah menjadi bagian dari berbagai transformasi besar dalam dunia komunikasi. Setiap langkah adalah cerita yang membentuk reputasi dan kepercayaan.'
-          : 'For over two decades, Estetic has played a role in major transformations in the world of communication. Every step is a story that shapes reputation and builds trust.'}
+          ? 'Selama lebih dari dua dekade, Estetic telah menghadapi berbagai tantangan dan pencapaian besar dalam komunikasi. Kami percaya bahwa reputasi dibangun dari langkah nyata dan strategi yang berdampak.'
+          : 'For over two decades, Estetic has faced major milestones and challenges in communications. We believe reputation is built through impactful strategies and real steps forward.'}
       </p>
     </div>
 
-    {/* Kolom 2: Tangga + Overlay Teks */}
-    <div className="relative w-full h-[700px] md:h-[900px]">
+    {/* Kolom 2: Gambar Tangga + Arrow Overlay */}
+    <div className="relative w-full h-[800px] md:h-[900px]">
       <img
         src="/assets/tangga.png"
         alt="Success Steps"
         className="absolute w-full h-full object-contain"
       />
-      {[
-        { year: 1997, text: "Handled Bentoel Group", top: "88%", left: "10%", dark: false },
-        { year: 1998, text: "Krisis Bank Bali", top: "80%", left: "14%", dark: false },
-        { year: 2000, text: "Media Relation Mayora", top: "72%", left: "19%", dark: false },
-        { year: 2004, text: "Reklamasi PIK – Agung Podomoro", top: "64%", left: "25%", dark: false },
-        { year: 2013, text: "Krisis Teluk Jambe", top: "56%", left: "32%", dark: false },
-        { year: 2014, text: "Reklamasi APL", top: "48%", left: "38%", dark: false },
-        { year: 2016, text: "Serah Terima Antasari 45", top: "40%", left: "45%", dark: true },
-        { year: 2019, text: "Recovery Saigon Delight", top: "32%", left: "55%", dark: true },
-        { year: 2022, text: "Transformasi Digital", top: "24%", left: "64%", dark: true },
-        { year: 2025, text: "Era Emas Komunikasi", top: "14%", left: "72%", dark: false, highlight: true },
-      ].map((item, i) => (
-        <motion.div
-          key={item.year}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: i * 0.15 }}
-          viewport={{ once: true }}
-          className="absolute text-center max-w-[160px] px-2"
-          style={{ top: item.top, left: item.left, transform: "translate(-50%, -50%)" }}
-        >
-          <p className={`font-bold text-sm ${item.highlight ? "text-[#d7b940]" : item.dark ? "text-white" : "text-[#082846]"}`}>
-            {item.year}
-          </p>
-          <p className={`text-xs ${item.dark ? "text-white" : "text-[#082846]"}`}>
-            {item.text}
-          </p>
-        </motion.div>
-      ))}
+
+      <div className="absolute inset-0 flex flex-col justify-between py-10 px-4 md:px-8">
+        {[
+          { year: 1997, text: "Handled Bentoel Group" },
+          { year: 1998, text: "Krisis Bank Bali" },
+          { year: 2000, text: "Media Relation Mayora" },
+          { year: 2004, text: "Reklamasi PIK – Agung Podomoro" },
+          { year: 2013, text: "Krisis Teluk Jambe" },
+          { year: 2014, text: "Reklamasi APL" },
+          { year: 2016, text: "Serah Terima Antasari 45" },
+          { year: 2019, text: "Recovery Saigon Delight" },
+          { year: 2022, text: "Transformasi Digital" },
+          { year: 2025, text: "Era Emas Komunikasi" },
+        ].map((item, index) => (
+          <div key={item.year} className="flex items-center gap-3">
+            <div className="flex flex-col text-right pr-2">
+              <span className="text-sm font-bold text-[#d7b940]">{item.year}</span>
+              <span className="text-sm text-[#082846]">{item.text}</span>
+            </div>
+            <div className="w-4 h-4 rotate-45 bg-[#d7b940]"></div> {/* Arrow */}
+          </div>
+        ))}
+      </div>
     </div>
+
   </div>
 </section>
 
