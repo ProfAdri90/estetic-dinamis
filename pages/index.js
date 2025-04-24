@@ -671,7 +671,7 @@ useEffect(() => {
     <img
       src="/whatsapp.png"
       alt="Chat via WhatsApp"
-      className="w-12 h-12 drop-shadow-lg rounded-full object-contain hover:scale-110 transition-transform duration-300"
+      className="w-14 h-14 drop-shadow-lg rounded-full object-contain hover:scale-110 transition-transform duration-300"
     />
   </a>
 )}
