@@ -662,16 +662,12 @@ useEffect(() => {
     href="https://wa.me/62813"
     target="_blank"
     rel="noopener noreferrer"
-    className="fixed bottom-6 right-6 z-50 group flex items-center gap-2"
+    className="fixed bottom-6 right-6 z-50"
   >
-    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-[#25D366] text-sm font-medium px-3 py-1 rounded-full shadow-md">
-      Chat with us
-    </span>
-
     <img
-      src="/whatsapp.png"
+      src="/icons/whatsapp.png"
       alt="Chat via WhatsApp"
-      className="w-14 h-14 drop-shadow-lg rounded-full object-contain hover:scale-110 transition-transform duration-300"
+      className="w-15 h-15 drop-shadow-lg rounded-full object-contain"
     />
   </a>
 )}
