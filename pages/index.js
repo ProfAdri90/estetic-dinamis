@@ -658,7 +658,6 @@ useEffect(() => {
       <div className="flex justify-center mt-6">
         <img src="/logo.png" alt="Estetic Logo" className="h-20 w-auto" />
       </div>
-    </div>
   </div>
 </section>
 
