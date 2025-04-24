@@ -474,39 +474,78 @@ useEffect(() => {
       </p>
     </div>
 
-    {/* Timeline using <img> + overlay */}
-    <div className="flex flex-wrap justify-center gap-6">
-      {[
-        { year: 1997, text: "Bentoel Group" },
-        { year: 1998, text: "Krisis Bank Bali" },
-        { year: 2000, text: "Media Relation Mayora" },
-        { year: 2004, text: "Reklamasi PIK - Podomoro" },
-        { year: 2013, text: "Teluk Jambe" },
-        { year: 2014, text: "Reklamasi APL" },
-        { year: 2016, text: "Serah Terima Antasari 45" },
-        { year: 2019, text: "Recovery Saigon Delight" },
-        { year: 2022, text: "Transformasi Digital" },
-        { year: 2025, text: "Era Emas Komunikasi" },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="relative w-[280px] h-[120px] flex-shrink-0"
-          style={{
-            animation: `fadeUp 0.6s ease ${(index * 0.2).toFixed(1)}s forwards`,
-            opacity: 0
-          }}
-        >
-          <img
-            src="/assets/ss_clean.png"
-            alt={`Arrow ${item.year}`}
-            className="w-full h-full object-contain"
-          />
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-            <span className="text-lg font-bold text-[#d7b940]">{item.year}</span>
-            <p className="text-sm mt-1 text-white">{item.text}</p>
+    {/* Arrow Timeline */}
+    <div className="overflow-x-auto">
+      <div className="flex gap-4 min-w-max px-2">
+        {[
+          {
+            year: 1997,
+            id: "Menangani kasus Bentoel Group",
+            en: "Handled Bentoel Group case",
+          },
+          {
+            year: 1998,
+            id: "Krisis komunikasi Bank Bali",
+            en: "Bank Bali communication crisis",
+          },
+          {
+            year: 2000,
+            id: "Media relation Mayora Group",
+            en: "Handled Mayora Group's media relations",
+          },
+          {
+            year: 2004,
+            id: "Reklamasi PIK – Agung Podomoro",
+            en: "Reclamation PIK – Agung Podomoro",
+          },
+          {
+            year: 2013,
+            id: "Krisis lahan Teluk Jambe",
+            en: "Teluk Jambe land crisis",
+          },
+          {
+            year: 2014,
+            id: "Reklamasi Pantura – APL",
+            en: "North Coast Reclamation – APL",
+          },
+          {
+            year: 2016,
+            id: "Serah terima Antasari 45",
+            en: "Handover of Antasari 45 apartments",
+          },
+          {
+            year: 2019,
+            id: "Recovery Saigon Delight",
+            en: "Saigon Delight recovery",
+          },
+          {
+            year: 2025,
+            id: "Transformasi generasi kedua",
+            en: "Second generation transformation",
+          },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="relative w-[200px] h-[100px] flex-shrink-0"
+            style={{
+              animation: `fadeUp 0.6s ease ${(index * 0.2).toFixed(1)}s forwards`,
+              opacity: 0
+            }}
+          >
+            <img
+              src="/ss_clean.png"
+              alt={`Arrow ${item.year}`}
+              className="w-full h-full object-contain"
+            />
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-3">
+              <span className="text-md font-bold text-[#d7b940]">{item.year}</span>
+              <p className="text-xs mt-1 text-white leading-tight">
+                {lang === "id" ? item.id : item.en}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 
