@@ -459,47 +459,50 @@ useEffect(() => {
     ))}
   </div>
 </section>
-<section id="sukses" className="relative py-20 px-6 bg-white text-[#082846]">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-    
-    {/* Kolom Kiri: Judul + Narasi */}
-    <div className="space-y-6">
-      <h3 className="text-4xl font-bold leading-snug">
-        Our Success Journey
-      </h3>
-      <div className="w-20 h-1 bg-[#d7b940] rounded mb-4"></div>
-      <p className="text-lg leading-relaxed text-[#444]">
-        Since 1997, Estetic Communication has played a strategic role 
-        in shaping public perception through trust-driven communication. 
-        From managing corporate crises to navigating national controversies, 
-        our journey reflects continuous adaptation, integrity, and innovation.
-      </p>
-    </div>
+<section id="sukses" className="relative py-20 bg-white text-[#082846] overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6">
+    <h3 className="text-4xl font-bold text-center mb-10">
+      Our Success Journey
+    </h3>
 
-    {/* Kolom Kanan: Timeline Anak Tangga (scale menurun) */}
-    <div className="relative flex flex-col items-start space-y-8">
-      <div className="absolute left-2 top-0 h-full w-1 bg-gradient-to-b from-[#d7b940] to-transparent rounded-full"></div>
-      
-      {[...successStory].reverse().map((item, index) => {
-        const baseScale = 1.1 - index * 0.06;
-        return (
-          <motion.div
-            key={item.year}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.15 }}
-            viewport={{ once: true }}
-            style={{ transform: `scale(${baseScale})`, transformOrigin: 'left center' }}
-            className="relative z-10 w-full pl-6 pr-4 py-4 bg-white border-l-4 border-[#d7b940] shadow-md rounded-lg"
-          >
-            <h4 className="text-xl font-bold text-[#d7b940]">{item.year}</h4>
-            <p className="text-sm mt-1 text-gray-700">{item.text}</p>
-          </motion.div>
-        );
-      })}
+    <div className="relative w-full h-[600px] md:h-[800px]">
+      {/* Tangga sebagai background */}
+      <img
+        src="/assets/tangga.png"
+        alt="Success Steps"
+        className="absolute w-full h-full object-contain"
+      />
+
+      {/* Text tiap anak tangga */}
+      {[
+        { year: 1997, text: "Handled Bentoel Group", top: "80%", left: "5%" },
+        { year: 1998, text: "Krisis Bank Bali", top: "72%", left: "10%" },
+        { year: 2000, text: "Media Relation Mayora", top: "64%", left: "15%" },
+        { year: 2004, text: "Reklamasi PIK - Agung Podomoro", top: "56%", left: "20%" },
+        { year: 2013, text: "Krisis Teluk Jambe", top: "48%", left: "25%" },
+        { year: 2014, text: "Reklamasi APL", top: "40%", left: "30%" },
+        { year: 2016, text: "Serah Terima Antasari 45", top: "32%", left: "40%" },
+        { year: 2019, text: "Recovery Saigon Delight", top: "24%", left: "50%" },
+        { year: 2022, text: "Transformasi Digital", top: "16%", left: "60%" },
+        { year: 2025, text: "Era Emas Komunikasi", top: "8%", left: "70%" },
+      ].map((item, i) => (
+        <motion.div
+          key={item.year}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: i * 0.15 }}
+          viewport={{ once: true }}
+          className="absolute text-xs md:text-sm max-w-[140px] text-center"
+          style={{ top: item.top, left: item.left }}
+        >
+          <p className="font-bold text-[#d7b940]">{item.year}</p>
+          <p className="text-[#082846]">{item.text}</p>
+        </motion.div>
+      ))}
     </div>
   </div>
 </section>
+
 
     <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10">
