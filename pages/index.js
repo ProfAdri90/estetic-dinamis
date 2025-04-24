@@ -459,33 +459,49 @@ useEffect(() => {
     ))}
   </div>
 </section>
-    <section id="sukses" className="scroll-mt-[180px] py-20 px-6 bg-white text-[#082846] text-center">
-  <h3 className="text-3xl font-bold mb-12">
-    {lang === "id" ? "Cerita Sukses Kami" : "Our Success Journey"}
+  <section id="sukses" class="relative py-20 bg-white text-[#082846]">
+  <h3 class="text-3xl font-bold mb-16 text-center">
+    Cerita Sukses Kami
   </h3>
 
-  <div className="relative max-w-4xl mx-auto space-y-8">
-    {successStory.map((item, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 }}
-        viewport={{ once: true }}
-        className={`w-full md:w-[85%] mx-auto py-6 px-6 rounded-xl shadow-lg text-left bg-gradient-to-r ${
-          index % 3 === 0
-            ? "from-[#d7b940] to-[#f7e77f]"
-            : index % 3 === 1
-            ? "from-[#3a4f6a] to-[#7c92ab]"
-            : "from-[#8398af] to-[#c8d7e1]"
-        } mt-${index * 4}`}
-      >
-        <h4 className="text-xl font-bold mb-2">{item.year}</h4>
-        <p>{item.text}</p>
-      </motion.div>
-    ))}
+  <div class="relative max-w-6xl mx-auto">
+    <!-- Wrapper untuk anak tangga -->
+    <div class="flex flex-col space-y-12">
+      <!-- Contoh 6 step (bisa diperbanyak dengan loop jika pakai React/JSX) -->
+
+      <div class="relative w-full md:w-[70%] bg-[#f7e77f] py-4 px-6 rounded-xl shadow-lg ml-0">
+        <h4 class="font-bold text-lg text-[#d7b940]">1997</h4>
+        <p>Menangani kasus Bentoel Group</p>
+      </div>
+
+      <div class="relative w-full md:w-[70%] bg-[#e1e4f2] py-4 px-6 rounded-xl shadow-lg ml-auto">
+        <h4 class="font-bold text-lg text-[#3a4f6a]">1998</h4>
+        <p>Krisis komunikasi Bank Bali</p>
+      </div>
+
+      <div class="relative w-full md:w-[70%] bg-[#f7e77f] py-4 px-6 rounded-xl shadow-lg ml-0">
+        <h4 class="font-bold text-lg text-[#d7b940]">2000</h4>
+        <p>Menangani media relation Mayora Group</p>
+      </div>
+
+      <div class="relative w-full md:w-[70%] bg-[#e1e4f2] py-4 px-6 rounded-xl shadow-lg ml-auto">
+        <h4 class="font-bold text-lg text-[#3a4f6a]">2004</h4>
+        <p>Kasus penolakan reklamasi PIK – Agung Podomoro</p>
+      </div>
+
+      <div class="relative w-full md:w-[70%] bg-[#f7e77f] py-4 px-6 rounded-xl shadow-lg ml-0">
+        <h4 class="font-bold text-lg text-[#d7b940]">2013</h4>
+        <p>Krisis komunikasi lahan Teluk Jambe – Karawang</p>
+      </div>
+
+      <div class="relative w-full md:w-[70%] bg-[#e1e4f2] py-4 px-6 rounded-xl shadow-lg ml-auto">
+        <h4 class="font-bold text-lg text-[#3a4f6a]">2025</h4>
+        <p>Transformasi Estetic generasi baru</p>
+      </div>
+    </div>
   </div>
 </section>
+
     <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
