@@ -235,12 +235,34 @@ useEffect(() => {
 
   return () => observer.disconnect();
 }, []);
+  
   // Fallback trigger untuk mobile (jaga-jaga observer ga ke-trigger)
 useEffect(() => {
   if (typeof window !== 'undefined' && window.innerWidth < 768) {
     setTimeout(() => setShowCounter(true), 2000); // nyala otomatis setelah 2 detik
   }
 }, []);
+
+  const [showCTA, setShowCTA] = useState(false);
+
+useEffect(() => {
+  const kontakSection = document.getElementById('kontak');
+  if (!kontakSection) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setShowCTA(entry.isIntersecting);
+    },
+    {
+      threshold: 0.4,
+    }
+  );
+
+  observer.observe(kontakSection);
+
+  return () => observer.disconnect();
+}, []);
+
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
     
@@ -635,25 +657,24 @@ useEffect(() => {
 </section>
 
 
+{showCTA && (
+  <a
+    href="https://wa.me/62813"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="fixed bottom-6 right-6 z-50 group flex items-center gap-2"
+  >
+    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-[#25D366] text-sm font-medium px-3 py-1 rounded-full shadow-md">
+      Chat with us
+    </span>
 
-                            <a
-  href="https://wa.me/62813"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed bottom-6 right-6 z-50 group flex items-center gap-2"
->
-  {/* Bubble teks yang muncul saat hover */}
-  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-[#25D366] text-sm font-medium px-3 py-1 rounded-full shadow-md">
-    Chat with us
-  </span>
-
-  {/* Icon WhatsApp */}
-  <img
-    src="/whatsapp.png"
-    alt="Chat via WhatsApp"
-    className="w-12 h-12 drop-shadow-lg hover:scale-110 transition-transform duration-300"
-  />
-</a>
+    <img
+      src="/whatsapp.png"
+      alt="Chat via WhatsApp"
+      className="w-10 h-10 drop-shadow-lg rounded-full object-contain hover:scale-110 transition-transform duration-300"
+    />
+  </a>
+)}
 
   
   <footer className="bg-[#082846] text-white text-center py-6 mt-10">
