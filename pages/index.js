@@ -350,15 +350,6 @@ useEffect(() => {
   <h2 className="text-xl md:text-2xl font-semibold drop-shadow-md">
     Shaping Reputation | Building Trust | Through Generations
   </h2>
-  <p className="text-lg md:text-xl italic font-['Dancing_Script',cursive] mt-2 text-[#d7b940] drop-shadow">
-    helping brands tell stories that people believe & remember
-  </p>
-  <button
-    onClick={() => scrollTo("kontak")}
-    className="mt-4 bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold hover:bg-[#c9a72e] transition"
-  >
-    {lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}
-  </button>
 </div>
 
 
