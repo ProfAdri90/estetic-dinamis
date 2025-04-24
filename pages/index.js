@@ -477,7 +477,7 @@ useEffect(() => {
     {/* Kolom 2: Tangga + Overlay Teks */}
     <div className="relative w-full h-[700px] md:h-[900px]">
       <img
-        src="/tangga.png"
+        src="/assets/tangga.png"
         alt="Success Steps"
         className="absolute w-full h-full object-contain"
       />
