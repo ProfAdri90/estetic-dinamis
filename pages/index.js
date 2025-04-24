@@ -492,7 +492,7 @@ useEffect(() => {
           key={index}
           className="w-[280px] h-[120px] bg-cover bg-no-repeat bg-center text-white relative flex flex-col items-center justify-center text-center shadow-md"
           style={{
-            backgroundImage: "url('/assets/ss.png')",
+            backgroundImage: "url('/assets/ss_clean.png')",
             animation: `fadeUp 0.6s ease ${(index * 0.2).toFixed(1)}s forwards`,
             opacity: 0,
           }}
