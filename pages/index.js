@@ -460,7 +460,7 @@ useEffect(() => {
   </div>
 </section>
 <section id="sukses" className="bg-white text-[#082846] py-20">
-  <div className="max-w-7xl mx-auto px-4 space-y-10">
+  <div className="max-w-7xl mx-auto px-6 space-y-12">
 
     {/* Judul dan Narasi */}
     <div className="text-center space-y-4">
@@ -469,44 +469,54 @@ useEffect(() => {
       </h3>
       <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
         {lang === 'id'
-          ? 'Perjalanan Estetic dimulai sejak tahun 1997. Langkah demi langkah kami jalani dengan komitmen membangun reputasi dan kepercayaan.'
-          : 'Estetic’s journey began in 1997. Step by step, we built reputation and trust through real, impactful communication.'}
+          ? 'Estetic telah menempuh perjalanan panjang sejak 1997. Kami terus melangkah membangun reputasi dengan strategi yang berdampak.'
+          : 'Since 1997, Estetic has been on a long journey. We keep building reputation through impactful strategies.'}
       </p>
     </div>
 
-    {/* Timeline Arrow Steps */}
-    <div className="overflow-x-auto">
-      <div className="flex gap-4 min-w-max px-2">
-        {[
-          { year: 1997, text: "Bentoel Group" },
-          { year: 1998, text: "Krisis Bank Bali" },
-          { year: 2000, text: "Media Relation Mayora" },
-          { year: 2004, text: "Reklamasi PIK - Podomoro" },
-          { year: 2013, text: "Teluk Jambe" },
-          { year: 2014, text: "Reklamasi APL" },
-          { year: 2016, text: "Serah Terima Antasari 45" },
-          { year: 2019, text: "Recovery Saigon Delight" },
-          { year: 2022, text: "Transformasi Digital" },
-          { year: 2025, text: "Era Emas Komunikasi" },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="w-[240px] h-[120px] flex-shrink-0 bg-[#082846] text-white p-4 flex flex-col justify-center items-center text-center relative"
-            style={{
-              backgroundImage: "url('/ss.png')",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center"
-            }}
-          >
-            <span className="text-lg font-bold text-[#d7b940]">{item.year}</span>
-            <p className="text-sm">{item.text}</p>
-          </div>
-        ))}
-      </div>
+    {/* Timeline Arrows */}
+    <div className="flex flex-wrap justify-center gap-6">
+      {[
+        { year: 1997, text: "Bentoel Group" },
+        { year: 1998, text: "Krisis Bank Bali" },
+        { year: 2000, text: "Media Relation Mayora" },
+        { year: 2004, text: "Reklamasi PIK - Podomoro" },
+        { year: 2013, text: "Teluk Jambe" },
+        { year: 2014, text: "Reklamasi APL" },
+        { year: 2016, text: "Serah Terima Antasari 45" },
+        { year: 2019, text: "Recovery Saigon Delight" },
+        { year: 2022, text: "Transformasi Digital" },
+        { year: 2025, text: "Era Emas Komunikasi" },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="w-[280px] h-[120px] bg-cover bg-no-repeat bg-center text-white relative flex flex-col items-center justify-center text-center shadow-md"
+          style={{
+            backgroundImage: "url('/assets/ss.png')",
+            animation: `fadeUp 0.6s ease ${(index * 0.2).toFixed(1)}s forwards`,
+            opacity: 0,
+          }}
+        >
+          <span className="text-lg font-bold text-[#d7b940]">{item.year}</span>
+          <p className="text-sm mt-1 px-4">{item.text}</p>
+        </div>
+      ))}
     </div>
-
   </div>
+
+  {/* CSS animation */}
+  <style jsx>{`
+    @keyframes fadeUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  `}</style>
 </section>
 
 
