@@ -459,32 +459,39 @@ useEffect(() => {
     ))}
   </div>
 </section>
-<section id="sukses" className="relative py-20 bg-white text-[#082846] overflow-hidden">
-  <div className="max-w-7xl mx-auto px-6">
-    <h3 className="text-4xl font-bold text-center mb-10">
-      Our Success Journey
-    </h3>
+<section id="sukses" className="bg-white text-[#082846] py-20">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 items-center">
+    
+    {/* Kolom 1: Judul + Narasi */}
+    <div className="space-y-6">
+      <h3 className="text-3xl md:text-4xl font-bold">
+        {lang === 'id' ? 'Cerita Sukses Kami' : 'Our Success Journey'}
+      </h3>
+      <p className="text-base md:text-lg leading-relaxed text-[#082846]">
+        {lang === 'id'
+          ? 'Dalam lebih dari dua dekade perjalanan kami, Estetic telah menjadi bagian dari berbagai transformasi besar dalam dunia komunikasi. Setiap langkah adalah cerita yang membentuk reputasi dan kepercayaan.'
+          : 'For over two decades, Estetic has played a role in major transformations in the world of communication. Every step is a story that shapes reputation and builds trust.'}
+      </p>
+    </div>
 
-    <div className="relative w-full h-[600px] md:h-[800px]">
-      {/* Tangga sebagai background */}
+    {/* Kolom 2: Tangga + Overlay Teks */}
+    <div className="relative w-full h-[700px] md:h-[900px]">
       <img
-        src="/assets/tangga.png"
+        src="/tangga.png"
         alt="Success Steps"
         className="absolute w-full h-full object-contain"
       />
-
-      {/* Text tiap anak tangga */}
       {[
-        { year: 1997, text: "Handled Bentoel Group", top: "80%", left: "5%" },
-        { year: 1998, text: "Krisis Bank Bali", top: "72%", left: "10%" },
-        { year: 2000, text: "Media Relation Mayora", top: "64%", left: "15%" },
-        { year: 2004, text: "Reklamasi PIK - Agung Podomoro", top: "56%", left: "20%" },
-        { year: 2013, text: "Krisis Teluk Jambe", top: "48%", left: "25%" },
-        { year: 2014, text: "Reklamasi APL", top: "40%", left: "30%" },
-        { year: 2016, text: "Serah Terima Antasari 45", top: "32%", left: "40%" },
-        { year: 2019, text: "Recovery Saigon Delight", top: "24%", left: "50%" },
-        { year: 2022, text: "Transformasi Digital", top: "16%", left: "60%" },
-        { year: 2025, text: "Era Emas Komunikasi", top: "8%", left: "70%" },
+        { year: 1997, text: "Handled Bentoel Group", top: "88%", left: "10%", dark: false },
+        { year: 1998, text: "Krisis Bank Bali", top: "80%", left: "14%", dark: false },
+        { year: 2000, text: "Media Relation Mayora", top: "72%", left: "19%", dark: false },
+        { year: 2004, text: "Reklamasi PIK – Agung Podomoro", top: "64%", left: "25%", dark: false },
+        { year: 2013, text: "Krisis Teluk Jambe", top: "56%", left: "32%", dark: false },
+        { year: 2014, text: "Reklamasi APL", top: "48%", left: "38%", dark: false },
+        { year: 2016, text: "Serah Terima Antasari 45", top: "40%", left: "45%", dark: true },
+        { year: 2019, text: "Recovery Saigon Delight", top: "32%", left: "55%", dark: true },
+        { year: 2022, text: "Transformasi Digital", top: "24%", left: "64%", dark: true },
+        { year: 2025, text: "Era Emas Komunikasi", top: "14%", left: "72%", dark: false, highlight: true },
       ].map((item, i) => (
         <motion.div
           key={item.year}
@@ -492,16 +499,21 @@ useEffect(() => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: i * 0.15 }}
           viewport={{ once: true }}
-          className="absolute text-xs md:text-sm max-w-[140px] text-center"
-          style={{ top: item.top, left: item.left }}
+          className="absolute text-center max-w-[160px] px-2"
+          style={{ top: item.top, left: item.left, transform: "translate(-50%, -50%)" }}
         >
-          <p className="font-bold text-[#d7b940]">{item.year}</p>
-          <p className="text-[#082846]">{item.text}</p>
+          <p className={`font-bold text-sm ${item.highlight ? "text-[#d7b940]" : item.dark ? "text-white" : "text-[#082846]"}`}>
+            {item.year}
+          </p>
+          <p className={`text-xs ${item.dark ? "text-white" : "text-[#082846]"}`}>
+            {item.text}
+          </p>
         </motion.div>
       ))}
     </div>
   </div>
 </section>
+
 
 
     <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
