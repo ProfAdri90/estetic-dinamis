@@ -671,7 +671,7 @@ useEffect(() => {
     <img
       src="/whatsapp.png"
       alt="Chat via WhatsApp"
-      style={{ width: "72px", height: "72px" }}
+      style={{ width: "100px", height: "100px" }}
       className="drop-shadow-lg rounded-full object-contain"
     />
   </motion.a>
