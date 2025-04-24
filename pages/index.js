@@ -665,7 +665,7 @@ useEffect(() => {
     className="fixed bottom-6 right-6 z-50"
   >
     <img
-      src="/icons/whatsapp.png"
+      src="/whatsapp.png"
       alt="Chat via WhatsApp"
       className="w-15 h-15 drop-shadow-lg rounded-full object-contain"
     />
