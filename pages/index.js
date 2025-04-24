@@ -588,7 +588,7 @@ useEffect(() => {
         <h2 className="text-3xl font-bold text-[#082846]">
           {lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}
         </h2>
-        <img src="/assets/hub.png" alt="Office" className="w-full h-auto rounded-3xl shadow-lg object-cover" />
+        <img src="/assets/hub.png" alt="Office" className="w-full h-auto " />
       </div>
 
       {/* Kolom 2: Info Kontak + Tagline */}
