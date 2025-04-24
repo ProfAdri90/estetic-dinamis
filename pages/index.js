@@ -657,20 +657,26 @@ useEffect(() => {
 </section>
 
 
+
 {showCTA && (
-  <a
+  <motion.a
     href="https://wa.me/62813"
     target="_blank"
     rel="noopener noreferrer"
     className="fixed bottom-6 right-6 z-50"
+    initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.4, ease: "easeOut" }}
   >
     <img
       src="/whatsapp.png"
       alt="Chat via WhatsApp"
-      className="w-15 h-15 drop-shadow-lg rounded-full object-contain"
+      style={{ width: "58px", height: "58px" }}
+      className="drop-shadow-lg rounded-full object-contain"
     />
-  </a>
+  </motion.a>
 )}
+
 
   
   <footer className="bg-[#082846] text-white text-center py-6 mt-10">
