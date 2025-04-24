@@ -368,22 +368,26 @@ useEffect(() => {
         ? "Kami memahami dinamika industri modern, dan kami siap untuk memastikan pesan Anda sampai dengan tepat, berdampak dan bernilai."
         : "We understand the dynamics of modern industries and are ready to ensure your message is delivered accurately, impactfully, and meaningfully."}
     </p>
-  {/* CTA Show More Here */}
-    <div
+ {/* === CTA Stylish Here === */}
+    <motion.div
       onClick={() => scrollTo("tentang")}
-      className="mt-4 flex items-center gap-2 cursor-pointer text-[#d7b940] font-medium hover:underline transition"
+      whileHover={{ x: 5 }}
+      transition={{ duration: 0.3 }}
+      className="mt-6 flex items-center gap-2 cursor-pointer text-[#d7b940] font-medium text-lg hover:underline"
     >
-      {lang === "id" ? "Lihat ke bawah" : "Show More About Estetic"}
+      <span>
+        {lang === "id" ? "Selengkapnya tentang Estetic" : "Learn More About Estetic"}
+      </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-4 h-4"
+        className="w-5 h-5"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
       </svg>
-    </div>
+    </motion.div>
   </div>
 </section>
 
