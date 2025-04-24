@@ -579,59 +579,59 @@ useEffect(() => {
   </div>
 </section>
 
-  <section className="bg-[#082846] text-white py-16 px-4" id="kontak">
-  <div className="max-w-7xl mx-auto">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+ <section id="kontak" className="bg-white text-[#082846] py-20 px-4">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
 
-      {/* Kolom 1: Gambar */}
-      <div>
-        <img src="/assets/hub.png" alt="Office" className="w-full h-auto rounded-3xl shadow-lg" />
-      </div>
-
-      {/* Kolom 2: Judul + Info Kontak */}
-      <div className="space-y-6">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-1">
-            {lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}
-          </h2>
-          <p className="text-2xl md:text-3xl font-bold italic font-['Dancing Script',cursive] drop-shadow-md">
-            Helping brands tell stories that people believe & remember, with an aesthetic way
-          </p>
-        </div>
-        <div className="space-y-4 mt-4">
-          <div className="flex items-start gap-3">
-            <img src="/assets/phone.png" alt="Phone" className="w-6 h-6 mt-1 filter brightness-0 invert" />
-            <p>+62 812-1212-1212</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <img src="/assets/email.png" alt="Email" className="w-6 h-6 mt-1 filter brightness-0 invert" />
-            <p>Communicatewith@estetic.co.id</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <img src="/assets/map.png" alt="Map" className="w-6 h-6 mt-1 filter brightness-0 invert" />
-            <p>Jl. Pelita Raya Blok P No. 5-6, Tangerang</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Kolom 3: Form Kontak */}
-      <form className="space-y-4">
-        <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border rounded text-[#082846]" />
-        <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded text-[#082846]" />
-        <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border rounded text-[#082846]" />
-        <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border rounded text-[#082846]"></textarea>
-        <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold">
-          {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
-        </button>
-      </form>
+    {/* Kolom 1: Ilustrasi Estetik */}
+    <div className="flex justify-center">
+      <img src="/assets/hub.png" alt="Ilustrasi" className="w-full max-w-xs md:max-w-sm rounded-xl shadow-md" />
     </div>
 
-    {/* Logo Estetic */}
-    <div className="flex justify-center mt-12">
+    {/* Kolom 2: Info Kontak */}
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-3xl font-bold mb-2">{lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}</h2>
+        <p className="text-xl font-semibold font-['Dancing Script',cursive] italic text-[#082846]">
+          Helping brands tell stories that people believe & remember, with an aesthetic way
+        </p>
+      </div>
+      <div className="space-y-4 text-base">
+        <div className="flex items-start gap-3">
+          <img src="/assets/phone.png" alt="Phone" className="w-5 h-5 mt-1 filter brightness-0 invert" />
+          <span>+62 812-1212-1212</span>
+        </div>
+        <div className="flex items-start gap-3">
+          <img src="/assets/email.png" alt="Email" className="w-5 h-5 mt-1 filter brightness-0 invert" />
+          <span>Communicatewith@estetic.co.id</span>
+        </div>
+        <div className="flex items-start gap-3">
+          <img src="/assets/map.png" alt="Map" className="w-5 h-5 mt-1 filter brightness-0 invert" />
+          <span>Jl. Pelita Raya Blok P No. 5-6, Tangerang</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Kolom 3: Form Kontak */}
+    <form className="space-y-4">
+      <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940]" />
+      <input type="email" placeholder="Email" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940]" />
+      <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940]" />
+      <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940]"></textarea>
+      <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
+        {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
+      </button>
+    </form>
+  </div>
+
+  {/* CTA & Logo */}
+  <div className="text-center mt-16">
+    <p className="text-lg font-medium italic text-[#082846]">Let’s build your story together.</p>
+    <div className="flex justify-center mt-6">
       <img src="/logo.png" alt="Estetic Logo" className="h-20 w-auto" />
     </div>
   </div>
 </section>
+
 
                             <a
   href="https://wa.me/62813"
