@@ -591,7 +591,9 @@ useEffect(() => {
     <div className="space-y-8">
       <div>
         <h2 className="text-3xl font-bold mb-2">{lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}</h2>
-        <p className="text-2xl font-bold italic font-['Dancing Script',cursive] text-[#082846] drop-shadow-md">
+        <p className="text-2xl font-bold italic"  
+style={{ fontFamily: '"Dancing Script", cursive' }}
+ drop-shadow-md">
           Helping brands tell stories that people believe & remember, with an aesthetic way
         </p>
       </div>
