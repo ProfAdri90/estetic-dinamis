@@ -474,7 +474,7 @@ useEffect(() => {
       </p>
     </div>
 
-    {/* Timeline Arrows */}
+    {/* Timeline using <img> + overlay */}
     <div className="flex flex-wrap justify-center gap-6">
       {[
         { year: 1997, text: "Bentoel Group" },
@@ -490,15 +490,21 @@ useEffect(() => {
       ].map((item, index) => (
         <div
           key={index}
-          className="w-[280px] h-[120px] bg-cover bg-no-repeat bg-center text-white relative flex flex-col items-center justify-center text-center shadow-md"
+          className="relative w-[280px] h-[120px] flex-shrink-0"
           style={{
-            backgroundImage: "url('/assets/ss_clean.png')",
             animation: `fadeUp 0.6s ease ${(index * 0.2).toFixed(1)}s forwards`,
-            opacity: 0,
+            opacity: 0
           }}
         >
-          <span className="text-lg font-bold text-[#d7b940]">{item.year}</span>
-          <p className="text-sm mt-1 px-4">{item.text}</p>
+          <img
+            src="/assets/ss_clean.png"
+            alt={`Arrow ${item.year}`}
+            className="w-full h-full object-contain"
+          />
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+            <span className="text-lg font-bold text-[#d7b940]">{item.year}</span>
+            <p className="text-sm mt-1 text-white">{item.text}</p>
+          </div>
         </div>
       ))}
     </div>
@@ -518,6 +524,7 @@ useEffect(() => {
     }
   `}</style>
 </section>
+
 
 
 
