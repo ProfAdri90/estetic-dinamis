@@ -584,7 +584,7 @@ useEffect(() => {
 
     {/* Kolom 1: Gambar Estetik Full Height */}
     <div className="h-full">
-      <img src="/assets/hub.png" alt="Ilustrasi" className="w-full h-full" />
+      <img src="/assets/hub.png" alt="Ilustrasi" className="w-full h-full " />
     </div>
 
     {/* Kolom 2: Info Kontak */}
