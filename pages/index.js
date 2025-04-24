@@ -465,9 +465,9 @@ useEffect(() => {
   </h3>
 
   <div class="relative max-w-6xl mx-auto">
-    <!-- Wrapper untuk anak tangga -->
+    /* Wrapper untuk anak tangga*/
     <div class="flex flex-col space-y-12">
-      <!-- Contoh 6 step (bisa diperbanyak dengan loop jika pakai React/JSX) -->
+      /* Contoh 6 step (bisa diperbanyak dengan loop jika pakai React/JSX) */
 
       <div class="relative w-full md:w-[70%] bg-[#f7e77f] py-4 px-6 rounded-xl shadow-lg ml-0">
         <h4 class="font-bold text-lg text-[#d7b940]">1997</h4>
