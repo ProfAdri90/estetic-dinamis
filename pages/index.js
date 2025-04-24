@@ -460,47 +460,47 @@ useEffect(() => {
   </div>
 </section>
 <section id="sukses" className="bg-white text-[#082846] py-20">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 items-start">
+  <div className="max-w-7xl mx-auto px-4 space-y-10">
 
-    {/* Kolom 1: Judul dan Narasi */}
-    <div className="space-y-6">
+    {/* Judul dan Narasi */}
+    <div className="text-center space-y-4">
       <h3 className="text-3xl md:text-4xl font-bold">
         {lang === 'id' ? 'Cerita Sukses Kami' : 'Our Success Journey'}
       </h3>
-      <p className="text-base md:text-lg leading-relaxed">
+      <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
         {lang === 'id'
-          ? 'Selama lebih dari dua dekade, Estetic telah menghadapi berbagai tantangan dan pencapaian besar dalam komunikasi. Kami percaya bahwa reputasi dibangun dari langkah nyata dan strategi yang berdampak.'
-          : 'For over two decades, Estetic has faced major milestones and challenges in communications. We believe reputation is built through impactful strategies and real steps forward.'}
+          ? 'Perjalanan Estetic dimulai sejak tahun 1997. Langkah demi langkah kami jalani dengan komitmen membangun reputasi dan kepercayaan.'
+          : 'Estetic’s journey began in 1997. Step by step, we built reputation and trust through real, impactful communication.'}
       </p>
     </div>
 
-    {/* Kolom 2: Gambar Tangga + Arrow Overlay */}
-    <div className="relative w-full h-[800px] md:h-[900px]">
-      <img
-        src="/assets/tangga.png"
-        alt="Success Steps"
-        className="absolute w-full h-full object-contain"
-      />
-
-      <div className="absolute inset-0 flex flex-col justify-between py-10 px-4 md:px-8">
+    {/* Timeline Arrow Steps */}
+    <div className="overflow-x-auto">
+      <div className="flex gap-4 min-w-max px-2">
         {[
-          { year: 1997, text: "Handled Bentoel Group" },
+          { year: 1997, text: "Bentoel Group" },
           { year: 1998, text: "Krisis Bank Bali" },
           { year: 2000, text: "Media Relation Mayora" },
-          { year: 2004, text: "Reklamasi PIK – Agung Podomoro" },
-          { year: 2013, text: "Krisis Teluk Jambe" },
+          { year: 2004, text: "Reklamasi PIK - Podomoro" },
+          { year: 2013, text: "Teluk Jambe" },
           { year: 2014, text: "Reklamasi APL" },
           { year: 2016, text: "Serah Terima Antasari 45" },
           { year: 2019, text: "Recovery Saigon Delight" },
           { year: 2022, text: "Transformasi Digital" },
           { year: 2025, text: "Era Emas Komunikasi" },
         ].map((item, index) => (
-          <div key={item.year} className="flex items-center gap-3">
-            <div className="flex flex-col text-right pr-2">
-              <span className="text-sm font-bold text-[#d7b940]">{item.year}</span>
-              <span className="text-sm text-[#082846]">{item.text}</span>
-            </div>
-            <div className="w-4 h-4 rotate-45 bg-[#d7b940]"></div> {/* Arrow */}
+          <div
+            key={index}
+            className="w-[240px] h-[120px] flex-shrink-0 bg-[#082846] text-white p-4 flex flex-col justify-center items-center text-center relative"
+            style={{
+              backgroundImage: "url('/ss.png')",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center"
+            }}
+          >
+            <span className="text-lg font-bold text-[#d7b940]">{item.year}</span>
+            <p className="text-sm">{item.text}</p>
           </div>
         ))}
       </div>
