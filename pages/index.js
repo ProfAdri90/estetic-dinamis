@@ -459,32 +459,30 @@ useEffect(() => {
     ))}
   </div>
 </section>
-      <section id="sukses" className="scroll-mt-[180px] text-center py-20 px-8 bg-white text-[#082846]">
-  <h3 className="text-3xl font-bold mb-10 text-center">
-    {lang === "id" ? "Cerita Sukses" : "Success Stories"}
+    <section id="sukses" className="scroll-mt-[180px] py-20 px-6 bg-white text-[#082846] text-center">
+  <h3 className="text-3xl font-bold mb-12">
+    {lang === "id" ? "Cerita Sukses Kami" : "Our Success Journey"}
   </h3>
 
-  <div className="flex flex-col gap-10 max-w-5xl mx-auto">
+  <div className="relative max-w-4xl mx-auto space-y-8">
     {successStory.map((item, index) => (
-      <div
+      <motion.div
         key={index}
-        className={`flex flex-col md:flex-row items-center gap-6 ${
-          index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-        }`}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: index * 0.2 }}
+        viewport={{ once: true }}
+        className={`w-full md:w-[85%] mx-auto py-6 px-6 rounded-xl shadow-lg text-left bg-gradient-to-r ${
+          index % 3 === 0
+            ? "from-[#d7b940] to-[#f7e77f]"
+            : index % 3 === 1
+            ? "from-[#3a4f6a] to-[#7c92ab]"
+            : "from-[#8398af] to-[#c8d7e1]"
+        } mt-${index * 4}`}
       >
-        {/* Titik tahun */}
-        <div className="flex-shrink-0 text-[#d7b940] text-3xl font-bold">
-          {item.year}
-        </div>
-
-        {/* Garis penghubung */}
-        <div className="hidden md:block w-10 h-1 bg-[#d7b940] rounded" />
-
-        {/* Teks cerita */}
-        <div className="flex-1 bg-[#f9f9f9] p-4 rounded-xl shadow-md text-left">
-          <p>{item.text}</p>
-        </div>
-      </div>
+        <h4 className="text-xl font-bold mb-2">{item.year}</h4>
+        <p>{item.text}</p>
+      </motion.div>
     ))}
   </div>
 </section>
