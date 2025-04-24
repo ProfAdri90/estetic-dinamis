@@ -533,7 +533,7 @@ useEffect(() => {
             }}
           >
             <img
-              src="/ss_clean.png"
+              src="/assets/ss_clean.png"
               alt={`Arrow ${item.year}`}
               className="w-full h-full object-contain"
             />
