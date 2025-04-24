@@ -459,32 +459,45 @@ useEffect(() => {
     ))}
   </div>
 </section>
- <section id="sukses" className="relative py-20 bg-white text-[#082846]">
-  <h3 className="text-3xl font-bold mb-16 text-center">
-    Cerita Sukses Kami
-  </h3>
+<section id="sukses" className="relative py-20 px-6 bg-white text-[#082846]">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+    
+    {/* Kolom Kiri: Judul + Narasi */}
+    <div className="space-y-6">
+      <h3 className="text-4xl font-bold leading-snug">
+        Our Success Journey
+      </h3>
+      <div className="w-20 h-1 bg-[#d7b940] rounded mb-4"></div>
+      <p className="text-lg leading-relaxed text-[#444]">
+        Since 1997, Estetic Communication has played a strategic role 
+        in shaping public perception through trust-driven communication. 
+        From managing corporate crises to navigating national controversies, 
+        our journey reflects continuous adaptation, integrity, and innovation.
+      </p>
+    </div>
 
-  <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-10">
-    {successStory.map((item, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 30, x: index % 2 === 0 ? -20 : 20 }}
-        whileInView={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 }}
-        viewport={{ once: true }}
-        className={`relative p-6 rounded-2xl shadow-xl border-l-4 ${
-          index % 2 === 0
-            ? 'md:col-start-1 border-[#d7b940]'
-            : 'md:col-start-2 border-[#3a4f6a]'
-        } bg-gradient-to-br from-white to-gray-100`}
-      >
-        <div className="flex items-center gap-4 mb-2">
-          <div className="text-2xl font-bold text-[#d7b940]">{item.year}</div>
-          <div className="h-[2px] flex-1 bg-[#d7b940]" />
-        </div>
-        <p className="text-sm md:text-base">{item.text}</p>
-      </motion.div>
-    ))}
+    {/* Kolom Kanan: Timeline Anak Tangga (scale menurun) */}
+    <div className="relative flex flex-col items-start space-y-8">
+      <div className="absolute left-2 top-0 h-full w-1 bg-gradient-to-b from-[#d7b940] to-transparent rounded-full"></div>
+      
+      {[...successStory].reverse().map((item, index) => {
+        const baseScale = 1.1 - index * 0.06;
+        return (
+          <motion.div
+            key={item.year}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.15 }}
+            viewport={{ once: true }}
+            style={{ transform: `scale(${baseScale})`, transformOrigin: 'left center' }}
+            className="relative z-10 w-full pl-6 pr-4 py-4 bg-white border-l-4 border-[#d7b940] shadow-md rounded-lg"
+          >
+            <h4 className="text-xl font-bold text-[#d7b940]">{item.year}</h4>
+            <p className="text-sm mt-1 text-gray-700">{item.text}</p>
+          </motion.div>
+        );
+      })}
+    </div>
   </div>
 </section>
 
