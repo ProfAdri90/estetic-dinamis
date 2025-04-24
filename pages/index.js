@@ -582,30 +582,30 @@ useEffect(() => {
  <section id="kontak" className="bg-white text-[#082846] py-20 px-4">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
 
-    {/* Kolom 1: Ilustrasi Estetik */}
-    <div className="flex justify-center">
-      <img src="/assets/hub.png" alt="Ilustrasi" className="w-full max-w-xs md:max-w-sm rounded-xl shadow-md" />
+    {/* Kolom 1: Gambar Estetik Full Height */}
+    <div className="h-full">
+      <img src="/assets/hub.png" alt="Ilustrasi" className="w-full h-full object-cover rounded-xl shadow-md" />
     </div>
 
     {/* Kolom 2: Info Kontak */}
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div>
         <h2 className="text-3xl font-bold mb-2">{lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}</h2>
-        <p className="text-xl font-semibold font-['Dancing Script',cursive] italic text-[#082846]">
+        <p className="text-2xl font-bold italic font-['Dancing Script',cursive] text-[#082846] drop-shadow-md">
           Helping brands tell stories that people believe & remember, with an aesthetic way
         </p>
       </div>
-      <div className="space-y-4 text-base">
-        <div className="flex items-start gap-3">
-          <img src="/assets/phone.png" alt="Phone" className="w-5 h-5 mt-1 filter brightness-0 invert" />
+      <div className="space-y-6 text-base">
+        <div className="flex items-center gap-4">
+          <svg className="w-6 h-6 text-[#082846]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M3 5h2a2 2 0 012 2v2a2 2 0 01-2 2H3m0 4h2a2 2 0 012 2v2a2 2 0 01-2 2H3m4-16h14M7 20h14M7 4v16"></path></svg>
           <span>+62 812-1212-1212</span>
         </div>
-        <div className="flex items-start gap-3">
-          <img src="/assets/email.png" alt="Email" className="w-5 h-5 mt-1 filter brightness-0 invert" />
+        <div className="flex items-center gap-4">
+          <svg className="w-6 h-6 text-[#082846]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m0 0v4m0-4V8"></path></svg>
           <span>Communicatewith@estetic.co.id</span>
         </div>
-        <div className="flex items-start gap-3">
-          <img src="/assets/map.png" alt="Map" className="w-5 h-5 mt-1 filter brightness-0 invert" />
+        <div className="flex items-center gap-4">
+          <svg className="w-6 h-6 text-[#082846]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2z"></path><path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z"></path></svg>
           <span>Jl. Pelita Raya Blok P No. 5-6, Tangerang</span>
         </div>
       </div>
@@ -613,10 +613,10 @@ useEffect(() => {
 
     {/* Kolom 3: Form Kontak */}
     <form className="space-y-4">
-      <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940]" />
-      <input type="email" placeholder="Email" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940]" />
-      <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940]" />
-      <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940]"></textarea>
+      <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940] text-[#082846]" />
+      <input type="email" placeholder="Email" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940] text-[#082846]" />
+      <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940] text-[#082846]" />
+      <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#d7b940] text-[#082846]"></textarea>
       <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
         {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
       </button>
