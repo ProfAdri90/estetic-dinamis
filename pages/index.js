@@ -579,7 +579,7 @@ useEffect(() => {
   </div>
 </section>
 
-   <section className="bg-[#d7b940] text-[#082846] py-16 px-4" id="kontak">
+  <section className="bg-[#082846] text-white py-16 px-4" id="kontak">
   <div className="max-w-7xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
@@ -591,10 +591,10 @@ useEffect(() => {
       {/* Kolom 2: Judul + Info Kontak */}
       <div className="space-y-6">
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-1 text-[#082846]">
+          <h2 className="text-2xl md:text-3xl font-bold mb-1">
             {lang === 'id' ? 'Hubungi Kami' : 'Contact Us'}
           </h2>
-          <p className="text-2xl md:text-3xl font-bold italic text-[#082846] font-['Dancing Script',cursive] drop-shadow-md">
+          <p className="text-2xl md:text-3xl font-bold italic font-['Dancing Script',cursive] drop-shadow-md">
             Helping brands tell stories that people believe & remember, with an aesthetic way
           </p>
         </div>
@@ -616,11 +616,11 @@ useEffect(() => {
 
       {/* Kolom 3: Form Kontak */}
       <form className="space-y-4">
-        <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border rounded" />
-        <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded" />
-        <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border rounded" />
-        <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border rounded"></textarea>
-        <button type="submit" className="bg-[#082846] text-[#d7b940] px-6 py-2 rounded font-bold">
+        <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border rounded text-[#082846]" />
+        <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded text-[#082846]" />
+        <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border rounded text-[#082846]" />
+        <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border rounded text-[#082846]"></textarea>
+        <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold">
           {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
         </button>
       </form>
