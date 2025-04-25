@@ -125,16 +125,6 @@ export default function Home() {
     bg: "/bgsukses/delapan.png"
   }
 ];
-function SuccessStorySection({ lang }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % successStories.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
 
 
   const testimonials = [
@@ -360,7 +350,17 @@ useEffect(() => {
   return () => observer.disconnect();
 }, []);
 
-  
+  function SuccessStorySection({ lang }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % successStories.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
     
