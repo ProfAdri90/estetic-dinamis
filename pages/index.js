@@ -674,32 +674,7 @@ useEffect(() => {
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
-  <div className="flex flex-col gap-8 max-w-4xl mx-auto">
-    {team.map((person, i) => (
-      <motion.div
-        key={i}
-        className="bg-white p-6 rounded shadow-md"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: i * 0.2 }}
-      >
-        {/* FOTO PROFIL TIM */}
-      <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#d7b940] shadow-md">
-  <img
-    src={person.photo}
-    alt={person.name}
-    className="w-full h-full object-cover"
-  />
-</div>
-
-
-          {/* NAMA PROFIL TIM */}
-        <h4 className="text-xl font-bold mb-1">{person.name}</h4>
-        <p className="text-sm font-semibold mb-2 text-[#d7b940]">{person.title}</p>
-        <p className="text-sm">{person.desc}</p>
-      </motion.div>
-    ))}
-  </div>
+  <OurTeams />
 </section>
     <section id="layanan" className="scroll-mt-[140px] text-center py-20 px-8 bg-white text-[#082846]">
   <h3 className="text-3xl font-bold mb-10">
