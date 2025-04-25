@@ -667,10 +667,7 @@ useEffect(() => {
     </div>
   </div>
 </section>
-
-
-
-<section id="tim" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
+<section id="our-team" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4 py-12 scroll-mt-[140px]">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
