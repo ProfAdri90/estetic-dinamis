@@ -15,7 +15,7 @@ export default function TeamCard({ name, title, image }) {
         <hr className="my-1 border-t border-gray-300 w-6" />
         <p className="text-xs text-gray-200">{title}</p>
       </div>
-    </div>
+    </div> 
   );
 }
 
