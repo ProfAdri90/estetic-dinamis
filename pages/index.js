@@ -123,6 +123,18 @@ export default function Home() {
       en: "Built a strategic PR campaign to restore customer confidence in a premium dining brand."
     },
     bg: "/bgsukses/delapan.png"
+  },
+  {
+    year: "2025",
+    title: {
+      id: "Transformasi Generasi Kedua",
+      en: "Second Generation Transformation"
+    },
+    desc: {
+      id: "Estetic bertransformasi menuju era baru berbasis data dan teknologi.",
+      en: "Estetic transforms into a data and technology-driven agency."
+    },
+    bg: "/bgsukses/sembilan.png"
   }
 ];
 
@@ -350,16 +362,13 @@ useEffect(() => {
 
   return () => observer.disconnect();
 }, []);
- function SuccessStorySection({ lang }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % successStories.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
+const [activeIndex, setActiveIndex] = useState(0);
+useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveIndex((prev) => (prev + 1) % successStories.length);
+  }, 5000);
+  return () => clearInterval(interval);
+}, []);
 
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
@@ -558,53 +567,49 @@ useEffect(() => {
   </div>
 </section>
  <section id="sukses" className="relative w-full h-screen overflow-hidden">
-    {SuccessStorySection({ lang })}
-      {/* Background Image Crossfade */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={successStories[activeIndex].year}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${successStories[activeIndex].bg})`
-          }}
-        />
-      </AnimatePresence>
+  {/* Background Image Crossfade */}
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={successStories[activeIndex].year}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${successStories[activeIndex].bg})`
+      }}
+    />
+  </AnimatePresence>
 
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-6 backdrop-blur-sm bg-black/40 text-white">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={successStories[activeIndex].year + "-text"}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl space-y-4 p-6 rounded-xl"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-[#d7b940] drop-shadow-lg">
-              {successStories[activeIndex].year}
-            </h1>
-            <h2 className="text-xl md:text-2xl font-semibold">
-              {lang === "id"
-                ? successStories[activeIndex].title.id
-                : successStories[activeIndex].title.en}
-            </h2>
-            <p className="text-base md:text-lg leading-relaxed">
-              {lang === "id"
-                ? successStories[activeIndex].desc.id
-                : successStories[activeIndex].desc.en}
-            </p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-    </section>
-  );
-}
-
+  {/* Overlay Content */}
+  <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-6 backdrop-blur-sm bg-black/40 text-white">
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={successStories[activeIndex].year + "-text"}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-3xl space-y-4 p-6 rounded-xl"
+      >
+        <h1 className="text-4xl md:text-6xl font-bold text-[#d7b940] drop-shadow-lg">
+          {successStories[activeIndex].year}
+        </h1>
+        <h2 className="text-xl md:text-2xl font-semibold">
+          {lang === "id"
+            ? successStories[activeIndex].title.id
+            : successStories[activeIndex].title.en}
+        </h2>
+        <p className="text-base md:text-lg leading-relaxed">
+          {lang === "id"
+            ? successStories[activeIndex].desc.id
+            : successStories[activeIndex].desc.en}
+        </p>
+      </motion.div>
+    </AnimatePresence>
+  </div>
+</section>
 
     <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10">
