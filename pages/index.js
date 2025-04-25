@@ -547,33 +547,28 @@ useEffect(() => {
     ))}
   </div>
 </section>
-<section id="sukses">
-  {/* LOOP SECTION */}
-  {successStories.map((item, index) => (
-    <section
-      key={index}
-      className="min-h-screen bg-cover bg-center flex flex-col justify-center px-6 text-white"
-      style={{ backgroundImage: `url('${item.bg}')` }}
-    >
+<section id="sukses" className="bg-white text-[#082846] py-20 px-6">
+  <h3 className="text-3xl font-bold text-center mb-10">
+    {lang === 'id' ? 'Cerita Sukses Kami' : 'Our Success Story'}
+  </h3>
+
+  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    {successStories.map((item, index) => (
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="max-w-3xl mx-auto text-center space-y-4 backdrop-blur-sm bg-black/40 rounded-xl p-6"
+        transition={{ delay: index * 0.1 }}
+        className="bg-[#f9f9f9] rounded-xl shadow-md p-6 text-center"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-[#d7b940] drop-shadow-lg">
-          {item.year}
-        </h1>
-        <h2 className="text-xl md:text-2xl font-semibold">
-          {lang === "id" ? item.title.id : item.title.en}
-        </h2>
-        <p className="text-base md:text-lg leading-relaxed">
+        <h4 className="text-[#d7b940] font-bold text-xl mb-1">{item.year}</h4>
+        <h5 className="font-semibold text-md mb-2">{lang === "id" ? item.title.id : item.title.en}</h5>
+        <p className="text-sm leading-relaxed">
           {lang === "id" ? item.desc.id : item.desc.en}
         </p>
       </motion.div>
-    </section>
-  ))}
+    ))}
+  </div>
 </section>
 
 
