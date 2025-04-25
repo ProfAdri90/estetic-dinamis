@@ -350,7 +350,7 @@ useEffect(() => {
 
   return () => observer.disconnect();
 }, []);
-export default function SuccessStorySection({ lang }) {
+ function SuccessStorySection({ lang }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -558,6 +558,7 @@ export default function SuccessStorySection({ lang }) {
   </div>
 </section>
  <section id="sukses" className="relative w-full h-screen overflow-hidden">
+    {SuccessStorySection({ lang })}
       {/* Background Image Crossfade */}
       <AnimatePresence mode="wait">
         <motion.div
