@@ -566,7 +566,7 @@ useEffect(() => {
     ))}
   </div>
 </section>
- <section id="sukses" className="relative w-full h-screen overflow-hidden">
+<section id="sukses" className="relative w-full h-screen overflow-hidden">
   {/* Background Image Crossfade */}
   <AnimatePresence mode="wait">
     <motion.div
@@ -582,7 +582,7 @@ useEffect(() => {
     />
   </AnimatePresence>
 
-  {/* Overlay Content */}
+  {/* Overlay Text Content */}
   <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-6 backdrop-blur-sm bg-black/40 text-white">
     <AnimatePresence mode="wait">
       <motion.div
@@ -609,7 +609,21 @@ useEffect(() => {
       </motion.div>
     </AnimatePresence>
   </div>
+
+  {/* Dot Navigation */}
+  <div className="absolute bottom-6 w-full flex justify-center gap-2 z-50">
+    {successStories.map((_, i) => (
+      <button
+        key={i}
+        className={`w-3 h-3 rounded-full ${
+          i === activeIndex ? "bg-[#d7b940]" : "bg-white/50"
+        } transition`}
+        onClick={() => setActiveIndex(i)}
+      />
+    ))}
+  </div>
 </section>
+
 
     <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10">
