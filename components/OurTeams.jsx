@@ -16,7 +16,8 @@ export default function OurTeams() {
   return (
     <section id="our-team" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-white">
       <h2 className="text-3xl font-bold text-center mb-10">Tim Kami</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 justify-center">
+      
+     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 justify-center">
         {teamMembers.map((member, index) => (
           <div key={index} className="flex justify-center">
             <TeamCard
