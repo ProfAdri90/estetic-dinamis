@@ -533,7 +533,7 @@ useEffect(() => {
           className="relative w-full h-[140px]"
         >
           <img
-            src="/ss_clean.png"
+            src="/assets/ss_clean.png"
             alt={`Arrow ${index}`}
             className="w-full h-full object-cover"
           />
