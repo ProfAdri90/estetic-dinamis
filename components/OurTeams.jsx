@@ -13,22 +13,19 @@ const teamMembers = [
   { name: "Putri Pangabean", title: "Manajer Pemasaran", image: "/team/putri.jpeg" },
 ];
 
-export default function OurTeams() {
+export default function TeamCard({ image, name, title }) {
   return (
-    <section id="tim" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-white">
-     <div className="w-full max-w-[1200px] mx-auto grid grid-cols-8 gap-2 px-2">
-    {teamMembers.map((member, i) => (
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: i * 0.05 }}
-        className="w-full"
-      >
-        <TeamCard image={member.image} name={member.name} title={member.title} />
-      </motion.div>
-    ))}
-  </div>
-</section>
+    <div className="relative aspect-[3/4] w-full overflow-hidden group">
+      <Image
+        src={image}
+        alt={name}
+        fill
+        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"
+      />
+      <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-center py-2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out text-xs md:text-sm">
+        <h3 className="font-semibold">{name}</h3>
+        <p className="text-[10px] md:text-xs">{title}</p>
+      </div>
+    </div>
   );
 }
