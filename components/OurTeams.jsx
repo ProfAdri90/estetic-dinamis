@@ -25,7 +25,7 @@ export default function OurTeams() {
           />
         ))}
       </div>
-    </section>
+    </section> 
   );
 }
 
