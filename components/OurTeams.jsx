@@ -15,35 +15,22 @@ const teamMembers = [
 
 export default function OurTeams() {
   return (
-    <section id="our-team" className="scroll-mt-[140px] px-4 py-20 bg-[#082846] text-center">
-      <h2 className="text-white text-4xl font-bold mb-10">Tim Kami</h2>
+    <section id="our-team" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-center">
+      <h2 className="text-white text-3xl md:text-4xl font-bold mb-10">Tim Kami</h2>
 
-      {/* Fade-in Container */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="max-w-[1600px] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center"
-      >
+      <div className="flex flex-wrap justify-center gap-x-4 gap-y-6 max-w-[1200px] mx-auto">
         {teamMembers.map((member, index) => (
-          <div
+          <motion.div
             key={index}
-            className={`
-              flex justify-center
-              ${index >= 6 ? "col-span-2 lg:col-start-3" : ""}
-            `}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <TeamCard
-              image={member.image}
-              name={member.name}
-              title={member.title}
-            />
-          </div>
+            <TeamCard image={member.image} name={member.name} title={member.title} />
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
-
-
