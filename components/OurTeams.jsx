@@ -14,7 +14,7 @@ const teamMembers = [
 export default function OurTeams() {
   return (
     <section id="our-team" className="scroll-mt-[140px] px-4 py-16 bg-[#082846]">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-8 gap-0">
+      <div className="max-w-[1520px] mx-auto grid grid-cols-8 gap-0">
         {teamMembers.map((member, index) => (
           <TeamCard
             key={index}
