@@ -1,3 +1,4 @@
+// components/OurTeams.jsx
 import TeamCard from "./TeamCard";
 
 const teamMembers = [
@@ -13,15 +14,18 @@ const teamMembers = [
 
 export default function OurTeams() {
   return (
-    <section id="our-team" className="scroll-mt-[140px] px-4 py-16 bg-[#082846]">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-8 gap-0">
+    <section id="our-team" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-white">
+      <h2 className="text-3xl font-bold text-center mb-10">Tim Kami</h2>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 justify-center">
         {teamMembers.map((member, index) => (
-          <TeamCard
-            key={index}
-            image={member.image}
-            name={member.name}
-            title={member.title}
-          />
+          <div key={index} className="flex justify-center">
+            <TeamCard
+              image={member.image}
+              name={member.name}
+              title={member.title}
+            />
+          </div>
         ))}
       </div>
     </section>
