@@ -459,32 +459,101 @@ useEffect(() => {
     ))}
   </div>
 </section>
-<section id="sukses" className="bg-white text-[#082846] py-20">
-  <div className="max-w-6xl mx-auto px-6 text-center space-y-12">
+<section id="sukses" className="py-20 bg-white text-[#082846] overflow-x-auto">
+  <div className="max-w-7xl mx-auto px-4">
+    <h3 className="text-3xl font-bold text-center mb-4">
+      {lang === 'id' ? 'Cerita Sukses Kami' : 'Our Success Journey'}
+    </h3>
+    <p className="text-center mb-10 text-lg max-w-3xl mx-auto">
+      {lang === 'id'
+        ? 'Perjalanan Estetic dalam membangun kepercayaan, menghadirkan solusi komunikasi, dan memperkuat reputasi sejak 1997.'
+        : 'Estetic’s journey in shaping trust, delivering communication solutions, and strengthening reputation since 1997.'}
+    </p>
 
-    {/* Title & Desc */}
-    <div>
-      <h3 className="text-3xl font-bold">{lang === 'id' ? 'Perjalanan Sukses' : 'Success Journey'}</h3>
-      <p className="max-w-3xl mx-auto text-base mt-2">
-        {lang === 'id'
-          ? 'Langkah demi langkah sejak 1997 hingga menjadi perusahaan komunikasi terpercaya.'
-          : 'Step by step since 1997 to becoming a trusted communication firm.'}
-      </p>
-    </div>
-
-    {/* Timeline */}
-    <div className="relative flex items-center justify-between w-full border-t-4 border-[#d7b940] px-4 py-10 overflow-x-auto">
-      {successStory.map((item, index) => (
-        <div key={index} className="relative flex flex-col items-center flex-shrink-0 w-36">
-          <div className="w-6 h-6 rounded-full bg-[#082846] border-4 border-white shadow-md z-10"></div>
-          <div className="mt-3 text-sm font-bold text-[#d7b940]">{item.year}</div>
-          <p className="text-xs mt-1">{lang === 'id' ? item.id : item.en}</p>
+    <div className="flex flex-nowrap gap-6 overflow-x-auto pb-4">
+      {[
+        {
+          title: lang === 'id'
+            ? 'Tahun-Tahun Perintisan (1997–2004)'
+            : 'Early Establishment Years (1997–2004)',
+          items: [
+            lang === 'id'
+              ? '1997 - Penanganan Strategi Komunikasi Bentoel'
+              : '1997 - Strategic Comms for Bentoel',
+            lang === 'id'
+              ? '1998 - Strategi Komunikasi Bank Bali'
+              : '1998 - Public Comms for Bank Bali',
+            lang === 'id'
+              ? '2000 - Media Relation Mayora'
+              : '2000 - Media Relation Mayora',
+            lang === 'id'
+              ? '2004 - Komunikasi Pembangunan Agung Podomoro'
+              : '2004 - APL Development Strategy'
+          ]
+        },
+        {
+          title: lang === 'id'
+            ? 'Konsolidasi Strategi (2013–2016)'
+            : 'Strategic Consolidation (2013–2016)',
+          items: [
+            lang === 'id'
+              ? '2013 - Perencanaan PR PT Sumber Air Mas Pratama'
+              : '2013 - PR Planning for Sumber Air Mas',
+            lang === 'id'
+              ? '2014 - Strategi Komunikasi APL'
+              : '2014 - Comms Strategy for APL',
+            lang === 'id'
+              ? '2016 - Komunikasi Korporat Antasari 45'
+              : '2016 - Corporate Comms Antasari 45'
+          ]
+        },
+        {
+          title: lang === 'id'
+            ? 'Menuju Transformasi (2019–2022)'
+            : 'Toward Transformation (2019–2022)',
+          items: [
+            lang === 'id'
+              ? '2019 - Pemulihan Citra Saigon Delight'
+              : '2019 - Reputation Recovery Saigon Delight',
+            lang === 'id'
+              ? '2022 - Transformasi Digital Estetic'
+              : '2022 - Digital Transformation'
+          ]
+        },
+        {
+          title: lang === 'id'
+            ? 'Era Baru Estetic (2025–)'
+            : 'New Era of Estetic (2025–)',
+          items: [
+            lang === 'id'
+              ? '2025 - Transformasi Generasi Kedua'
+              : '2025 - Second Generation Transformation'
+          ]
+        }
+      ].map((era, index) => (
+        <div
+          key={index}
+          className="relative min-w-[360px] h-[130px] shrink-0"
+        >
+          <img
+            src="/assets/ss_clean.png"
+            alt={`Arrow Era ${index + 1}`}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute top-4 left-4 right-4 text-white text-sm space-y-1">
+            <h4 className="font-bold">{era.title}</h4>
+            <ul className="list-disc list-inside text-xs leading-snug">
+              {era.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       ))}
     </div>
-
   </div>
 </section>
+
 
 
     <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
