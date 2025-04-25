@@ -3,6 +3,7 @@ import PartnerMedia from "../components/PartnerMedia";
 /*import { useState } from "react";*/
 /*import { motion } from "framer-motion";*/
 import { motion, AnimatePresence } from "framer-motion";
+import OurTeams from "@/components/OurTeams";
 
 
 export default function Home() {
