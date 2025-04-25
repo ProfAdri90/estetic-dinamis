@@ -16,4 +16,4 @@ export default function TeamCard({ name, title, image }) {
       </div>
     </div>
   );
-} 
+}
