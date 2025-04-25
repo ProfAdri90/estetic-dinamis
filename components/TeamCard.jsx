@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function TeamCard({ name, title, image }) {
   return (
-    <div className="w-[12.5%] px-1">
+   <div className="w-full max-w-[140px] px-1">
       <div className="relative group w-full aspect-[3/4] overflow-hidden rounded-xl shadow-md">
         <Image
           src={image}
