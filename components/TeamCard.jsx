@@ -3,24 +3,24 @@ import Image from "next/image";
 
 export default function TeamCard({ image, name, title }) {
   return (
-    <div className="w-[320px] aspect-[2/3] relative group overflow-hidden shadow-lg">
+    <div className="relative w-[360px] aspect-[2/3] overflow-hidden shadow-md bg-white">
       <Image
         src={image}
         alt={name}
         fill
-        className="object-cover grayscale md:group-hover:grayscale-0 transition-all duration-500 ease-in-out"
+        className="object-cover grayscale md:group-hover:grayscale-0 transition duration-500"
       />
       <div className={`
-        absolute bottom-0 left-0 w-full px-4 py-2
-        backdrop-blur-md bg-black/60 text-white text-center
-        md:opacity-0 md:group-hover:opacity-100
-        md:translate-y-full md:group-hover:translate-y-0
-        opacity-100 translate-y-0 transition-all duration-500
+        absolute bottom-0 left-0 w-full text-white text-center p-2
+        backdrop-blur-sm bg-black/60
+        md:opacity-0 md:group-hover:opacity-100 md:translate-y-full md:group-hover:translate-y-0
+        transition-all duration-500 ease-in-out
       `}>
-        <h3 className="text-base font-semibold">{name}</h3>
+        <h3 className="text-sm font-semibold">{name}</h3>
         <hr className="my-1 border-t border-gray-300 w-8 mx-auto" />
-        <p className="text-xs text-gray-200">{title}</p>
+        <p className="text-xs">{title}</p>
       </div>
     </div>
   );
 }
+
