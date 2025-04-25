@@ -16,20 +16,34 @@ const teamMembers = [
 export default function OurTeams() {
   return (
     <section id="tim" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-white">
-     
-<div className="w-full max-w-[1200px] mx-auto grid grid-cols-8 gap-2 px-2">
-    {teamMembers.map((member, i) => (
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: i * 0.05 }}
-        className="w-full"
-      >
-        <TeamCard image={member.image} name={member.name} title={member.title} />
-      </motion.div>
-    ))}
-  </div>
-</section>
+      <h2 className="text-3xl font-bold text-center mb-12">Tim Kami</h2>
+      
+      {/* DESKTOP GRID */}
+      <div className="hidden md:flex flex-col items-center gap-6">
+        <div className="flex justify-center gap-4 flex-wrap max-w-[1200px]">
+          {teamMembers.slice(0, 6).map((member, index) => (
+            <TeamCard key={index} image={member.image} name={member.name} title={member.title} />
+          ))}
+        </div>
+        <div className="flex justify-center gap-4">
+          {teamMembers.slice(6, 8).map((member, index) => (
+            <TeamCard key={index + 6} image={member.image} name={member.name} title={member.title} />
+          ))}
+        </div>
+      </div>
+
+      {/* MOBILE GRID */}
+      <div className="md:hidden grid grid-cols-2 gap-6 max-w-sm mx-auto">
+        {teamMembers.map((member, index) => (
+          <TeamCard
+            key={index}
+            image={member.image}
+            name={member.name}
+            title={member.title}
+            mobile
+          />
+        ))}
+      </div>
+    </section>
   );
 }
