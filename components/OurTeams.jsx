@@ -18,18 +18,20 @@ export default function OurTeams() {
     <section id="tim" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-white">
       <h2 className="text-center text-3xl font-bold mb-10">Tim Kami</h2>
 
-      <div className="flex justify-center flex-wrap gap-x-[10px] gap-y-[20px] max-w-[1440px] mx-auto">
-  {teamMembers.map((member, i) => (
-    <motion.div
-      key={i}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: i * 0.05 }}
-    >
-      <TeamCard image={member.image} name={member.name} title={member.title} />
-    </motion.div>
-  ))}
-</div>
+      <div className="w-full overflow-x-auto">
+    <div className="w-[1440px] grid grid-cols-8 gap-4 mx-auto">
+      {teamMembers.map((member, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: i * 0.05 }}
+        >
+          <TeamCard image={member.image} name={member.name} title={member.title} />
+        </motion.div>
+      ))}
+    </div>
+  </div>
     </section>
   );
 }
