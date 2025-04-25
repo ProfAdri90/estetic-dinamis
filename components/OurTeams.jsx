@@ -1,5 +1,6 @@
 // components/OurTeams.jsx
 import TeamCard from "./TeamCard";
+import { motion } from "framer-motion";
 
 const teamMembers = [
   { name: "Profesor Adri", title: "Direktur Utama", image: "/team/profadri.jpeg" },
@@ -17,16 +18,30 @@ export default function OurTeams() {
     <section id="our-team" className="scroll-mt-[140px] px-4 py-20 bg-[#082846] text-center">
       <h2 className="text-white text-4xl font-bold mb-10">Tim Kami</h2>
 
-      <div className="max-w-[1440px] mx-auto flex flex-wrap justify-center gap-x-6 gap-y-10">
+      {/* Fade-in Container */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="max-w-[1600px] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center"
+      >
         {teamMembers.map((member, index) => (
-          <TeamCard
+          <div
             key={index}
-            image={member.image}
-            name={member.name}
-            title={member.title}
-          />
+            className={`
+              flex justify-center
+              ${index >= 6 ? "col-span-2 lg:col-start-3" : ""}
+            `}
+          >
+            <TeamCard
+              image={member.image}
+              name={member.name}
+              title={member.title}
+            />
+          </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
