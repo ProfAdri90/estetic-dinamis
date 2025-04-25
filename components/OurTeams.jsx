@@ -14,12 +14,17 @@ const teamMembers = [
 
 export default function OurTeams() {
   return (
-    <section id="our-team" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-white">
-      <h2 className="text-3xl font-bold text-center mb-10">Tim Kami</h2>
-      
-     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 justify-center">
+    <section id="our-team" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-center">
+      <h2 className="text-white text-4xl font-bold mb-10">Tim Kami</h2>
+      <div className="max-w-[2160px] mx-auto grid grid-cols-6 gap-4">
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex justify-center">
+          <div
+            key={index}
+            className={`
+              ${index < 6 ? "" : "col-start-3 col-span-2"} 
+              flex justify-center
+            `}
+          >
             <TeamCard
               image={member.image}
               name={member.name}
@@ -31,3 +36,4 @@ export default function OurTeams() {
     </section>
   );
 }
+
