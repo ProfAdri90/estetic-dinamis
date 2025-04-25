@@ -27,17 +27,105 @@ export default function Home() {
   ? ["Adaptif", "Profesionalisme", "Kreativitas Strategis", "Kolaboratif", "Terpercaya", "Berkelanjutan"]
   : ["Adaptive", "Professionalism", "Strategic Creativity", "Collaborative", "Trusted", "Sustainable"];
 
-  const successStory = [
-  { year: 1997, text: lang === "id" ? "Menangani kasus Bentoel Group" : "Handled Bentoel Group case" },
-  { year: 1998, text: lang === "id" ? "Krisis komunikasi Bank Bali" : "Bank Bali communication crisis" },
-  { year: 2000, text: lang === "id" ? "Menangani media relation Mayora Group" : "Handled media relation for Mayora Group" },
-  { year: 2004, text: lang === "id" ? "Kasus penolakan reklamasi PIK – Agung Podomoro" : "Reclamation rejection case PIK – Agung Podomoro" },
-  { year: 2013, text: lang === "id" ? "Krisis komunikasi lahan Teluk Jambe – Karawang" : "Land communication crisis Teluk Jambe – Karawang" },
-  { year: 2014, text: lang === "id" ? "Reklamasi Pantura Jakarta – APL" : "North Coast Jakarta reclamation – APL" },
-  { year: 2016, text: lang === "id" ? "Serah terima apartemen Antasari 45 – Cowell Dev" : "Apartment handover Antasari 45 – Cowell Dev" },
-  { year: 2019, text: lang === "id" ? "Pemulihan reputasi Saigon Delight – kasus keracunan" : "Reputation recovery of Saigon Delight – food poisoning case" },
-  { year: 2025, text: lang === "id" ? "Transformasi Estetic generasi baru" : "Estetic transformation for the new generation" }
+ const successStories = [
+  {
+    year: "1997",
+    title: {
+      id: "Awal Perjalanan PR Estetic",
+      en: "The PR Journey Begins"
+    },
+    desc: {
+      id: "Proyek perdana Estetic dalam merancang strategi komunikasi untuk brand besar nasional.",
+      en: "Estetic’s first major step in developing a public relations strategy for a national brand."
+    },
+    bg: "/bgsukses/first.png"
+  },
+  {
+    year: "1998",
+    title: {
+      id: "Membangun Narasi Finansial",
+      en: "Financial Narrative Building"
+    },
+    desc: {
+      id: "Merancang komunikasi publik untuk industri keuangan dengan pendekatan yang terpercaya.",
+      en: "Crafted public communication strategies for the financial sector with a trusted approach."
+    },
+    bg: "/bgsukses/dua.png"
+  },
+  {
+    year: "2000",
+    title: {
+      id: "Sinergi Media Korporasi Mayora",
+      en: "Media Relations for Mayora"
+    },
+    desc: {
+      id: "Menginisiasi hubungan media strategis jangka panjang bersama korporasi consumer goods.",
+      en: "Initiated long-term strategic media partnerships with a major consumer goods company."
+    },
+    bg: "/bgsukses/tiga.png"
+  },
+  {
+    year: "2004",
+    title: {
+      id: "Komunikasi Pembangunan Perkotaan",
+      en: "Urban Development Communication"
+    },
+    desc: {
+      id: "Menyusun strategi komunikasi korporat untuk ekspansi kawasan properti terpadu.",
+      en: "Built strategic corporate messaging for integrated property development projects."
+    },
+    bg: "/bgsukses/empat.png"
+  },
+  {
+    year: "2013",
+    title: {
+      id: "PR Berbasis Stakeholder Industri",
+      en: "Stakeholder-Focused PR Planning"
+    },
+    desc: {
+      id: "Mengembangkan strategi komunikasi berbasis pemetaan pemangku kepentingan di sektor industri.",
+      en: "Developed PR strategy based on stakeholder mapping in the industrial sector."
+    },
+    bg: "/bgsukses/lima.png"
+  },
+  {
+    year: "2014",
+    title: {
+      id: "Narasi Proyek Infrastruktur Pesisir",
+      en: "Coastal Infrastructure Narrative"
+    },
+    desc: {
+      id: "Mengelola komunikasi publik pada proyek pengembangan kawasan pesisir skala besar.",
+      en: "Managed public messaging for a large-scale coastal infrastructure initiative."
+    },
+    bg: "/bgsukses/enam.png"
+  },
+  {
+    year: "2016",
+    title: {
+      id: "Komunikasi Strategis Antasari 45",
+      en: "Strategic Communication for Antasari 45"
+    },
+    desc: {
+      id: "Mengembangkan strategi komunikasi proaktif dalam proyek hunian yang bersinggungan dengan pembangunan infrastruktur publik.",
+      en: "Developed proactive communication strategies for a residential project intersecting with major public infrastructure development."
+    },
+    bg: "/bgsukses/tujuh.png"
+  },
+  {
+    year: "2019",
+    title: {
+      id: "Reputasi Restoran Premium",
+      en: "Premium Restaurant Reputation Recovery"
+    },
+    desc: {
+      id: "Menyusun strategi komunikasi untuk membangun kembali kepercayaan pelanggan restoran.",
+      en: "Built a strategic PR campaign to restore customer confidence in a premium dining brand."
+    },
+    bg: "/bgsukses/delapan.png"
+  }
 ];
+
 
 
   const testimonials = [
@@ -459,96 +547,33 @@ useEffect(() => {
     ))}
   </div>
 </section>
-<section id="sukses" className="py-20 bg-white text-[#082846]">
-  <div className="max-w-7xl mx-auto px-4">
-    <h3 className="text-3xl font-bold text-center mb-4">
-      {lang === 'id' ? 'Cerita Sukses Kami' : 'Our Success Journey'}
-    </h3>
-    <p className="text-center mb-10 text-lg max-w-3xl mx-auto">
-      {lang === 'id'
-        ? 'Perjalanan Estetic dalam membangun kepercayaan, menghadirkan solusi komunikasi, dan memperkuat reputasi sejak 1997.'
-        : 'Estetic’s journey in shaping trust, delivering communication solutions, and strengthening reputation since 1997.'}
-    </p>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {[
-        {
-          title: lang === 'id'
-            ? 'Tahun-Tahun Perintisan (1997–2004)'
-            : 'Early Establishment Years (1997–2004)',
-          items: [
-            lang === 'id'
-              ? 'Strategi Komunikasi Bentoel'
-              : 'Strategic Comms Bentoel',
-            lang === 'id'
-              ? 'Bank Bali & Mayora Group'
-              : 'Bank Bali & Mayora',
-            lang === 'id'
-              ? 'Pembangunan APL'
-              : 'APL Development'
-          ]
-        },
-        {
-          title: lang === 'id'
-            ? 'Konsolidasi Strategi (2013–2016)'
-            : 'Strategic Consolidation (2013–2016)',
-          items: [
-            lang === 'id'
-              ? 'PR PT Sumber Air Mas'
-              : 'PR for Sumber Air Mas',
-            lang === 'id'
-              ? 'Komunikasi APL'
-              : 'APL Comms Strategy',
-            lang === 'id'
-              ? 'Antasari 45'
-              : 'Antasari 45 Corporate'
-          ]
-        },
-        {
-          title: lang === 'id'
-            ? 'Transformasi (2019–2022)'
-            : 'Transformation (2019–2022)',
-          items: [
-            lang === 'id'
-              ? 'Reputasi Saigon Delight'
-              : 'Saigon Delight Recovery',
-            lang === 'id'
-              ? 'Transformasi Digital'
-              : 'Digital Transformation'
-          ]
-        },
-        {
-          title: lang === 'id'
-            ? 'Era Baru (2025–)'
-            : 'New Era (2025–)',
-          items: [
-            lang === 'id'
-              ? 'Generasi Kedua Estetic'
-              : '2nd Gen Transformation'
-          ]
-        }
-      ].map((era, index) => (
-        <div
-          key={index}
-          className="relative w-full h-[140px]"
-        >
-          <img
-            src="/assets/ss_clean.png"
-            alt={`Arrow ${index}`}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-4 left-4 right-4 text-white text-xs leading-snug space-y-1">
-            <h4 className="font-bold text-sm">{era.title}</h4>
-            <ul className="list-disc list-inside">
-              {era.items.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
+<section id="sukses">
+  {/* LOOP SECTION */}
+  {successStories.map((item, index) => (
+    <section
+      key={index}
+      className="min-h-screen bg-cover bg-center flex flex-col justify-center px-6 text-white"
+      style={{ backgroundImage: `url('${item.bg}')` }}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="max-w-3xl mx-auto text-center space-y-4 backdrop-blur-sm bg-black/40 rounded-xl p-6"
+      >
+        <h1 className="text-4xl md:text-6xl font-bold text-[#d7b940] drop-shadow-lg">
+          {item.year}
+        </h1>
+        <h2 className="text-xl md:text-2xl font-semibold">
+          {lang === "id" ? item.title.id : item.title.en}
+        </h2>
+        <p className="text-base md:text-lg leading-relaxed">
+          {lang === "id" ? item.desc.id : item.desc.en}
+        </p>
+      </motion.div>
+    </section>
+  ))}
 </section>
 
 
