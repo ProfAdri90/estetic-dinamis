@@ -17,7 +17,7 @@ export default function TeamCard({ name, title, image }) {
       <p className="text-xs text-gray-200">{title}</p>
     </div>
   </div>
-</div>
+</div> 
   );
 }
 
