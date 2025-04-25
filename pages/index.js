@@ -125,7 +125,7 @@ export default function Home() {
     bg: "/bgsukses/delapan.png"
   }
 ];
-export default function SuccessStorySection({ lang }) {
+function SuccessStorySection({ lang }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
