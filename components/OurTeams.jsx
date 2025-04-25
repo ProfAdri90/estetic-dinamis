@@ -15,17 +15,16 @@ const teamMembers = [
 
 export default function OurTeams() {
   return (
-    <section id="our-team" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-center">
-      <h2 className="text-white text-3xl md:text-4xl font-bold mb-10">Tim Kami</h2>
+    <section id="tim" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-white">
+      <h2 className="text-center text-3xl font-bold mb-10">Tim Kami</h2>
 
-      <div className="flex flex-wrap justify-center gap-x-4 gap-y-6 max-w-[1200px] mx-auto">
-        {teamMembers.map((member, index) => (
+      <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[95%] mx-auto">
+        {teamMembers.map((member, i) => (
           <motion.div
-            key={index}
+            key={i}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
           >
             <TeamCard image={member.image} name={member.name} title={member.title} />
           </motion.div>
