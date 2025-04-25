@@ -567,11 +567,11 @@ useEffect(() => {
   </div>
 </section>
 <section id="sukses" className="relative w-full h-screen overflow-hidden">
-    <h2 className="text-4xl md:text-5xl font-bold text-center text-[#d7b940] drop-shadow-lg mb-8 z-20 relative">
-    {lang === 'id'
-      ? 'Perjalanan Keberhasilan Estetic dari Waktu ke Waktu'
-      : 'Estetic’s Legacy of Excellence Through the Years'}
-  </h2>
+   <h2 className="text-3xl md:text-4xl font-bold text-center text-white drop-shadow-md mb-10 z-20 relative">
+  {lang === 'id'
+    ? 'Perjalanan Keberhasilan Estetic dari Waktu ke Waktu'
+    : 'Estetic’s Legacy of Excellence Through the Years'}
+</h2>
   {/* Background Image Crossfade */}
   <AnimatePresence mode="wait">
     <motion.div
