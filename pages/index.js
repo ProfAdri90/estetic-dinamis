@@ -460,111 +460,31 @@ useEffect(() => {
   </div>
 </section>
 <section id="sukses" className="bg-white text-[#082846] py-20">
-  <div className="max-w-7xl mx-auto px-6 space-y-12">
+  <div className="max-w-6xl mx-auto px-6 text-center space-y-12">
 
-    {/* Judul dan Narasi */}
-    <div className="text-center space-y-4">
-      <h3 className="text-3xl md:text-4xl font-bold">
-        {lang === 'id' ? 'Cerita Sukses Kami' : 'Our Success Journey'}
-      </h3>
-      <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
+    {/* Title & Desc */}
+    <div>
+      <h3 className="text-3xl font-bold">{lang === 'id' ? 'Perjalanan Sukses' : 'Success Journey'}</h3>
+      <p className="max-w-3xl mx-auto text-base mt-2">
         {lang === 'id'
-          ? 'Estetic telah menempuh perjalanan panjang sejak 1997. Kami terus melangkah membangun reputasi dengan strategi yang berdampak.'
-          : 'Since 1997, Estetic has been on a long journey. We keep building reputation through impactful strategies.'}
+          ? 'Langkah demi langkah sejak 1997 hingga menjadi perusahaan komunikasi terpercaya.'
+          : 'Step by step since 1997 to becoming a trusted communication firm.'}
       </p>
     </div>
 
-    {/* Arrow Timeline */}
-    <div className="overflow-x-auto">
-      <div className="flex gap-4 min-w-max px-2">
-        {[
-          {
-            year: 1997,
-            id: "Menangani kasus Bentoel Group",
-            en: "Handled Bentoel Group case",
-          },
-          {
-            year: 1998,
-            id: "Krisis komunikasi Bank Bali",
-            en: "Bank Bali communication crisis",
-          },
-          {
-            year: 2000,
-            id: "Media relation Mayora Group",
-            en: "Handled Mayora Group's media relations",
-          },
-          {
-            year: 2004,
-            id: "Reklamasi PIK – Agung Podomoro",
-            en: "Reclamation PIK – Agung Podomoro",
-          },
-          {
-            year: 2013,
-            id: "Krisis lahan Teluk Jambe",
-            en: "Teluk Jambe land crisis",
-          },
-          {
-            year: 2014,
-            id: "Reklamasi Pantura – APL",
-            en: "North Coast Reclamation – APL",
-          },
-          {
-            year: 2016,
-            id: "Serah terima Antasari 45",
-            en: "Handover of Antasari 45 apartments",
-          },
-          {
-            year: 2019,
-            id: "Recovery Saigon Delight",
-            en: "Saigon Delight recovery",
-          },
-          {
-            year: 2025,
-            id: "Transformasi generasi kedua",
-            en: "Second generation transformation",
-          },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="relative w-[200px] h-[100px] flex-shrink-0"
-            style={{
-              animation: `fadeUp 0.6s ease ${(index * 0.2).toFixed(1)}s forwards`,
-              opacity: 0
-            }}
-          >
-            <img
-              src="/assets/ss_clean.png"
-              alt={`Arrow ${item.year}`}
-              className="w-full h-full object-contain"
-            />
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-3">
-              <span className="text-md font-bold text-[#d7b940]">{item.year}</span>
-              <p className="text-xs mt-1 text-white leading-tight">
-                {lang === "id" ? item.id : item.en}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+    {/* Timeline */}
+    <div className="relative flex items-center justify-between w-full border-t-4 border-[#d7b940] px-4 py-10 overflow-x-auto">
+      {successStory.map((item, index) => (
+        <div key={index} className="relative flex flex-col items-center flex-shrink-0 w-36">
+          <div className="w-6 h-6 rounded-full bg-[#082846] border-4 border-white shadow-md z-10"></div>
+          <div className="mt-3 text-sm font-bold text-[#d7b940]">{item.year}</div>
+          <p className="text-xs mt-1">{lang === 'id' ? item.id : item.en}</p>
+        </div>
+      ))}
     </div>
+
   </div>
-
-  {/* CSS animation */}
-  <style jsx>{`
-    @keyframes fadeUp {
-      0% {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  `}</style>
 </section>
-
-
 
 
     <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
