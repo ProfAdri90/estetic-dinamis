@@ -1,4 +1,4 @@
-// components/OurTeams.jsx
+
 import TeamCard from "./TeamCard";
 import { motion } from "framer-motion";
 
