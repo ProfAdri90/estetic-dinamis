@@ -28,7 +28,8 @@ export default function OurTeams() {
       </motion.h2>
 
       {/* Grid Team */}
-      <div className="grid grid-cols-2 md:grid-cols-8 gap-4 w-full px-4">
+      <div className="grid grid-cols-2 md:grid-cols-8 gap-3 w-full px-4">
+
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
