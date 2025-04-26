@@ -15,36 +15,35 @@ const teamMembers = [
 
 export default function OurTeams() {
   return (
-    <section id="tim" className="scroll-mt-[140px] px-6 py-20 bg-[#082846] text-white">
-      <div className="max-w-[1400px] mx-auto flex flex-col items-center">
-        {/* Judul Section */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold mb-12 text-center"
-        >
-          Tim Kami
-        </motion.h2>
+    <section id="tim" className="scroll-mt-[140px] w-full px-6 py-20 bg-[#082846] text-white">
+      
+      {/* Title */}
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl md:text-5xl font-bold mb-12 text-center"
+      >
+        Tim Kami
+      </motion.h2>
 
-        {/* Grid Tim */}
-        <div className="w-full grid grid-cols-2 md:grid-cols-8 gap-4">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              viewport={{ once: true }}
-            >
-              <TeamCard
-                image={member.image}
-                name={member.name}
-                title={member.title}
-              />
-            </motion.div>
-          ))}
-        </div>
+      {/* Grid Team */}
+      <div className="grid grid-cols-2 md:grid-cols-8 gap-4 w-full">
+        {teamMembers.map((member, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            viewport={{ once: true }}
+          >
+            <TeamCard
+              image={member.image}
+              name={member.name}
+              title={member.title}
+            />
+          </motion.div>
+        ))}
       </div>
     </section>
   );
