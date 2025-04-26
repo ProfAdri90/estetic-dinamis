@@ -15,34 +15,36 @@ const teamMembers = [
 
 export default function OurTeams() {
   return (
-    <section id="tim" className="scroll-mt-[140px] px-4 py-16 bg-[#082846] text-white">
-      <h2 className="text-3xl font-bold text-center mb-12">Tim Kami</h2>
-      
-      {/* DESKTOP GRID */}
-      <div className="hidden md:flex flex-col items-center gap-6">
-        <div className="flex justify-center gap-4 flex-wrap max-w-[1200px]">
-          {teamMembers.slice(0, 6).map((member, index) => (
-            <TeamCard key={index} image={member.image} name={member.name} title={member.title} />
-          ))}
-        </div>
-        <div className="flex justify-center gap-4">
-          {teamMembers.slice(6, 8).map((member, index) => (
-            <TeamCard key={index + 6} image={member.image} name={member.name} title={member.title} />
-          ))}
-        </div>
-      </div>
+    <section id="tim" className="scroll-mt-[140px] px-6 py-20 bg-[#082846] text-white">
+      <div className="max-w-[1400px] mx-auto flex flex-col items-center">
+        {/* Judul Section */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold mb-12 text-center"
+        >
+          Tim Kami
+        </motion.h2>
 
-      {/* MOBILE GRID */}
-      <div className="md:hidden grid grid-cols-2 gap-6 max-w-sm mx-auto">
-        {teamMembers.map((member, index) => (
-          <TeamCard
-            key={index}
-            image={member.image}
-            name={member.name}
-            title={member.title}
-            mobile
-          />
-        ))}
+        {/* Grid Tim */}
+        <div className="w-full grid grid-cols-2 md:grid-cols-8 gap-4">
+          {teamMembers.map((member, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              viewport={{ once: true }}
+            >
+              <TeamCard
+                image={member.image}
+                name={member.name}
+                title={member.title}
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
