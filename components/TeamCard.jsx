@@ -6,7 +6,7 @@ export default function TeamCard({ image, name, title }) {
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="relative w-full aspect-[3/4] overflow-hidden group shadow-md hover:shadow-xl"
+      className="relative w-[150px] md:w-[180px] aspect-[3/4] overflow-hidden group shadow-md hover:shadow-xl"
     >
       <Image
         src={image}
