@@ -15,13 +15,9 @@ export default function TeamCard({ image, name, title }) {
         className="object-cover transition duration-500 md:grayscale md:group-hover:grayscale-0"
       />
 
-      <div
-        className="absolute bottom-0 w-full bg-black/60 backdrop-blur-md text-center py-2 
-        md:opacity-0 md:group-hover:opacity-100 
-        transition-all duration-500 ease-in-out text-white text-xs md:text-sm"
-      >
-        <h3 className="font-bold">{name}</h3>
-        <p>{title}</p>
+     <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-sm p-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
+        <p className="text-sm font-semibold text-white">{name}</p>
+        <p className="text-xs text-gray-200">{title}</p>
       </div>
     </motion.div>
   );
