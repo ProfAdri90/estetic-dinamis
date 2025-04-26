@@ -1,4 +1,3 @@
-// components/OurTeams.jsx
 import TeamCard from "./TeamCard";
 import { motion } from "framer-motion";
 
@@ -15,14 +14,23 @@ const teamMembers = [
 
 export default function OurTeams() {
   return (
-    <section id="tim" className="scroll-mt-[140px] py-20 bg-[#082846] text-white">
-      <div className="grid grid-cols-2 md:grid-cols-8 gap-4 justify-items-center px-4 md:px-12">
+    <section id="tim" className="bg-[#082846] text-white py-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="text-4xl font-bold text-center mb-12"
+      >
+        Tim Kami
+      </motion.div>
+
+      <div className="w-full px-4 flex flex-wrap justify-center gap-4 md:gap-6">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.05 }} 
+            transition={{ duration: 0.5, delay: index * 0.05 }}
             viewport={{ once: true }}
           >
             <TeamCard
