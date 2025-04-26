@@ -16,7 +16,7 @@ const teamMembers = [
 export default function OurTeams() {
   return (
     <section id="tim" className="scroll-mt-[140px] py-20 bg-[#082846] text-white">
-      <div className="grid grid-cols-2 md:grid-cols-8 gap-4 justify-items-center px-4 md:px-12"> 
+      <div className="grid grid-cols-2 md:grid-cols-8 gap-4 justify-items-center px-4 md:px-12">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
