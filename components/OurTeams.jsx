@@ -15,16 +15,16 @@ const teamMembers = [
 export default function OurTeams() {
   return (
     <section id="tim" className="bg-[#082846] text-white py-16">
-      <motion.div
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         className="text-4xl font-bold text-center mb-12"
       >
         Tim Kami
-      </motion.div>
+      </motion.h2>
 
-      <div className="w-full px-4 flex flex-wrap justify-center gap-4 md:gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-8 max-w-7xl mx-auto">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
