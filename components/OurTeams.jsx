@@ -24,7 +24,7 @@ export default function OurTeams() {
         Tim Kami
       </motion.h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-16 px-4 md:px-8 max-w-7xl mx-auto">
+     <div className="grid grid-cols-2 md:grid-cols-4 gap-x-16 gap-y-20 px-4 md:px-8 max-w-7xl mx-auto">
   {teamMembers.map((member, index) => (
     <motion.div
       key={index}
