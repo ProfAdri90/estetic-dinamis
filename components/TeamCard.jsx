@@ -6,18 +6,19 @@ export default function TeamCard({ image, name, title }) {
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="relative w-[120px] md:w-[160px] aspect-[3/4] overflow-hidden group shadow-md hover:shadow-xl"
+      className="relative w-[120px] md:w-[150px] aspect-[3/4] overflow-hidden rounded-lg shadow-md hover:shadow-xl flex flex-col items-center"
     >
       <Image
         src={image}
         alt={name}
         fill
-        className="object-cover transition duration-500 md:grayscale md:group-hover:grayscale-0"
+        className="object-cover"
       />
 
-      <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-sm p-2 opacity-0 md:group-hover:opacity-100 transition-all duration-500">
+      {/* Nama dan jabatan */}
+      <div className="absolute bottom-0 w-full bg-black/60 backdrop-blur-sm text-center p-2">
         <p className="text-sm font-semibold text-white">{name}</p>
-        <p className="text-xs text-gray-200">{title}</p>
+        <p className="text-xs text-gray-300">{title}</p>
       </div>
     </motion.div>
   );
