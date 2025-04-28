@@ -24,23 +24,23 @@ export default function OurTeams() {
         Tim Kami
       </motion.h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-8 max-w-7xl mx-auto">
-        {teamMembers.map((member, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.05 }}
-            viewport={{ once: true }}
-          >
-            <TeamCard
-              image={member.image}
-              name={member.name}
-              title={member.title}
-            />
-          </motion.div>
-        ))}
-      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 px-4 md:px-8 max-w-7xl mx-auto">
+  {teamMembers.map((member, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.05 }}
+      viewport={{ once: true }}
+    >
+      <TeamCard
+        image={member.image}
+        name={member.name}
+        title={member.title}
+      />
+    </motion.div>
+  ))}
+</div>
     </section>
   );
 }
