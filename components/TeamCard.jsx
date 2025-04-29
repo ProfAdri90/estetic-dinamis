@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 export default function TeamCard({ image, name, title }) {
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="relative w-[120px] md:w-[150px] aspect-[3/4] overflow-hidden rounded-lg shadow-md hover:shadow-xl flex flex-col items-center"
-    >
+  whileHover={{ scale: 1.05 }}
+  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+  className="relative w-[150px] md:w-[180px] aspect-[3/4] overflow-hidden group shadow-md hover:shadow-xl"
+>
       <Image
         src={image}
         alt={name}
