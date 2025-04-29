@@ -62,7 +62,7 @@ export default function ClientGrid() {
 
   useEffect(() => {
     const onScroll = () => {
-      const top = document.getElementById("clients-section")?.getBoundingClientRect().top;
+      const top = document.getElementById("klien")?.getBoundingClientRect().top;
       if (top < window.innerHeight * 0.8) setShow(true);
     };
     window.addEventListener("scroll", onScroll);
