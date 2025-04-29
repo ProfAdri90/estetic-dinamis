@@ -53,7 +53,7 @@ const teamMembers = [
   },
 ];
 
-export default function OurTeams() {
+export default function OurTeams({ lang }) {
   const [lang, setLang] = useState("id");
 
   useEffect(() => {
