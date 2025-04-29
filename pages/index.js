@@ -756,7 +756,7 @@ useEffect(() => {
     </div>
   </div>
 </section>
-<ClientGrid />
+<ClientGrid lang={lang} />
  <section className="bg-white text-[#082846] py-20 px-4" id="kontak">
   <div className="max-w-7xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
