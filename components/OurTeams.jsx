@@ -57,8 +57,21 @@ export default function OurTeams() {
   const [lang, setLang] = useState("id");
 
   useEffect(() => {
+    // Ambil bahasa awal
     const storedLang = localStorage.getItem("lang") || "id";
     setLang(storedLang);
+
+    // Listener kalau tombol bilingual dipencet
+    const handleStorageChange = () => {
+      const updatedLang = localStorage.getItem("lang") || "id";
+      setLang(updatedLang);
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
   }, []);
 
   return (
