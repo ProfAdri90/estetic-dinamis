@@ -671,7 +671,7 @@ useEffect(() => {
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
-  <OurTeams />
+  <OurTeams lang={lang} />
 </section>
     <section id="layanan" className="scroll-mt-[140px] text-center py-20 px-8 bg-white text-[#082846]">
   <h3 className="text-3xl font-bold mb-10">
