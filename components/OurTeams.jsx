@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const teamMembers = [
@@ -53,7 +52,8 @@ const teamMembers = [
   },
 ];
 
- return (
+export default function OurTeams({ lang }) {
+  return (
     <section id="tim" className="bg-[#082846] py-16 scroll-mt-[140px]">
       <h2 className="text-center text-white text-3xl font-bold mb-12">
         {lang === "id" ? "Tim Kami" : "Our Team"}
@@ -61,16 +61,18 @@ const teamMembers = [
 
       <div className="grid grid-cols-2 md:grid-cols-8 gap-[1px] w-full">
         {teamMembers.map((member, index) => (
-          <div key={index} className="relative group w-full aspect-[3/4] overflow-hidden">
+          <div
+            key={index}
+            className="relative group w-full aspect-[3/4] overflow-hidden"
+          >
             <Image
               src={member.image}
               alt={member.name[lang]}
               fill
-              className={`object-cover transition duration-500 grayscale md:group-hover:grayscale-0`}
+              className="object-cover transition duration-500 grayscale md:group-hover:grayscale-0"
             />
             <div
-              className={`absolute bottom-0 left-0 w-full bg-black/60 p-2 text-center text-sm text-white transition-opacity duration-300
-                md:opacity-0 md:group-hover:opacity-100 opacity-100`}
+              className="absolute bottom-0 left-0 w-full bg-black/60 p-2 text-center text-sm text-white transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 opacity-100"
             >
               <p className="font-bold leading-tight">{member.name[lang]}</p>
               <p className="text-xs leading-tight">{member.title[lang]}</p>
