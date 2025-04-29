@@ -66,7 +66,7 @@ export default function OurTeams({ lang }) {
               src={member.image}
               alt={member.name[lang]}
               fill
-              className="object-cover transition duration-500 grayscale md:group-hover:grayscale-0"
+              className="object-cover transition duration-500 md:grayscale md:group-hover:grayscale-0"
             />
             <div
               className="absolute bottom-0 left-0 w-full bg-black/60 p-2 text-center text-sm text-white transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 opacity-100"
