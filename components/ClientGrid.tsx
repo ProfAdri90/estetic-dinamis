@@ -111,7 +111,7 @@ export default function ClientGrid({ lang }: { lang: string }) {
           <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">
             {lang === "id" ? category.title.id : category.title.en}
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+         <div className="grid justify-center grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-6 w-full max-w-7xl">
             {category.items.map((item, idx) => (
               <motion.div
                 key={item.name}
