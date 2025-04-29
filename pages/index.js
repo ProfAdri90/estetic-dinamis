@@ -388,6 +388,7 @@ useEffect(() => {
     <button onClick={() => scrollTo("testimoni")}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
     <button onClick={() => scrollTo("tim")}>{lang === "id" ? "Tim" : "Team"}</button>
     <button onClick={() => scrollTo("layanan")}>{lang === "id" ? "Layanan" : "Services"}</button>
+    <button onClick={() => scrollTo("klien")}>{lang === "id" ? "Klien" : "Our Clients"}</button>
     <button onClick={() => scrollTo("kontak")}>{lang === "id" ? "Kontak" : "Contact"}</button>
     <button
       onClick={switchLang}
@@ -432,6 +433,7 @@ useEffect(() => {
       <button onClick={() => { scrollTo("testimoni"); setMenuOpen(false); }}>{lang === "id" ? "Testimoni" : "Testimonials"}</button>
       <button onClick={() => { scrollTo("tim"); setMenuOpen(false); }}>{lang === "id" ? "Tim" : "Team"}</button>
       <button onClick={() => { scrollTo("layanan"); setMenuOpen(false); }}>{lang === "id" ? "Layanan" : "Services"}</button>
+      <button onClick={() => { scrollTo("klien"); setMenuOpen(false); }}>{lang === "id" ? "Klien" : "Our Clients"}</button>
       <button onClick={() => { scrollTo("kontak"); setMenuOpen(false); }}>{lang === "id" ? "Kontak" : "Contact"}</button>
     </motion.div>
   )}
@@ -754,7 +756,7 @@ useEffect(() => {
     </div>
   </div>
 </section>
-
+<ClientGrid />
  <section className="bg-white text-[#082846] py-20 px-4" id="kontak">
   <div className="max-w-7xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
