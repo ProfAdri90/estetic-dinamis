@@ -108,46 +108,42 @@ export default function ClientGrid({ lang }: { lang: string }) {
       </h2>
       {clients.map((category) => (
         <div key={category.id} className="mb-12">
-  <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">
-    {lang === "id" ? category.title.id : category.title.en}
-  </h3>
-
-  <div className="flex justify-center">
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-7xl">
-      {category.items.map((item, idx) => (
-        <motion.div
-          key={item.name}
-          className="aspect-square bg-white rounded-lg shadow-inner flex flex-col items-center justify-center p-2 text-center border border-gray-200 hover:border-yellow-500 transition-transform duration-500 transform hover:scale-105 perspective"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={show ? { opacity: 1, scale: 1 } : {}}
-          transition={{ delay: idx * 0.1 }}
-        >
-          {item.oldLogo && item.newLogo ? (
-            <div className="relative w-full h-full [transform-style:preserve-3d] transition-transform duration-700 hover:[transform:rotateY(180deg)]">
-              <div
-                className="absolute w-full h-full flex items-center justify-center"
-                style={{ backfaceVisibility: 'hidden' }}
+          <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">
+            {lang === "id" ? category.title.id : category.title.en}
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {category.items.map((item, idx) => (
+              <motion.div
+                key={item.name}
+                className="aspect-square bg-white rounded-lg shadow-inner flex items-center justify-center p-2 border border-gray-200 hover:border-yellow-500 transition-transform duration-500 transform hover:scale-105 perspective"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={show ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: idx * 0.1 }}
               >
-                <Image src={item.oldLogo} alt={item.name} width={100} height={100} className="object-contain" />
-              </div>
-              <div
-                className="absolute w-full h-full flex items-center justify-center [transform:rotateY(180deg)]"
-                style={{ backfaceVisibility: 'hidden' }}
-              >
-                <Image src={item.newLogo} alt={item.name + ' baru'} width={100} height={100} className="object-contain" />
-              </div>
-            </div>
-          ) : (
-            <div className="text-sm text-center text-gray-600 px-2">
-              {item.name}
-            </div>
-          )}
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</div>
-
+                {item.oldLogo && item.newLogo ? (
+                  <div className="relative w-full h-full [transform-style:preserve-3d] transition-transform duration-700 hover:[transform:rotateY(180deg)]">
+                    <div
+                      className="absolute w-full h-full flex items-center justify-center"
+                      style={{ backfaceVisibility: 'hidden' }}
+                    >
+                      <Image src={item.oldLogo} alt={item.name} width={100} height={100} className="object-contain" />
+                    </div>
+                    <div
+                      className="absolute w-full h-full flex items-center justify-center [transform:rotateY(180deg)]"
+                      style={{ backfaceVisibility: 'hidden' }}
+                    >
+                      <Image src={item.newLogo} alt={item.name + ' baru'} width={100} height={100} className="object-contain" />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-sm text-center text-gray-600 px-2">
+                    {item.name}
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
       ))}
     </section>
   );
