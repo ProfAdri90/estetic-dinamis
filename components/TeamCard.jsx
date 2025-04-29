@@ -27,4 +27,4 @@ export default function TeamCard({ image, name, title }) {
       </div>
     </motion.div>
   );
-}
+} 
