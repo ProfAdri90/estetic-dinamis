@@ -14,12 +14,9 @@ const teamMembers = [
 
 export default function OurTeams() {
   return (
-    <section id="tim" className="bg-[#082846] text-white py-16">
-      <div className="text-4xl font-bold text-center mb-12">
-        Tim Kami
-      </div>
+    <section id="tim" className="bg-[#082846] text-white py-20">
 
-      <div className="max-w-[1280px] mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-14">
+      <div className="max-w-[1280px] mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-14 justify-center">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
@@ -27,28 +24,12 @@ export default function OurTeams() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
             viewport={{ once: true }}
-            className="relative group overflow-hidden"
           >
-            {/* FOTO */}
-            <div className="relative w-full aspect-[3/4] overflow-hidden rounded-md shadow-md">
-              <Image
-                src={member.image}
-                alt={member.name}
-                fill
-                className="object-cover transition-all duration-500 grayscale group-hover:grayscale-0"
-              />
-              {/* OVERLAY */}
-              <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-sm p-2 opacity-0 group-hover:opacity-100 transition-all duration-500 md:opacity-0">
-                <p className="text-sm font-semibold text-white">{member.name}</p>
-                <p className="text-xs text-gray-200">{member.title}</p>
-              </div>
-            </div>
-
-            {/* MOBILE langsung muncul nama */}
-            <div className="block md:hidden mt-2 text-center">
-              <p className="font-semibold">{member.name}</p>
-              <p className="text-sm text-gray-300">{member.title}</p>
-            </div>
+            <TeamCard
+              image={member.image}
+              name={member.name}
+              title={member.title}
+            />
           </motion.div>
         ))}
       </div>
