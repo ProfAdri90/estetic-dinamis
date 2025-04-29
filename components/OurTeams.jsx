@@ -53,28 +53,7 @@ const teamMembers = [
   },
 ];
 
-export default function OurTeams({ lang }) {
-  const [lang, setLang] = useState("id");
-
-  useEffect(() => {
-    // Ambil bahasa awal
-    const storedLang = localStorage.getItem("lang") || "id";
-    setLang(storedLang);
-
-    // Listener kalau tombol bilingual dipencet
-    const handleStorageChange = () => {
-      const updatedLang = localStorage.getItem("lang") || "id";
-      setLang(updatedLang);
-    };
-
-    window.addEventListener("storage", handleStorageChange);
-
-    return () => {
-      window.removeEventListener("storage", handleStorageChange);
-    };
-  }, []);
-
-  return (
+ return (
     <section id="tim" className="bg-[#082846] py-16 scroll-mt-[140px]">
       <h2 className="text-center text-white text-3xl font-bold mb-12">
         {lang === "id" ? "Tim Kami" : "Our Team"}
