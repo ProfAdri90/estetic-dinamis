@@ -55,10 +55,7 @@ const teamMembers = [
 export default function OurTeams({ lang }) {
   return (
     <section id="tim" className="bg-[#082846] py-16 scroll-mt-[140px]">
-      <h2 className="text-center text-white text-3xl font-bold mb-12">
-        {lang === "id" ? "Tim Kami" : "Our Team"}
-      </h2>
-
+     
       <div className="grid grid-cols-2 md:grid-cols-8 gap-[1px] w-full">
         {teamMembers.map((member, index) => (
           <div
