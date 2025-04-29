@@ -1,47 +1,81 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const teamMembers = [
-  { nameId: "Profesor Adri", nameEn: "Professor Adri", titleId: "Direktur Utama", titleEn: "President Director", image: "/team/profadri.jpeg" },
-  { nameId: "Dul Jonih Iskandar", nameEn: "Dul Jonih Iskandar", titleId: "Direktur", titleEn: "Director", image: "/team/duljoni.jpeg" },
-  { nameId: "Desti Purnamasari", nameEn: "Desti Purnamasari", titleId: "Direktur Keuangan", titleEn: "Finance Director", image: "/team/desti.jpeg" },
-  { nameId: "Budi Mariono Perdanu", nameEn: "Budi Mariono Perdanu", titleId: "Manajer Pengembangan Bisnis", titleEn: "Business Development Manager", image: "/team/budi.jpeg" },
-  { nameId: "Meilinda Sari Hartati", nameEn: "Meilinda Sari Hartati", titleId: "Manajer Perencana Event Kreatif", titleEn: "Creative Event Planning Manager", image: "/team/didit.jpeg" },
-  { nameId: "Martin Herlambang Simanjuntak", nameEn: "Martin Herlambang Simanjuntak", titleId: "Manajer Operasional", titleEn: "Operations Manager", image: "/team/martin.jpeg" },
-  { nameId: "Rizka Bintang Utara", nameEn: "Rizka Bintang Utara", titleId: "Manajer Event", titleEn: "Event Manager", image: "/team/azka.jpeg" },
-  { nameId: "Putri Pangabean", nameEn: "Putri Pangabean", titleId: "Manajer Pemasaran", titleEn: "Marketing Manager", image: "/team/putri.jpeg" },
+  {
+    name: { id: "Profesor Adri", en: "Professor Adri" },
+    title: { id: "Direktur Utama", en: "President Director" },
+    image: "/team/profadri.jpeg",
+  },
+  {
+    name: { id: "Dul Jonih Iskandar", en: "Dul Jonih Iskandar" },
+    title: { id: "Direktur", en: "Director" },
+    image: "/team/duljoni.jpeg",
+  },
+  {
+    name: { id: "Desti Purnamasari", en: "Desti Purnamasari" },
+    title: { id: "Direktur Keuangan", en: "Finance Director" },
+    image: "/team/desti.jpeg",
+  },
+  {
+    name: { id: "Budi Mariono Perdanu", en: "Budi Mariono Perdanu" },
+    title: { id: "Manajer Pengembangan Bisnis", en: "Business Development Manager" },
+    image: "/team/budi.jpeg",
+  },
+  {
+    name: { id: "Meilinda Sari Hartati", en: "Meilinda Sari Hartati" },
+    title: { id: "Manajer Perencana Event Kreatif", en: "Creative Event Planning Manager" },
+    image: "/team/didit.jpeg",
+  },
+  {
+    name: { id: "Martin Herlambang Simanjuntak", en: "Martin Herlambang Simanjuntak" },
+    title: { id: "Manajer Operasional", en: "Operations Manager" },
+    image: "/team/martin.jpeg",
+  },
+  {
+    name: { id: "Rizka Bintang Utara", en: "Rizka Bintang Utara" },
+    title: { id: "Manajer Event", en: "Event Manager" },
+    image: "/team/azka.jpeg",
+  },
+  {
+    name: { id: "Putri Pangabean", en: "Putri Pangabean" },
+    title: { id: "Manajer Pemasaran", en: "Marketing Manager" },
+    image: "/team/putri.jpeg",
+  },
 ];
 
-export default function OurTeams({ lang = "id" }) {
+export default function OurTeams() {
+  const [lang, setLang] = useState("id");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const browserLang = navigator.language;
+      setLang(browserLang.startsWith("en") ? "en" : "id");
+    }
+  }, []);
+
   return (
-    <section id="tim" className="bg-[#082846] text-white py-16">
-      {/* Judul cuma satu */}
-      <h2 className="text-4xl font-bold text-center mb-12">
+    <section id="tim" className="bg-[#082846] py-16 text-white">
+      <h2 className="text-4xl font-bold text-center mb-10">
         {lang === "id" ? "Tim Kami" : "Our Team"}
       </h2>
 
-      {/* GRID TIM */}
-      <div className="grid grid-cols-2 md:grid-cols-8 gap-0 max-w-full mx-auto">
+      <div className="max-w-screen-xl mx-auto flex flex-wrap justify-center sm:justify-between gap-y-6 px-2">
         {teamMembers.map((member, index) => (
-          <div key={index} className="relative group w-full aspect-[3/4] overflow-hidden">
-            {/* FOTO */}
+          <div
+            key={index}
+            className="relative w-[22vw] sm:w-[22vw] aspect-[3/4] overflow-hidden group"
+            style={{ maxWidth: "180px" }}
+          >
             <Image
               src={member.image}
-              alt={lang === "id" ? member.nameId : member.nameEn}
-              layout="fill"
-              objectFit="cover"
-              className="transition duration-500 grayscale group-hover:grayscale-0"
+              alt={member.name[lang]}
+              fill
+              className="object-cover transition duration-500 grayscale group-hover:grayscale-0"
             />
-
-            {/* OVERLAY (HOVER hanya di desktop) */}
-            <div className="hidden md:flex absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-500 flex-col justify-center items-center text-center px-2">
-              <p className="text-sm font-semibold">{lang === "id" ? member.nameId : member.nameEn}</p>
-              <p className="text-xs">{lang === "id" ? member.titleId : member.titleEn}</p>
-            </div>
-
-            {/* MOBILE: Nama langsung muncul */}
-            <div className="md:hidden absolute bottom-0 left-0 right-0 bg-black/70 text-center text-xs p-1">
-              <p className="font-semibold">{lang === "id" ? member.nameId : member.nameEn}</p>
-              <p>{lang === "id" ? member.titleId : member.titleEn}</p>
+            <div className="absolute bottom-0 w-full text-center text-white text-sm px-2 py-2 bg-black/60 backdrop-blur-sm transition-all duration-500 opacity-0 group-hover:opacity-100 sm:opacity-100 sm:static sm:bg-transparent sm:backdrop-blur-0">
+              <p className="font-semibold">{member.name[lang]}</p>
+              <p className="text-xs">{member.title[lang]}</p>
             </div>
           </div>
         ))}
