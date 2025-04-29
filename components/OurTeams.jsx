@@ -1,25 +1,18 @@
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
 const teamMembers = [
-  { id: 1, name_id: "Profesor Adri", name_en: "Professor Adri", title_id: "Direktur Utama", title_en: "President Director", image: "/team/profadri.jpeg" },
-  { id: 2, name_id: "Dul Jonih Iskandar", name_en: "Dul Jonih Iskandar", title_id: "Direktur", title_en: "Director", image: "/team/duljoni.jpeg" },
-  { id: 3, name_id: "Desti Purnamasari", name_en: "Desti Purnamasari", title_id: "Direktur Keuangan", title_en: "Finance Director", image: "/team/desti.jpeg" },
-  { id: 4, name_id: "Budi Mariono Perdanu", name_en: "Budi Mariono Perdanu", title_id: "Manajer Pengembangan Bisnis", title_en: "Business Development Manager", image: "/team/budi.jpeg" },
-  { id: 5, name_id: "Meilinda Sari Hartati", name_en: "Meilinda Sari Hartati", title_id: "Manajer Perencana Event Kreatif", title_en: "Creative Event Planner Manager", image: "/team/didit.jpeg" },
-  { id: 6, name_id: "Martin Herlambang Simanjuntak", name_en: "Martin Herlambang Simanjuntak", title_id: "Manajer Operasional", title_en: "Operational Manager", image: "/team/martin.jpeg" },
-  { id: 7, name_id: "Rizka Bintang Utara", name_en: "Rizka Bintang Utara", title_id: "Manajer Event", title_en: "Event Manager", image: "/team/azka.jpeg" },
-  { id: 8, name_id: "Putri Pangabean", name_en: "Putri Pangabean", title_id: "Manajer Pemasaran", title_en: "Marketing Manager", image: "/team/putri.jpeg" },
+  { nameId: "Profesor Adri", nameEn: "Professor Adri", titleId: "Direktur Utama", titleEn: "President Director", image: "/team/profadri.jpeg" },
+  { nameId: "Dul Jonih Iskandar", nameEn: "Dul Jonih Iskandar", titleId: "Direktur", titleEn: "Director", image: "/team/duljoni.jpeg" },
+  { nameId: "Desti Purnamasari", nameEn: "Desti Purnamasari", titleId: "Direktur Keuangan", titleEn: "Finance Director", image: "/team/desti.jpeg" },
+  { nameId: "Budi Mariono Perdanu", nameEn: "Budi Mariono Perdanu", titleId: "Manajer Pengembangan Bisnis", titleEn: "Business Development Manager", image: "/team/budi.jpeg" },
+  { nameId: "Meilinda Sari Hartati", nameEn: "Meilinda Sari Hartati", titleId: "Manajer Perencana Event Kreatif", titleEn: "Creative Event Planning Manager", image: "/team/didit.jpeg" },
+  { nameId: "Martin Herlambang Simanjuntak", nameEn: "Martin Herlambang Simanjuntak", titleId: "Manajer Operasional", titleEn: "Operations Manager", image: "/team/martin.jpeg" },
+  { nameId: "Rizka Bintang Utara", nameEn: "Rizka Bintang Utara", titleId: "Manajer Event", titleEn: "Event Manager", image: "/team/azka.jpeg" },
+  { nameId: "Putri Pangabean", nameEn: "Putri Pangabean", titleId: "Manajer Pemasaran", titleEn: "Marketing Manager", image: "/team/putri.jpeg" },
 ];
 
 export default function OurTeams() {
-  const [lang, setLang] = useState("id");
-
-  useEffect(() => {
-    // Optional: detect lang from browser or setting
-    setLang("id");
-  }, []);
-
   return (
     <section id="tim" className="bg-[#082846] text-white py-16">
       <motion.h2
@@ -28,47 +21,40 @@ export default function OurTeams() {
         transition={{ duration: 0.7 }}
         className="text-4xl font-bold text-center mb-12"
       >
-        {lang === "id" ? "Tim Kami" : "Our Team"}
+        Tim Kami / Our Team
       </motion.h2>
 
-      {/* Flex container */}
-      <div className="flex flex-wrap w-full">
+      <div className="flex flex-wrap justify-center items-center gap-0 max-w-[1600px] mx-auto px-2">
         {teamMembers.map((member, index) => (
-          <div
+          <motion.div
             key={index}
-            className="relative group w-1/8 flex-shrink-0"
-            style={{ width: "12.5%", aspectRatio: "3/4" }}
+            className="relative group overflow-hidden"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
           >
-            {/* Gambar */}
-            <img
-              src={member.image}
-              alt={lang === "id" ? member.name_id : member.name_en}
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
-            />
-
-            {/* Overlay info */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 text-white text-center transition duration-500">
-              <p className="text-sm font-bold">{lang === "id" ? member.name_id : member.name_en}</p>
-              <p className="text-xs">{lang === "id" ? member.title_id : member.title_en}</p>
+            <div className="relative w-[190px] h-[250px]">
+              <Image
+                src={member.image}
+                alt={member.nameId}
+                fill
+                className="object-cover grayscale group-hover:grayscale-0 transition duration-500 ease-in-out"
+                sizes="(max-width: 768px) 50vw, 12vw"
+              />
+              {/* Desktop Hover */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center">
+                <p className="text-sm font-bold text-center">{member.nameId} / {member.nameEn}</p>
+                <p className="text-xs text-center">{member.titleId} / {member.titleEn}</p>
+              </div>
+              {/* Mobile, show always */}
+              <div className="block md:hidden absolute inset-0 bg-black/50 opacity-100 transition duration-500 flex flex-col justify-center items-center">
+                <p className="text-sm font-bold text-center">{member.nameId} / {member.nameEn}</p>
+                <p className="text-xs text-center">{member.titleId} / {member.titleEn}</p>
+              </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-
-      {/* Responsive adjustment mobile */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          #tim .group {
-            width: 50% !important;
-          }
-          #tim img {
-            filter: grayscale(0) !important;
-          }
-          #tim .group div {
-            opacity: 100 !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }
