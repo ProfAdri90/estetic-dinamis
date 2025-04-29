@@ -70,7 +70,7 @@ export default function ClientGrid() {
   }, []);
 
   return (
-    <section id="clients-section" className="py-16 px-4 md:px-16 bg-white">
+    <section id="klien" className="py-16 px-4 md:px-16 bg-white">
       <h2 className="text-3xl font-bold text-center mb-12">Klien Kami</h2>
       {Object.entries(clients).map(([category, logos]) => (
         <div key={category} className="mb-12">
