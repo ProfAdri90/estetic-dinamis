@@ -111,11 +111,11 @@ export default function ClientGrid({ lang }: { lang: string }) {
           <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">
             {lang === "id" ? category.title.id : category.title.en}
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+         <div className="text-sm text-center text-gray-600 px-2">
             {category.items.map((item, idx) => (
               <motion.div
                 key={item.name}
-                className="aspect-square bg-white rounded-lg shadow-inner flex items-center justify-center p-2 border border-gray-200 hover:border-yellow-500 transition-transform duration-500 transform hover:scale-105 perspective"
+                className="aspect-square bg-white rounded-lg shadow-inner flex flex-col items-center justify-center p-2 text-center border border-gray-200 hover:border-yellow-500 transition-transform duration-500 transform hover:scale-105 perspective"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={show ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: idx * 0.1 }}
