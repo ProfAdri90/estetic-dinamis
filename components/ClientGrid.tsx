@@ -30,20 +30,20 @@ const clients = [
     items: [
       {
         name: "Bank Bali",
-        oldLogo: "/logos/bankbali.png",
-        newLogo: "/logos/permata.png",
+        oldLogo: "/client-logos/bankbali.png",
+        newLogo: "/client-logos/permata.png",
         note: "Kini menjadi Bank Permata Tbk"
       },
       {
         name: "Bank Buana",
-        oldLogo: "/logos/buana.png",
-        newLogo: "/logos/uob.png",
+        oldLogo: "/client-logos/buana.png",
+        newLogo: "/client-logos/uob.png",
         note: "Kini menjadi Bank UOB Indonesia"
       },
       {
         name: "Bank Swadesi",
-        oldLogo: "/logos/swadesi.png",
-        newLogo: "/logos/boii.png",
+        oldLogo: "/client-logos/swadesi.png",
+        newLogo: "/client-logos/boii.png",
         note: "Kini menjadi Bank of India Indonesia"
       }
     ]
