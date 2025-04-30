@@ -112,22 +112,24 @@ export default function ClientGrid({ lang }: { lang: string }) {
             {category.items.map((item, idx) => (
               <div key={item.name} className="flex flex-col items-center space-y-2">
                 <motion.div
-                  className="w-[160px] aspect-square bg-white rounded-lg shadow-inner flex items-center justify-center p-4 text-center border border-gray-200 hover:border-yellow-500 transition-transform duration-500 transform perspective"
+                  className="w-[160px] h-[160px] bg-white rounded-lg shadow-inner flex items-center justify-center p-4 text-center border border-gray-200 hover:border-yellow-500 transition-transform duration-500 transform perspective"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={show ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: idx * 0.1 }}
                 >
                   {item.oldLogo && item.newLogo ? (
-                    <div className="relative w-full h-full [transform-style:preserve-3d] transition-transform duration-700 hover:[transform:rotateY(180deg)]">
+                    <div className="relative w-[100px] h-[100px] [transform-style:preserve-3d] transition-transform duration-700 hover:[transform:rotateY(180deg)]">
                       <div className="absolute w-full h-full flex items-center justify-center" style={{ backfaceVisibility: "hidden" }}>
-                        <Image src={item.oldLogo} alt={item.name} width={80} height={80} className="object-contain" />
+                        <Image src={item.oldLogo} alt={item.name} fill className="object-contain" />
                       </div>
                       <div className="absolute w-full h-full flex items-center justify-center [transform:rotateY(180deg)]" style={{ backfaceVisibility: "hidden" }}>
-                        <Image src={item.newLogo} alt={item.name + ' baru'} width={80} height={80} className="object-contain" />
+                        <Image src={item.newLogo} alt={item.name + ' baru'} fill className="object-contain" />
                       </div>
                     </div>
                   ) : (
-                    <Image src={item.logo!} alt={item.name} width={80} height={80} className="object-contain hover:scale-105 transition-transform duration-300" />
+                    <div className="relative w-[100px] h-[100px]">
+                      <Image src={item.logo!} alt={item.name} fill className="object-contain hover:scale-105 transition-transform duration-300" />
+                    </div>
                   )}
                 </motion.div>
                 <p className="text-sm font-medium text-[#082846] text-center max-w-[160px]">
