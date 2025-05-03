@@ -781,7 +781,7 @@ useEffect(() => {
           </div>
           <div className="flex items-start gap-4">
             <img src="/assets/email.png" alt="Email" className="w-6 h-6 mt-1" />
-            <p>Communicatewith@estetic.co.id</p>
+            <p>info@estetic.co.id</p>
           </div>
           <div className="flex items-start gap-4">
             <img src="/assets/map.png" alt="Map" className="w-6 h-6 mt-1" />
