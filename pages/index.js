@@ -791,15 +791,19 @@ useEffect(() => {
       </div>
 
       {/* Kolom 3: Form Kontak */}
-      <form className="space-y-4">
-        <input type="text" placeholder={lang === 'id' ? 'Nama' : 'Name'} className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
-        <input type="email" placeholder="Email" className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
-        <input type="text" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
-        <textarea placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]"></textarea>
-        <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
-          {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
-        </button>
-      </form>
+      <form
+  action="https://formspree.io/f/mabcdxyz" // ← ganti dengan URL dari akun lo
+  method="POST"
+  className="space-y-4"
+>
+  <input type="text" name="name" placeholder={lang === 'id' ? 'Nama' : 'Name'} required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
+  <input type="email" name="email" placeholder="Email" required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
+  <input type="text" name="subject" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
+  <textarea name="message" placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]"></textarea>
+  <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
+    {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
+  </button>
+</form>
     </div>
 
     {/* CTA & Logo */}
