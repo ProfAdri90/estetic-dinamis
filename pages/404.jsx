@@ -5,7 +5,7 @@ export default function Custom404() {
   const [lang, setLang] = useState("id");
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#082846] text-white px-6 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-[#082846] px-6 text-center">
       <img src="/logo.png" alt="Estetic Logo" className="h-16 mb-6" />
       <h1 className="text-5xl font-bold text-[#d7b940] mb-4">404</h1>
       <h2 className="text-2xl font-semibold mb-2">
