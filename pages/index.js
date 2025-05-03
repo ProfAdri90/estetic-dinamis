@@ -827,12 +827,12 @@ useEffect(() => {
   </button>
        {formStatus === "success" && (
   <p className="text-green-600 text-sm mt-2">
-    Pesan berhasil dikirim!
+    {lang === "id" ? "Pesan berhasil dikirim!" : "Message sent successfully!"}
   </p>
 )}
 {formStatus === "error" && (
   <p className="text-red-600 text-sm mt-2">
-    Gagal mengirim pesan. Silakan coba lagi.
+    {lang === "id" ? "Gagal mengirim pesan. Silakan coba lagi." : "Failed to send message. Please try again."}
   </p>
 )}
 </form>
