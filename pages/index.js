@@ -372,6 +372,32 @@ useEffect(() => {
   }, 5000);
   return () => clearInterval(interval);
 }, []);
+  const [formStatus, setFormStatus] = useState("");
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch("https://formspree.io/f/xvgakqjg", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+      },
+      body: formData,
+    });
+
+    if (response.ok) {
+      setFormStatus("success");
+      e.target.reset(); // reset form
+    } else {
+      setFormStatus("error");
+    }
+  } catch (err) {
+    setFormStatus("error");
+  }
+};
+
 
   return (
   <div className="w-full min-h-screen font-sans bg-[#082846] text-white">
@@ -791,11 +817,7 @@ useEffect(() => {
       </div>
 
       {/* Kolom 3: Form Kontak */}
-      <form
-  action="https://formspree.io/f/xvgakqjg"// ← ganti dengan URL dari akun lo
-  method="POST"
-  className="space-y-4"
->
+     <form onSubmit={handleSubmit} className="space-y-4">
   <input type="text" name="name" placeholder={lang === 'id' ? 'Nama' : 'Name'} required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
   <input type="email" name="email" placeholder="Email" required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
   <input type="text" name="subject" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
@@ -803,6 +825,16 @@ useEffect(() => {
   <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
     {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
   </button>
+       {formStatus === "success" && (
+  <p className="text-green-600 text-sm mt-2">
+    Pesan berhasil dikirim!
+  </p>
+)}
+{formStatus === "error" && (
+  <p className="text-red-600 text-sm mt-2">
+    Gagal mengirim pesan. Silakan coba lagi.
+  </p>
+)}
 </form>
     </div>
 
