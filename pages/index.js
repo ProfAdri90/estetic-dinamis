@@ -792,7 +792,7 @@ useEffect(() => {
 
       {/* Kolom 3: Form Kontak */}
       <form
-  action="https://formspree.io/f/mabcdxyz" // ← ganti dengan URL dari akun lo
+  action="https://formspree.io/f/xvgakqjg"// ← ganti dengan URL dari akun lo
   method="POST"
   className="space-y-4"
 >
