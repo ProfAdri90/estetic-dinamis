@@ -822,7 +822,15 @@ useEffect(() => {
   <input type="email" name="email" placeholder="Email" required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
   <input type="text" name="subject" placeholder={lang === 'id' ? 'Subjek' : 'Subject'} required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]" />
   <textarea name="message" placeholder={lang === 'id' ? 'Pesan' : 'Message'} rows="5" required className="w-full px-4 py-2 border border-gray-300 rounded text-[#082846]"></textarea>
-  <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
+ {/* Honeypot anti-spam field */}
+  <input
+    type="text"
+    name="website"
+    className="hidden"
+    tabIndex="-1"
+    autoComplete="off"
+  />
+     <button type="submit" className="bg-[#d7b940] text-[#082846] px-6 py-2 rounded font-bold w-full">
     {lang === 'id' ? 'Kirim Pesan' : 'Send Message'}
   </button>
        {formStatus === "success" && (
