@@ -12,19 +12,19 @@ const teamMembers = [
     id: "fachry",
     name: { id: "Fachryansyah Farandi", en: "Fachryansyah Farandi" },
     title: { id: "Komisaris", en: "Commissioner" },
-    image: "/team/duljoni.jpeg",
+    image: "/team/fachry.jpeg",
   },
   {
     id: "adri",
     name: { id: "Adri Muhammad", en: "Adri Muhammad" },
     title: { id: "Direktur", en: "Director" },
-    image: "/team/desti.jpeg",
+    image: "/team/profadri.jpeg",
   },
    {
     id: "desta",
     name: { id: "Desta Pretty Indriawanti", en: "Desta Pretty Indriawanti" },
     title: { id: "Kepala Keuangan & Akuntansi", en: "Head of Finance & Accounting" },
-    image: "/team/putri.jpeg",
+    image: "/team/desta.jpeg",
   },
   {
     id: "dana",
@@ -42,7 +42,7 @@ const teamMembers = [
     id: "cica",
     name: { id: "Annysa Yuliaty", en: "Annysa Yuliaty" },
     title: { id: "Kepala Kepegawaian & SDM", en: "Head of HR & Talent" },
-    image: "/team/azka.jpeg",
+    image: "/team/cica.jpeg",
   },
  
   {
