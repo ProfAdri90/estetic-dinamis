@@ -3,53 +3,55 @@ import Image from "next/image";
 
 const teamMembers = [
   {
-    id: "prof-adri",
-    name: { id: "Profesor Adri", en: "Professor Adri" },
-    title: { id: "Direktur Utama", en: "President Director" },
-    image: "/team/profadri.jpeg",
+    id: "tasril",
+    name: { id: "Tasril Jamal", en: "Tasril Jamal" },
+    title: { id: "Komisaris & ", en: "Commissioner & " },
+    image: "/team/tasril.jpeg",
   },
   {
-    id: "dul-joni",
-    name: { id: "Dul Jonih Iskandar", en: "Dul Jonih Iskandar" },
-    title: { id: "Direktur", en: "Director" },
+    id: "fachry",
+    name: { id: "Fachryansyah Farandi", en: "Fachryansyah Farandi" },
+    title: { id: "Komisaris", en: "Commissioner" },
     image: "/team/duljoni.jpeg",
   },
   {
-    id: "desti",
-    name: { id: "Desti Purnamasari", en: "Desti Purnamasari" },
-    title: { id: "Direktur Keuangan", en: "Finance Director" },
+    id: "adri",
+    name: { id: "Adri Muhammad, en: "Adri Muhammad" },
+    title: { id: "Direktur, en: "Director" },
     image: "/team/desti.jpeg",
   },
+   {
+    id: "desta",
+    name: { id: "Desta Pretty Indriawanti", en: "Desta Pretty Indriawanti" },
+    title: { id: "Kepala Keuangan & Akuntansi", en: "Head of Finance & Accounting" },
+    image: "/team/putri.jpeg",
+  },
   {
-    id: "budi",
-    name: { id: "Budi Mariono Perdanu", en: "Budi Mariono Perdanu" },
-    title: { id: "Manajer Pengembangan Bisnis", en: "Business Development Manager" },
+    id: "dana",
+    name: { id: "Dana Mahendra", en: "Dana Mahendra" },
+    title: { id: "Kepala Pengembangan Bisnis", en: "Head of Business Development" },
     image: "/team/budi.jpeg",
   },
   {
-    id: "meilinda",
-    name: { id: "Meilinda Sari Hartati", en: "Meilinda Sari Hartati" },
-    title: { id: "Manajer Perencana Event Kreatif", en: "Creative Event Planner Manager" },
+    id: "meiditha",
+    name: { id: "Meiditha Hartaniah", en: "Meiditha Hartaniah" },
+    title: { id: "Kepala Perencana Event Kreatif", en: "Head of Creative Event Planner" },
     image: "/team/didit.jpeg",
   },
   {
-    id: "martin",
-    name: { id: "Martin Herlambang Simanjuntak", en: "Martin Herlambang Simanjuntak" },
-    title: { id: "Manajer Operasional", en: "Operational Manager" },
-    image: "/team/martin.jpeg",
-  },
-  {
-    id: "rizka",
-    name: { id: "Rizka Bintang Utara", en: "Rizka Bintang Utara" },
-    title: { id: "Manajer Event", en: "Event Manager" },
+    id: "cica",
+    name: { id: "Annysa Yuliaty", en: "Annysa Yuliaty" },
+    title: { id: "Kepala Kepegawaian & SDM", en: "Head of HR & Talent" },
     image: "/team/azka.jpeg",
   },
+ 
   {
-    id: "putri",
-    name: { id: "Putri Pangabean", en: "Putri Pangabean" },
-    title: { id: "Manajer Pemasaran", en: "Marketing Manager" },
-    image: "/team/putri.jpeg",
+    id: "martin",
+    name: { id: "Martin Erlambang", en: "Martin Erlambang" },
+    title: { id: "Spesialis PR Digital", en: "Digital PR Specialist" },
+    image: "/team/martin.jpeg",
   },
+  
 ];
 
 export default function OurTeams({ lang }) {
