@@ -6,50 +6,50 @@ const teamMembers = [
     id: "tasril",
     name: { id: "Tasril Jamal", en: "Tasril Jamal" },
     title: { id: "Komisaris & ", en: "Commissioner & " },
-    image: "/team/tasril.jpeg",
+    image: "/team/tasril.jpg",
   },
   {
     id: "fachry",
     name: { id: "Fachryansyah Farandi", en: "Fachryansyah Farandi" },
     title: { id: "Komisaris", en: "Commissioner" },
-    image: "/team/fachry.jpeg",
+    image: "/team/fachry.jpg",
   },
   {
     id: "adri",
     name: { id: "Adri Muhammad", en: "Adri Muhammad" },
     title: { id: "Direktur", en: "Director" },
-    image: "/team/profadri.jpeg",
+    image: "/team/profadri.jpg",
   },
    {
     id: "desta",
     name: { id: "Desta Pretty Indriawanti", en: "Desta Pretty Indriawanti" },
     title: { id: "Kepala Keuangan & Akuntansi", en: "Head of Finance & Accounting" },
-    image: "/team/desta.jpeg",
+    image: "/team/desta.jpg",
   },
   {
     id: "dana",
     name: { id: "Dana Mahendra", en: "Dana Mahendra" },
     title: { id: "Kepala Pengembangan Bisnis", en: "Head of Business Development" },
-    image: "/team/budi.jpeg",
+    image: "/team/budi.jpg",
   },
   {
     id: "meiditha",
     name: { id: "Meiditha Hartaniah", en: "Meiditha Hartaniah" },
     title: { id: "Kepala Perencana Event Kreatif", en: "Head of Creative Event Planner" },
-    image: "/team/didit.jpeg",
+    image: "/team/didit.jpg",
   },
   {
     id: "cica",
     name: { id: "Annysa Yuliaty", en: "Annysa Yuliaty" },
     title: { id: "Kepala Kepegawaian & SDM", en: "Head of HR & Talent" },
-    image: "/team/cica.jpeg",
+    image: "/team/cica.jpg",
   },
  
   {
     id: "martin",
     name: { id: "Martin Erlambang", en: "Martin Erlambang" },
     title: { id: "Spesialis PR Digital", en: "Digital PR Specialist" },
-    image: "/team/martin.jpeg",
+    image: "/team/martin.jpg",
   },
   
 ];
