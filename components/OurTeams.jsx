@@ -16,8 +16,8 @@ const teamMembers = [
   },
   {
     id: "adri",
-    name: { id: "Adri Muhammad, en: "Adri Muhammad" },
-    title: { id: "Direktur, en: "Director" },
+    name: { id: "Adri Muhammad", en: "Adri Muhammad" },
+    title: { id: "Direktur", en: "Director" },
     image: "/team/desti.jpeg",
   },
    {
