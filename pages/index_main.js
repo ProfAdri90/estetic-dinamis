@@ -144,7 +144,7 @@ export default function Home() {
 
 
   const testimonials = [
-  {
+  /*{
     name: "Andre Sukendra Atmadja",
     title: lang === "id" ? "Direktur Utama PT Mayora Indah Tbk" : "President Director of PT Mayora Indah Tbk",
     text: lang === "id"
@@ -166,8 +166,8 @@ export default function Home() {
       : "One word for Estetic: Keep it up!"
   },
     {
-    name: "Herman Sutanta",
-    title: lang === "id" ? "Manajer Legal PT Agung Podomoro Land Tbk" : "Legal Manager of PT Agung Podomoro Land Tbk",
+    name: "Paulus Hersutanta",
+    title: lang === "id" ? "Direktorat Legal PT Agung Podomoro Land Tbk" : "Legal Directorate of PT Agung Podomoro Land Tbk",
     text: lang === "id"
       ? "Konslutan PR yang diisi orang-orang hebat"
       : "Public relations consultant filled with great people"
@@ -178,7 +178,7 @@ export default function Home() {
     text: lang === "id"
       ? "Salah satu perusahaan PR terbaik di Indonesia"
       : "One of the best PR companies in Indonesia"
-    },
+    },*/
     {
   name: "Irman Gusman",
   title: lang === "id" ? "Anggota DPD RI" : "Senator Indonesian Republic",
@@ -217,7 +217,7 @@ export default function Home() {
 ];
 
 
-  const team = [
+ /* const team = [
   {
     name: "Profesor Adri",
     title: lang === "id" ? "Direktur Utama" : "President Director",
@@ -242,10 +242,10 @@ export default function Home() {
       : "Active since 2016 in financial management in both private and government sectors.",
     photo: "/team/desti.png"
   }
-];
+];*/
 
 
-  const services = {
+ /* const services = {
   konsultansi:
     lang === "id"
       ? ["Public relations & strategi komunikasi", "Manajemen perusahaan & krisis isu", "Penanganan isu publik", "Investor relations", "Government relations"]
@@ -258,7 +258,7 @@ export default function Home() {
     lang === "id"
       ? ["RUPS", "Pameran, seminar, workshop", "Talkshow", "Peluncuran produk baru", "Pemasaran digital", "Periklanan"]
       : ["General Meeting", "Exhibition, seminar, workshop", "Talkshow", "New product launch", "Digital marketing", "Advertising"]
-};
+};*/
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTesti, setCurrentTesti] = useState(0);
