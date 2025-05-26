@@ -5,13 +5,13 @@ const teamMembers = [
   {
     id: "tasril",
     name: { id: "Tasril Jamal", en: "Tasril Jamal" },
-    title: { id: "Komisaris & ", en: "Commissioner & " },
+    title: { id: "Komisaris & Pendiri ", en: "Commissioner & Founder " },
     image: "/team/tasril.jpg",
   },
   {
     id: "fachry",
     name: { id: "Fachryansyah Farandi", en: "Fachryansyah Farandi" },
-    title: { id: "Komisaris", en: "Commissioner" },
+    title: { id: "Komisaris & Penasihat", en: "Commissioner & Advisor" },
     image: "/team/fachry.jpg",
   },
   {
