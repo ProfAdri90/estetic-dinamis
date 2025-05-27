@@ -574,10 +574,8 @@ useEffect(() => {
     {lang === "id"
       ? "Kini Estetic berada dalam fase transformasi generasi kedua, menggabungkan pengalaman konvensional dengan pendekatan komunikasi modern berbasis data dan teknologi."
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
-    <h3 className="text-3xl font-bold mb-6 text-center">
-    {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
-  </h3>
-  <div className="mt-10 bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-md">
+   
+<div className="mt-10 bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-md">
   <h3 className="text-2xl font-bold text-[#082846] mb-4">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
   </h3>
@@ -593,17 +591,17 @@ useEffect(() => {
         {value}
       </motion.span>
     ))}
-
-
-          {/* PARTNER MEDIA */}
-  <PartnerMedia lang={lang} />
+  </div>
+</div>
   </p>
-      </div>
+     {/* PARTNER MEDIA */}
+            <PartnerMedia lang={lang} />
 </section>
   
 
       <section id="nilai" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
- 
+  
+</section>
 <section id="sukses" className="relative w-full h-screen overflow-hidden">
    <h2 className="text-3xl md:text-4xl font-bold text-center text-white drop-shadow-md mb-10 z-20 relative">
   {lang === 'id'
