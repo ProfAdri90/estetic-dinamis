@@ -18,31 +18,30 @@ export default function AdminDashboard() {
 }
 
   const [counts, setCounts] = useState({
-    testimoni: 0,
-    clients: 0,
-    portofolio: 0,
-    mediapartners: 0,
-  });
+  testimonies: 0,
+  clients: 0,
+  media: 0,
+  portfolio: 0,
+});
 
-  useEffect(() => {
-    if (!isLoggedIn) router.push("/admin/login");
+useEffect(() => {
+  async function fetchCounts() {
+    const testi = await supabase.from("Testimoni").select("*", { count: "exact", head: true });
+    const client = await supabase.from("Clients").select("*", { count: "exact", head: true });
+    const media = await supabase.from("MediaPartners").select("*", { count: "exact", head: true });
+    const porto = await supabase.from("Portofolio").select("*", { count: "exact", head: true });
 
-    async function fetchData() {
-      const t = await supabase.from("Testimoni").select("*");
-      const c = await supabase.from("clients").select("*");
-      const p = await supabase.from("portofolio").select("*");
-      const m = await supabase.from("mediapartners").select("*");
+    setCounts({
+      testimonies: testi.count || 0,
+      clients: client.count || 0,
+      media: media.count || 0,
+      portfolio: porto.count || 0,
+    });
+  }
 
-      setCounts({
-        testimoni: t.data?.length || 0,
-        clients: c.data?.length || 0,
-        portofolio: p.data?.length || 0,
-        mediapartners: m.data?.length || 0,
-      });
-    }
+  if (isLoggedIn) fetchCounts();
+}, [isLoggedIn]);
 
-    if (isLoggedIn) fetchData();
-  }, [isLoggedIn, router]);
 
   if (!isLoggedIn) return null;
 
@@ -73,12 +72,20 @@ export default function AdminDashboard() {
       <main className="flex-1 p-8">
         <h1 className="text-3xl font-bold mb-4">Selamat datang di Dashboard Admin</h1>
         <p className="text-gray-700">Silakan pilih menu di sidebar untuk mulai mengelola konten Estetic Communication.</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-  <StatBox label="Testimoni" count={counts.testimoni} />
-  <StatBox label="Klien" count={counts.clients} />
-  <StatBox label="Portofolio" count={counts.portofolio} />
-  <StatBox label="Media Partner" count={counts.mediapartners} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+  {[
+    { label: "Testimoni", value: counts.testimonies },
+    { label: "Klien", value: counts.clients },
+    { label: "Portofolio", value: counts.portfolio },
+    { label: "Media Partner", value: counts.media },
+  ].map((item, i) => (
+    <div key={i} className="bg-white p-6 rounded shadow text-center">
+      <p className="text-3xl font-bold text-[#d7b940]">{item.value}</p>
+      <p className="text-sm text-gray-600 mt-1">{item.label}</p>
+    </div>
+  ))}
 </div>
+
 
       </main>
     </div>
