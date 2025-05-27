@@ -593,11 +593,12 @@ useEffect(() => {
         {value}
       </motion.span>
     ))}
-  </div>
+
 
           {/* PARTNER MEDIA */}
   <PartnerMedia lang={lang} />
   </p>
+      </div>
 </section>
   
 
