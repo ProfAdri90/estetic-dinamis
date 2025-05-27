@@ -110,14 +110,16 @@ export default function TestimoniAdmin() {
           <div>
             <label className="block">Rating (1–5)</label>
             <input
-              type="number"
-              min={1}
-              max={5}
-              value={form.rating}
-              onChange={(e) => setForm({ ...form, rating: e.target.value })}
-              className="border px-2 py-1 rounded"
-              required
-            />
+  type="number"
+  min={1}
+  max={5}
+  value={form.rating}
+  onChange={(e) =>
+    setForm({ ...form, rating: parseInt(e.target.value) || 0 })
+  }
+  className="border px-2 py-1 rounded"
+  required
+/>
           </div>
           <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded">
             Simpan
