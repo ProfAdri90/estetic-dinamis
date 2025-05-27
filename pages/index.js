@@ -10,7 +10,7 @@ import Testimonials from "../components/Testimonials";
 
 
 export default function Home() {
-  const [lang, setLang] = useState("id");
+  const [lang, setLang] = useState("en");
   const switchLang = () => setLang(lang === "id" ? "en" : "id");
   const heroImages = ["/bg1.jpg", "/bg2.jpg", "/bg3.jpg", "/bg4.jpg"];
   const [heroIndex, setHeroIndex] = useState(0);
