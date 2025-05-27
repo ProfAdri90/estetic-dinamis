@@ -6,12 +6,12 @@ export default function AdminLogin() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
-  const { login } = useAuth();
-
+  const auth = useAuth();
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
-      login();
+      auth.login();
       router.push("/admin/testimonies");
     } else {
       setError("Password salah, coba lagi.");
