@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
@@ -6,8 +6,24 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("admin_logged_in");
-    if (stored === "true") setIsLoggedIn(true);
+    // Cek saat pertama kali load
+    const checkLoginStatus = () => {
+      const stored = localStorage.getItem("admin_logged_in");
+      setIsLoggedIn(stored === "true");
+    };
+
+    checkLoginStatus();
+
+    // Sinkronisasi antar tab
+    const handleStorageChange = () => {
+      checkLoginStatus();
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
   }, []);
 
   const login = () => {
