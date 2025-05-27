@@ -180,7 +180,7 @@ export default function Home() {
       ? "Salah satu perusahaan PR terbaik di Indonesia"
       : "One of the best PR companies in Indonesia"
     },*/
-    {
+  /*  {
   name: "Irman Gusman",
   title: lang === "id" ? "Anggota DPD RI" : "Senator Indonesian Republic",
   text: lang === "id"
@@ -214,7 +214,7 @@ export default function Home() {
   text: lang === "id"
     ? "Estetic konsisten dalam menyuarakan keterbukaan informasi publik dengan pendekatan komunikasi yang edukatif dan strategis."
     : "Estetic consistently champions public information transparency through educational and strategic communication approaches."
-}
+}*/
 ];
 
 
