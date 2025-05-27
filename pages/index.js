@@ -5,6 +5,7 @@ import PartnerMedia from "../components/PartnerMedia";
 import { motion, AnimatePresence } from "framer-motion";
 import OurTeams from "../components/OurTeams";
 import ClientGrid from "../components/ClientGrid";
+import Testimonials from "../components/Testimonials";
 
 
 
@@ -665,7 +666,7 @@ useEffect(() => {
   <h3 className="text-3xl font-bold mb-10">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
-
+<Testimonials lang={lang} />
   <div className="max-w-xl mx-auto">
     <motion.div
       key={currentTesti}
