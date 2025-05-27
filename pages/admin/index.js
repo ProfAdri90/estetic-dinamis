@@ -9,41 +9,39 @@ export default function AdminDashboard() {
   const router = useRouter();
 
   useEffect(() => {
-    if (!isLoggedIn) {
-      router.push("/admin/login");
-    }
+    if (!isLoggedIn) router.push("/admin/login");
   }, [isLoggedIn, router]);
 
   if (!isLoggedIn) return null;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">Estetic Admin Dashboard</h1>
-        <div className="space-y-4">
-          <Link href="/admin/testimonies" className="block p-3 bg-blue-600 text-white rounded text-center hover:bg-blue-700">
-            Kelola Testimoni
-          </Link>
-          <Link href="/admin/clients" className="block p-3 bg-green-600 text-white rounded text-center hover:bg-green-700">
-            Kelola Klien
-          </Link>
-          <Link href="/admin/media" className="block p-3 bg-indigo-600 text-white rounded text-center hover:bg-indigo-700">
-            Kelola Media Partner
-          </Link>
-          <Link href="/admin/portfolio" className="block p-3 bg-purple-600 text-white rounded text-center hover:bg-purple-700">
-            Kelola Portofolio
-          </Link>
+    <div className="min-h-screen flex bg-gray-100">
+      {/* Sidebar */}
+      <aside className="w-64 bg-white shadow-lg p-6">
+        <h2 className="text-xl font-bold mb-6">Estetic Admin</h2>
+        <nav className="flex flex-col space-y-4">
+          <Link href="/admin" className="text-blue-600 hover:underline">🏠 Dashboard</Link>
+          <Link href="/admin/testimonies" className="hover:text-blue-600">🗣️ Kelola Testimoni</Link>
+          <Link href="/admin/clients" className="hover:text-green-600">🏢 Kelola Klien</Link>
+          <Link href="/admin/media" className="hover:text-indigo-600">📰 Media Partner</Link>
+          <Link href="/admin/portfolio" className="hover:text-purple-600">📂 Portofolio</Link>
           <button
             onClick={() => {
               logout();
               router.push("/admin/login");
             }}
-            className="block w-full p-3 bg-red-600 text-white rounded text-center hover:bg-red-700"
+            className="mt-6 text-red-600 hover:underline text-left"
           >
-            Logout
+            🚪 Logout
           </button>
-        </div>
-      </div>
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <main className="flex-1 p-8">
+        <h1 className="text-3xl font-bold mb-4">Selamat datang di Dashboard Admin</h1>
+        <p className="text-gray-700">Silakan pilih menu di sidebar untuk mulai mengelola konten Estetic Communication.</p>
+      </main>
     </div>
   );
 }
