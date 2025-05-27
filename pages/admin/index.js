@@ -59,9 +59,9 @@ export default function AdminDashboard() {
         <nav className="flex flex-col space-y-4">
           <Link href="/admin" className="text-blue-600 hover:underline">🏠 Dashboard</Link>
           <Link href="/admin/testimonies" className="hover:text-blue-600">🗣️ Kelola Testimoni</Link>
-         // <Link href="/admin/clients" className="hover:text-green-600">🏢 Kelola Klien</Link>
-         // <Link href="/admin/media" className="hover:text-indigo-600">📰 Media Partner</Link>
-         // <Link href="/admin/portfolio" className="hover:text-purple-600">📂 Portofolio</Link>
+          <Link href="/admin/clients" className="hover:text-green-600">🏢 Kelola Klien</Link>
+         <Link href="/admin/media" className="hover:text-indigo-600">📰 Media Partner</Link>
+         <Link href="/admin/portfolio" className="hover:text-purple-600">📂 Portofolio</Link>
           <button
             onClick={() => {
               logout();
