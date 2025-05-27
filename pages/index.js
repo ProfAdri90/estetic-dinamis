@@ -667,7 +667,7 @@ useEffect(() => {
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
 <Testimonials lang={lang} />
-/*  <div className="max-w-xl mx-auto">
+  {/*  <div className="max-w-xl mx-auto">
     <motion.div
       key={currentTesti}
       initial={{ opacity: 0, y: 20 }}
@@ -695,7 +695,7 @@ useEffect(() => {
         →
       </button>
     </div>
-  </div>*/
+  </div>*/}
 </section>
 <section id="tim" className="scroll-mt-[140px] py-12">
   <h3 className="text-3xl font-bold mb-10 text-center">
