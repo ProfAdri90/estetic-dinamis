@@ -18,7 +18,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     if (!isLoggedIn) {
-      router.push("/admin/login");
+      router.push("/psikopat/login");
       return;
     }
 
@@ -65,7 +65,7 @@ export default function AdminDashboard() {
           <button
             onClick={() => {
               logout();
-              router.push("/admin/login");
+              router.push("/psikopat/login");
             }}
             className="mt-6 text-red-600 hover:underline text-left"
           >
