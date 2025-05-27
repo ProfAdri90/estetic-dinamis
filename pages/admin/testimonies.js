@@ -33,7 +33,6 @@ export default function TestimoniAdmin() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // Validasi rating
     const parsedRating = parseInt(form.rating);
     if (!parsedRating || parsedRating < 1 || parsedRating > 5) {
       alert("Rating harus antara 1 sampai 5.");
@@ -49,6 +48,15 @@ export default function TestimoniAdmin() {
 
     setForm({ name: "", title: "", content: "", lang: "id", rating: 5 });
     setShowForm(false);
+    fetchTestimonials();
+  }
+
+  async function handleDelete(id) {
+    const { error } = await supabase.from("Testimoni").delete().eq("id", id);
+    if (error) {
+      console.error("Delete error:", error);
+      return alert("Gagal menghapus testimoni.");
+    }
     fetchTestimonials();
   }
 
@@ -110,16 +118,14 @@ export default function TestimoniAdmin() {
           <div>
             <label className="block">Rating (1–5)</label>
             <input
-  type="number"
-  min={1}
-  max={5}
-  value={form.rating}
-  onChange={(e) =>
-    setForm({ ...form, rating: parseInt(e.target.value) || 0 })
-  }
-  className="border px-2 py-1 rounded"
-  required
-/>
+              type="number"
+              min={1}
+              max={5}
+              value={form.rating}
+              onChange={(e) => setForm({ ...form, rating: e.target.value })}
+              className="border px-2 py-1 rounded"
+              required
+            />
           </div>
           <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded">
             Simpan
@@ -152,6 +158,12 @@ export default function TestimoniAdmin() {
                   </svg>
                 ))}
               </div>
+              <button
+                onClick={() => handleDelete(t.id)}
+                className="mt-2 text-sm text-red-600 hover:underline"
+              >
+                Hapus
+              </button>
             </div>
           ))
         )}
