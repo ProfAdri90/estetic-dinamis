@@ -12,7 +12,7 @@ export default function AdminLogin() {
     e.preventDefault();
     if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
       auth.login();
-      router.push("/admin/testimonies");
+      router.push("/admin");
     } else {
       setError("Password salah, coba lagi.");
     }
