@@ -12,8 +12,13 @@ export default function Testimonials({ lang }) {
           <p className="italic mb-2">"{t.content}"</p>
           <p className="font-bold">{t.name}</p>
           <p className="text-sm">{t.title}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
+        
+          {t.rating && (
+      <div className="flex justify-center mt-2">
+        {[...Array(t.rating)].map((_, i) => (
+          <span key={i} className="text-yellow-400 text-lg">★</span>
+        ))}
+      </div>
+    )}
+  </div>
+))}
