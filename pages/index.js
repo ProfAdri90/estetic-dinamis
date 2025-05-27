@@ -144,8 +144,8 @@ export default function Home() {
 
 
 
-  const testimonials = [
-  /*{
+ /* const testimonials = [
+  {
     name: "Andre Sukendra Atmadja",
     title: lang === "id" ? "Direktur Utama PT Mayora Indah Tbk" : "President Director of PT Mayora Indah Tbk",
     text: lang === "id"
@@ -179,7 +179,7 @@ export default function Home() {
     text: lang === "id"
       ? "Salah satu perusahaan PR terbaik di Indonesia"
       : "One of the best PR companies in Indonesia"
-    },*/
+    },
    {
   name: "Irman Gusman",
   title: lang === "id" ? "Anggota DPD RI" : "Senator Indonesian Republic",
@@ -215,7 +215,7 @@ export default function Home() {
     ? "Estetic konsisten dalam menyuarakan keterbukaan informasi publik dengan pendekatan komunikasi yang edukatif dan strategis."
     : "Estetic consistently champions public information transparency through educational and strategic communication approaches."
 }
-];
+];*/
 
 
  /* const team = [
@@ -262,27 +262,27 @@ export default function Home() {
 };*/
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [currentTesti, setCurrentTesti] = useState(0);
+ /* const [currentTesti, setCurrentTesti] = useState(0);
   const nextTesti = () => {
   setCurrentTesti((prev) => (prev + 1) % testimonials.length);
 };
 
 const prevTesti = () => {
   setCurrentTesti((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-};
+};*/
  const [counts, setCounts] = useState({
   client: 0,
   kegiatan: 0,
   jurnalis: 0,
   rilis: 0
 });
-  useEffect(() => {
+ /* useEffect(() => {
   const interval = setInterval(() => {
     setCurrentTesti((prev) => (prev + 1) % testimonials.length);
   }, 5000); // Ganti testimoni setiap 5 detik
 
   return () => clearInterval(interval);
-}, [testimonials.length]);
+}, [testimonials.length]);*/
   
 const [showCounter, setShowCounter] = useState(false);
 
@@ -667,7 +667,7 @@ useEffect(() => {
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
 <Testimonials lang={lang} />
-  <div className="max-w-xl mx-auto">
+/*  <div className="max-w-xl mx-auto">
     <motion.div
       key={currentTesti}
       initial={{ opacity: 0, y: 20 }}
@@ -695,7 +695,7 @@ useEffect(() => {
         →
       </button>
     </div>
-  </div>
+  </div>*/
 </section>
 <section id="tim" className="scroll-mt-[140px] py-12">
   <h3 className="text-3xl font-bold mb-10 text-center">
