@@ -144,8 +144,8 @@ export default function Home() {
 
 
 
- /* const testimonials = [
-  {
+  const testimonials = [
+  /*{
     name: "Andre Sukendra Atmadja",
     title: lang === "id" ? "Direktur Utama PT Mayora Indah Tbk" : "President Director of PT Mayora Indah Tbk",
     text: lang === "id"
@@ -180,7 +180,7 @@ export default function Home() {
       ? "Salah satu perusahaan PR terbaik di Indonesia"
       : "One of the best PR companies in Indonesia"
     },*/
-  /*  {
+   {
   name: "Irman Gusman",
   title: lang === "id" ? "Anggota DPD RI" : "Senator Indonesian Republic",
   text: lang === "id"
@@ -215,7 +215,7 @@ export default function Home() {
     ? "Estetic konsisten dalam menyuarakan keterbukaan informasi publik dengan pendekatan komunikasi yang edukatif dan strategis."
     : "Estetic consistently champions public information transparency through educational and strategic communication approaches."
 }
-];*/
+];
 
 
  /* const team = [
