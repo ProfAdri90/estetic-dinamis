@@ -32,8 +32,21 @@ export default function TestimoniAdmin() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const { error } = await supabase.from("Testimoni").insert([form]);
-    if (error) return alert("Gagal menyimpan testimoni.");
+
+    // Validasi rating
+    const parsedRating = parseInt(form.rating);
+    if (!parsedRating || parsedRating < 1 || parsedRating > 5) {
+      alert("Rating harus antara 1 sampai 5.");
+      return;
+    }
+
+    const newForm = { ...form, rating: parsedRating };
+    const { error } = await supabase.from("Testimoni").insert([newForm]);
+    if (error) {
+      console.error("Insert error:", error);
+      return alert("Gagal menyimpan testimoni.");
+    }
+
     setForm({ name: "", title: "", content: "", lang: "id", rating: 5 });
     setShowForm(false);
     fetchTestimonials();
@@ -101,8 +114,9 @@ export default function TestimoniAdmin() {
               min={1}
               max={5}
               value={form.rating}
-              onChange={(e) => setForm({ ...form, rating: parseInt(e.target.value) })}
+              onChange={(e) => setForm({ ...form, rating: e.target.value })}
               className="border px-2 py-1 rounded"
+              required
             />
           </div>
           <button type="submit" className="bg-green-600 text-white px-4 py-2 rounded">
