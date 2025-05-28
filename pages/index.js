@@ -575,15 +575,15 @@ useEffect(() => {
       ? "Kini Estetic berada dalam fase transformasi generasi kedua, menggabungkan pengalaman konvensional dengan pendekatan komunikasi modern berbasis data dan teknologi."
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
    
-<div className="mt-10 bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-md">
+  <div className="max-w-7xl mx-auto text-center text-[#082846] px-4">
   <h3 className="text-2xl font-bold text-[#082846] mb-4">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
   </h3>
-  <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+   <div className="flex flex-wrap justify-center gap-4">
     {values.map((value, index) => (
       <motion.span
         key={index}
-       className="bg-[#082846] text-white px-6 py-3 rounded-md text-base min-w-[160px] text-center"
+        className="bg-[#082846] text-white px-6 py-3 rounded font-medium min-w-[160px] text-sm"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: index * 0.2 }}
