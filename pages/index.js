@@ -531,7 +531,7 @@ useEffect(() => {
 </section>
 
 
-   <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
+   <section id="tentang" className="scroll-mt-[100px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
   </h2>
@@ -596,7 +596,7 @@ useEffect(() => {
   <PartnerMedia lang={lang} />
 </section>
 
-<section id="sukses" className="relative w-full h-screen overflow-hidden">
+<section id="sukses" className="scroll-mt-[100px] relative w-full h-screen overflow-hidden">
    <h2 className="text-3xl md:text-4xl font-bold text-center text-white drop-shadow-md mb-10 z-20 relative">
   {lang === 'id'
     ? 'Cerita Sukses'
@@ -660,7 +660,7 @@ useEffect(() => {
 </section>
 
 
-    <section id="testimoni" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
+    <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
   <h3 className="text-3xl font-bold mb-10">
     {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
   </h3>
@@ -695,13 +695,13 @@ useEffect(() => {
     </div>
   </div>*/}
 </section>
-<section id="tim" className="scroll-mt-[140px] py-12">
+<section id="tim" className="scroll-mt-[100px] py-12">
   <h3 className="text-3xl font-bold mb-10 text-center">
     {lang === "id" ? "Tim Kami" : "Our Team"}
   </h3>
   <OurTeams lang={lang} />
 </section>
-    <section id="layanan" className="scroll-mt-[140px] text-center py-20 px-8 bg-white text-[#082846]">
+    <section id="layanan" className="scroll-mt-[100px] text-center py-20 px-8 bg-white text-[#082846]">
   <h3 className="text-3xl font-bold mb-10">
     {lang === "id" ? "Layanan Kami" : "Our Services"}
   </h3>
