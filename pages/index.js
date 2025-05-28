@@ -579,11 +579,11 @@ useEffect(() => {
   <h3 className="text-2xl font-bold text-[#082846] mb-4">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
   </h3>
-  <div className="flex flex-wrap justify-center gap-4">
+  <div className="flex flex-nowrap justify-center gap-4 overflow-x-auto">
     {values.map((value, index) => (
       <motion.span
         key={index}
-        className="bg-[#082846] text-white px-4 py-2 rounded"
+        className="bg-[#082846] text-white px-6 py-3 rounded-md whitespace-nowrap text-base"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: index * 0.2 }}
