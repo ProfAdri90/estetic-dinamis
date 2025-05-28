@@ -531,40 +531,40 @@ useEffect(() => {
 </section>
 
 
-      <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
+   <section id="tentang" className="scroll-mt-[180px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
   </h2>
-    <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center my-10">
-  <div>
-    <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-      {counts.client}
-      <span className="ml-1 text-2xl align-top">+</span>
-    </h4>
-    <p className="mt-2 text-lg">{lang === "id" ? "Klien" : "Clients"}</p>
+  <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center my-10">
+    <div>
+      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+        {counts.client}
+        <span className="ml-1 text-2xl align-top">+</span>
+      </h4>
+      <p className="mt-2 text-lg">{lang === "id" ? "Klien" : "Clients"}</p>
+    </div>
+    <div>
+      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+        {counts.kegiatan}
+        <span className="ml-1 text-2xl align-top">+</span>
+      </h4>
+      <p className="mt-2 text-lg">{lang === "id" ? "Kegiatan PR" : "PR Activities"}</p>
+    </div>
+    <div>
+      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+        {counts.jurnalis}
+        <span className="ml-1 text-2xl align-top">+</span>
+      </h4>
+      <p className="mt-2 text-lg">{lang === "id" ? "Jurnalis" : "Journalists"}</p>
+    </div>
+    <div>
+      <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
+        {counts.rilis}
+        <span className="ml-1 text-2xl align-top">+</span>
+      </h4>
+      <p className="mt-2 text-lg">{lang === "id" ? "Publikasi Rilis" : "Press Releases"}</p>
+    </div>
   </div>
-  <div>
-    <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-      {counts.kegiatan}
-      <span className="ml-1 text-2xl align-top">+</span>
-    </h4>
-    <p className="mt-2 text-lg">{lang === "id" ? "Kegiatan PR" : "PR Activities"}</p>
-  </div>
-  <div>
-    <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-      {counts.jurnalis}
-      <span className="ml-1 text-2xl align-top">+</span>
-    </h4>
-    <p className="mt-2 text-lg">{lang === "id" ? "Jurnalis" : "Journalists"}</p>
-  </div>
-  <div>
-    <h4 className="text-4xl font-bold text-[#d7b940] flex items-start justify-center">
-      {counts.rilis}
-      <span className="ml-1 text-2xl align-top">+</span>
-    </h4>
-    <p className="mt-2 text-lg">{lang === "id" ? "Publikasi Rilis" : "Press Releases"}</p>
-  </div>
-</div>
   <p className="max-w-4xl mx-auto leading-relaxed text-lg">
     {lang === "id"
       ? "Estetic Communication adalah perusahaan konsultan komunikasi yang berdiri sejak tahun 1997, berkomitmen untuk menjadi mitra strategis dalam membangun reputasi dan kepercayaan publik. Dengan pengalaman panjang dalam public relations, media relations, dan event management, kami telah menjadi bagian dari berbagai proyek komunikasi nasional dari sektor korporasi, pemerintahan, hingga organisasi publik."
@@ -574,31 +574,28 @@ useEffect(() => {
     {lang === "id"
       ? "Kini Estetic berada dalam fase transformasi generasi kedua, menggabungkan pengalaman konvensional dengan pendekatan komunikasi modern berbasis data dan teknologi."
       : "Estetic is now undergoing a transformation under the second generation leadership, combining conventional experience with modern, data-driven communication strategies."}
-   
-  <div className="bg-[#d7b940] rounded-xl p-10 text-[#082846]">
-  <h3 className="text-2xl font-bold text-[#082846] mb-4">
-    {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
-  </h3>
-   <div className="flex flex-wrap justify-center gap-6 max-w-[1200px] mx-auto">
-    {values.map((value, index) => (
-      <motion.span
-        key={index}
-        className="bg-[#082846] text-white px-6 py-3 rounded font-medium text-sm min-w-[150px] text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: index * 0.2 }}
-      >
-        {value}
-      </motion.span>
-    ))}
-  </div>
-</div>
   </p>
-     {/* PARTNER MEDIA */}
-            <PartnerMedia lang={lang} />
-
-  
+  <div className="w-full bg-[#d7b940] py-10 text-[#082846]">
+    <h3 className="text-2xl font-bold mb-6">
+      {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
+    </h3>
+    <div className="flex justify-center flex-wrap gap-4 px-4 max-w-screen-xl mx-auto">
+      {values.map((value, index) => (
+        <motion.span
+          key={index}
+          className="bg-[#082846] text-white px-6 py-3 rounded font-medium text-sm min-w-[150px] text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.2 }}
+        >
+          {value}
+        </motion.span>
+      ))}
+    </div>
+  </div>
+  <PartnerMedia lang={lang} />
 </section>
+
 <section id="sukses" className="relative w-full h-screen overflow-hidden">
    <h2 className="text-3xl md:text-4xl font-bold text-center text-white drop-shadow-md mb-10 z-20 relative">
   {lang === 'id'
