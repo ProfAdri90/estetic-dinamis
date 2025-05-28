@@ -531,7 +531,7 @@ useEffect(() => {
 </section>
 
 
-  // SECTION ABOUT (REVISED)
+     {/* SECTION ABOUT (REVISED)*/}
 <section id="tentang" className="scroll-mt-[100px] text-center py-20 px-8">
   <h2 className="text-4xl font-semibold mb-6">
     {lang === "id" ? "Tentang Estetic" : "About Estetic"}
@@ -599,10 +599,12 @@ useEffect(() => {
   <PartnerMedia lang={lang} />
 </section>
 
-<section id="sukses" className="relative w-full min-h-[80vh] scroll-mt-[120px] overflow-hidden">
-  <h2 className="text-3xl md:text-4xl font-bold text-center text-white drop-shadow-md mb-10 z-20 relative">
-    {lang === 'id' ? 'Cerita Sukses' : 'Success Story'}
-  </h2>
+<section id="sukses" className="scroll-mt-[100px] relative w-full h-screen overflow-hidden">
+   <h2 className="text-3xl md:text-4xl font-bold text-center text-white drop-shadow-md mb-10 z-20 relative">
+  {lang === 'id'
+    ? 'Cerita Sukses'
+    : 'Success Story'}
+</h2>
   {/* Background Image Crossfade */}
   <AnimatePresence mode="wait">
     <motion.div
@@ -619,7 +621,7 @@ useEffect(() => {
   </AnimatePresence>
 
   {/* Overlay Text Content */}
- <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-6 max-w-4xl mx-auto backdrop-blur-sm bg-black/40 text-white">
+  <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-6 backdrop-blur-sm bg-black/40 text-white">
     <AnimatePresence mode="wait">
       <motion.div
         key={successStories[activeIndex].year + "-text"}
@@ -627,7 +629,7 @@ useEffect(() => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -30 }}
         transition={{ duration: 0.8 }}
-        className="space-y-4 p-6 rounded-xl"
+        className="max-w-3xl space-y-4 p-6 rounded-xl"
       >
         <h1 className="text-4xl md:text-6xl font-bold text-[#d7b940] drop-shadow-lg">
           {successStories[activeIndex].year}
@@ -660,10 +662,11 @@ useEffect(() => {
   </div>
 </section>
 
-<section id="testimoni" className="w-full min-h-[80vh] scroll-mt-[120px] bg-[#f9f9f9] py-20">
-  <h2 className="text-3xl md:text-4xl font-bold text-[#082846] mb-10">
-  {lang === 'id' ? 'Testimoni' : 'Testimonials'}
-</h2>
+
+    <section id="testimoni" className="scroll-mt-[100px] bg-white text-[#082846] text-center py-20 px-8">
+  <h3 className="text-3xl font-bold mb-10">
+    {lang === "id" ? "Testimoni Klien" : "Client Testimonials"}
+  </h3>
 <Testimonials lang={lang} />
   {/*  <div className="max-w-xl mx-auto">
     <motion.div
@@ -695,15 +698,13 @@ useEffect(() => {
     </div>
   </div>*/}
 </section>
-<section id="tim" className="w-full min-h-[90vh] scroll-mt-[120px] bg-white py-20">
-  <div className="max-w-6xl mx-auto px-6 text-center">
-  <h2 className="text-3xl md:text-4xl font-bold text-[#082846] mb-10">
-    {lang === 'id' ? 'Tim Kami' : 'Our Team'}
-  </h2>
+<section id="tim" className="scroll-mt-[100px] py-12">
+  <h3 className="text-3xl font-bold mb-10 text-center">
+    {lang === "id" ? "Tim Kami" : "Our Team"}
+  </h3>
   <OurTeams lang={lang} />
-    </div>
 </section>
-   <section id="layanan" className="w-full min-h-[90vh] scroll-mt-[120px] bg-[#f8f9fa] py-20">
+    <section id="layanan" className="scroll-mt-[100px] text-center py-20 px-8 bg-white text-[#082846]">
   <h3 className="text-3xl font-bold mb-10">
     {lang === "id" ? "Layanan Kami" : "Our Services"}
   </h3>
@@ -784,7 +785,7 @@ useEffect(() => {
   </div>
 </section>
 <ClientGrid lang={lang} />
-<section id="kontak" className="w-full min-h-[90vh] scroll-mt-[120px] bg-[#082846] text-white py-20">
+ <section className="bg-white text-[#082846] py-20 px-4" id="kontak">
   <div className="max-w-7xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
 
