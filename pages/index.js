@@ -579,11 +579,11 @@ useEffect(() => {
   <h3 className="text-2xl font-bold text-[#082846] mb-4">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
   </h3>
-  <div className="flex flex-nowrap justify-center gap-4 overflow-x-auto">
+  <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
     {values.map((value, index) => (
       <motion.span
         key={index}
-        className="bg-[#082846] text-white px-6 py-3 rounded-md whitespace-nowrap text-base"
+       className="bg-[#082846] text-white px-6 py-3 rounded-md text-base min-w-[160px] text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: index * 0.2 }}
@@ -596,10 +596,7 @@ useEffect(() => {
   </p>
      {/* PARTNER MEDIA */}
             <PartnerMedia lang={lang} />
-</section>
-  
 
-      <section id="nilai" className="scroll-mt-[180px] bg-white text-[#082846] text-center py-20 px-8">
   
 </section>
 <section id="sukses" className="relative w-full h-screen overflow-hidden">
