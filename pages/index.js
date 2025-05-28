@@ -579,7 +579,7 @@ useEffect(() => {
   <h3 className="text-2xl font-bold text-[#082846] mb-4">
     {lang === "id" ? "Nilai Perusahaan" : "Company Values"}
   </h3>
-   <div className="flex flex-wrap justify-center gap-6">
+   <div className="flex flex-wrap justify-center gap-6 max-w-[1200px] mx-auto">
     {values.map((value, index) => (
       <motion.span
         key={index}
