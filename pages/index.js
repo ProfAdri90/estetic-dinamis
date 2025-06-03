@@ -17,7 +17,7 @@ export default function UnderConstruction() {
         />
 
         <h1 className="text-3xl md:text-5xl font-bold text-[#d7b940] drop-shadow mb-4">
-          {lang === "id" ? "Situs Sedang Dalam Pengembangan" : "Website Under Construction"}
+          {lang === "id" ? "Segera hadir" : "Coming Soon"}
         </h1>
 
         <p className="text-white text-lg md:text-xl max-w-xl mx-auto mb-6 drop-shadow">
@@ -50,7 +50,7 @@ export default function UnderConstruction() {
           onClick={() => setLang(lang === "id" ? "en" : "id")}
           className="bg-[#d7b940] text-[#082846] px-4 py-2 rounded font-semibold hover:brightness-110 transition"
         >
-          {lang === "id" ? "Bahasa Inggris" : "Bahasa Indonesia"}
+          {lang === "id" ? "English" : "Bahasa"}
         </button>
       </div>
     </div>
