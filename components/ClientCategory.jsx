@@ -77,6 +77,7 @@ const clientData = [
       { src: "/client-logos/eterindo.png", alt: "PT Eterindo Wahanatama Tbk" },
       { src: "/client-logos/ks.png", alt: "PT Krakatau Steel Tbk" },
     ],
+  }
 ];
 
 export default function OurClients() {
