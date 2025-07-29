@@ -29,7 +29,7 @@ const clientData = [
     ],
   },
   {
-    title: "Financial,
+    title: "Financial",
     logos: [
       { src: "/client-logos/bankbali.png", alt: "Bank Bali" },
       { src: "/client-logos/permata.png", alt: "Permata Bank" },
@@ -38,12 +38,14 @@ const clientData = [
       { src: "/client-logos/swadesi.png", alt: "Bank Swadesi" },
       { src: "/client-logos/boii.png", alt: "Bank of India Indonesia" },
     ],
+  },
   {
     title: "Textile & Garments",
     logos: [
       { src: "/client-logos/texmaco.png", alt: "Texmaco Group" },
       { src: "/client-logos/panbrothers.png", alt: "PT Pan Brothers Tbk" },
     ],
+  },
     {
     title: "Manfucature",
     logos: [
@@ -54,6 +56,7 @@ const clientData = [
       { src: "/client-logos/eterindo.png", alt: "PT Eterindo Wahanatama Tbk" },
       { src: "/client-logos/ks.png", alt: "PT Krakatau Steel Tbk" },
     ],
+    },
 ];
 
 export default function OurClients() {
