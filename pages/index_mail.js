@@ -781,20 +781,20 @@ useEffect(() => {
         <li>{lang === "id" ? "Manajemen Komunikasi Keuangan & IPO" : "Management of IPO and Financial Communications"}</li>
       </ul>
     </div>
-      {/* 6. Crisis Management*/}
-    <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
-      <img src="" alt="Strategic" className="h-16 mb-4" />
-      <h4 className="text-xl font-bold mb-2">
-        {lang === "id" ? "Menejemen Krisis" : "Crisis Management"}
-      </h4>
-      <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
-      <li>{lang === "id" ? "Pemulihan Citra Negatif": "Negative Image Counter"}</li>
-      <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
-       <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
-       <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
-       <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
-       </ul>
-  </div>
+    {/* 6. Crisis Management*/}
+<div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
+  <img src="/service-icons/crisis.png" alt="Crisis" className="h-16 mb-4" />
+  <h4 className="text-xl font-bold mb-2">
+    {lang === "id" ? "Manajemen Krisis" : "Crisis Management"}
+  </h4>
+  <ul className="list-disc pl-5 text-sm space-y-1">
+    <li>{lang === "id" ? "Pemantauan" : "Monitoring"}</li>
+    <li>{lang === "id" ? "Pemulihan Citra Negatif" : "Negative Image Recovery"}</li>
+    <li>{lang === "id" ? "Manajemen Isu Sensitif" : "Sensitive Issue Management"}</li>
+    <li>{lang === "id" ? "Strategi Reputasi Saat Krisis" : "Crisis-Time Reputation Strategy"}</li>
+    <li>{lang === "id" ? "Protokol Komunikasi Darurat" : "Emergency Communication Protocols"}</li>
+  </ul>
+</div>
 </section>
 <ClientGrid lang={lang} />
  <section className="bg-white text-[#082846] py-20 px-4" id="kontak">
