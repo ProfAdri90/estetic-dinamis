@@ -798,20 +798,14 @@ useEffect(() => {
 </div>
   </div>
 </section>
- <section
-      id="our-clients"
-      className="py-20 px-6 bg-gradient-to-b from-[#082846] to-[#0c3b64] text-white"
-    >
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 tracking-wide">
-          Our Clients
-        </h2>
-
+<section id="clients" className="py-20 bg-[#082846] text-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Clients</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {clientData.map((category, index) => (
             <ClientCategory
               key={index}
-              title={category.category}
+              title={category.title}
               logos={category.logos}
             />
           ))}
