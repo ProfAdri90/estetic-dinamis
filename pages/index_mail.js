@@ -795,6 +795,7 @@ useEffect(() => {
     <li>{lang === "id" ? "Protokol Komunikasi Darurat" : "Emergency Communication Protocols"}</li>
   </ul>
 </div>
+  </div>
 </section>
 <ClientGrid lang={lang} />
  <section className="bg-white text-[#082846] py-20 px-4" id="kontak">
