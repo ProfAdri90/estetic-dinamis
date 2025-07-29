@@ -51,7 +51,7 @@ const clientData = [
     ],
   },
   {
-    title: "Financial,
+    title: "Financial",
     logos: [
       { src: "/client-logos/bankbali.png", alt: "Bank Bali" },
       { src: "/client-logos/permata.png", alt: "Permata Bank" },
