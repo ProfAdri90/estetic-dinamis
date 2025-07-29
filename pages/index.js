@@ -5,6 +5,7 @@ import PartnerMedia from "../components/PartnerMedia";
 import { motion, AnimatePresence } from "framer-motion";
 import OurTeams from "../components/OurTeams";
 import clientData from "../data/clientData";
+import ClientCategory from "../components/ClientCategory";
 import Testimonials from "../components/Testimonials";
 
 
