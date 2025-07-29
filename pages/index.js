@@ -4,7 +4,7 @@ import PartnerMedia from "../components/PartnerMedia";
 /*import { motion } from "framer-motion";*/
 import { motion, AnimatePresence } from "framer-motion";
 import OurTeams from "../components/OurTeams";
-import ClientGrid from "../components/ClientGrid";
+import ClientCategory from "@/components/ClientCategory";
 import Testimonials from "../components/Testimonials";
 
 
