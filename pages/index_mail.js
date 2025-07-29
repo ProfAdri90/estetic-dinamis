@@ -718,7 +718,6 @@ useEffect(() => {
       <ul className="list-disc pl-5 text-sm space-y-1">
         <li>{lang === "id" ? "Perencanaan PR & Komunikasi" : "PR & Communication Planning"}</li>
         <li>{lang === "id" ? "Pembangunan Narasi Korporat" : "Corporate Narrative Building"}</li>
-        <li>{lang === "id" ? "Manajemen Krisis" : "Crisis Management"}</li>
         <li>{lang === "id" ? "Pemetaan Pemangku Kepentingan" : "Stakeholder Mapping"}</li>
         <li>{lang === "id" ? "Hubungan Pemerintah & Urusan Publik" : "Public Affairs & Government Relations"}</li>
       </ul>
@@ -782,6 +781,19 @@ useEffect(() => {
         <li>{lang === "id" ? "Manajemen Komunikasi Keuangan & IPO" : "Management of IPO and Financial Communications"}</li>
       </ul>
     </div>
+      {/* 6. Crisis Management*/}
+    <div className="bg-[#f9f9f9] rounded-xl p-6 shadow-md text-left">
+      <img src="" alt="Strategic" className="h-16 mb-4" />
+      <h4 className="text-xl font-bold mb-2">
+        {lang === "id" ? "Menejemen Krisis" : "Crisis Management"}
+      </h4>
+      <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
+      <li>{lang === "id" ? "Pemulihan Citra Negatif": "Negative Image Counter"}</li>
+      <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
+       <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
+       <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
+       <li>{lang === "id" ? "Pemantauan": "Monitoring"}</li>
+       </ul>
   </div>
 </section>
 <ClientGrid lang={lang} />
