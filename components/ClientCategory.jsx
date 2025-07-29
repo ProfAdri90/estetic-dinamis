@@ -1,14 +1,14 @@
 export default function ClientCategory({ title, logos }) {
   return (
-    <div className="bg-white rounded-xl shadow-md border border-gray-200 p-4 flex flex-col items-center">
-      <h3 className="text-lg font-semibold mb-4 text-center text-gray-800">{title}</h3>
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 w-full place-items-center">
+    <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start">
+      <h3 className="text-xl font-semibold text-[#082846] mb-4 tracking-wide">{title}</h3>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 w-full place-items-center">
         {logos.map((logo, i) => (
           <img
             key={i}
             src={logo.src}
             alt={logo.alt}
-            className="max-h-12 object-contain grayscale hover:grayscale-0 transition"
+            className="max-h-12 w-auto object-contain transition-all duration-300"
           />
         ))}
       </div>
