@@ -62,24 +62,24 @@ const clientData = [
     ],
   },
   {
-    title: "Textile & Garments",
-    logos: [
-      { src: "/client-logos/texmaco.png", alt: "Texmaco Group" },
-      { src: "/client-logos/panbrothers.png", alt: "PT Pan Brothers Tbk" },
-    ],
-  },
-    {
-    title: "Manfucature",
-    logos: [
-      { src: "/client-logos/dynaplast.png", alt: "PT Dynaplast Tbk" },
-      { src: "/client-logos/arwana.png", alt: "PT Arwana Citramulia Tbk" },
-      { src: "/client-logos/muliaindustri.png", alt: "PT Mulia Industrindo Tbk" },
-      { src: "/client-logos/dpn.png", alt: "PT Duta Pertiwi Nusantara Tbk" },
-      { src: "/client-logos/eterindo.png", alt: "PT Eterindo Wahanatama Tbk" },
-      { src: "/client-logos/ks.png", alt: "PT Krakatau Steel Tbk" },
-    ],
-  }
-];
+  title: "Textile & Garments",
+  logos: [
+    { src: "/client-logos/texmaco.png", alt: "Texmaco Group" },
+    { src: "/client-logos/panbrothers.png", alt: "PT Pan Brothers Tbk" },
+  ],
+},
+{
+  title: "Manufacture",
+  logos: [
+    { src: "/client-logos/dynaplast.png", alt: "PT Dynaplast Tbk" },
+    { src: "/client-logos/arwana.png", alt: "PT Arwana Citramulia Tbk" },
+    { src: "/client-logos/muliaindustri.png", alt: "PT Mulia Industrindo Tbk" },
+    { src: "/client-logos/dpn.png", alt: "PT Duta Pertiwi Nusantara Tbk" },
+    { src: "/client-logos/eterindo.png", alt: "PT Eterindo Wahanatama Tbk" },
+    { src: "/client-logos/ks.png", alt: "PT Krakatau Steel Tbk" },
+  ],
+}
+
 
 export default function OurClients() {
   return (
