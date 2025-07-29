@@ -1,6 +1,4 @@
 // components/ClientCategory.jsx
-import clientData from "../data/clientData";
-
 export default function ClientCategory({ title, logos }) {
   return (
     <section className="mb-12">
