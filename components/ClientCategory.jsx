@@ -60,6 +60,7 @@ const clientData = [
       { src: "/client-logos/swadesi.png", alt: "Bank Swadesi" },
       { src: "/client-logos/boii.png", alt: "Bank of India Indonesia" },
     ],
+  },
   {
     title: "Textile & Garments",
     logos: [
