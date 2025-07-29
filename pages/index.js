@@ -798,18 +798,18 @@ useEffect(() => {
 </div>
   </div>
 </section>
-<section id="our-clients" className="py-16 px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Clients</h2>
-        <div className="space-y-16">
-          {clientData.map((category, idx) => (
-            <ClientCategory
-              key={idx}
-              title={category.title}
-              logos={category.logos}
-            />
-          ))}
-        </div>
-      </section>
+<section id="our-clients" className="py-20 px-4 bg-[#082846] text-white">
+  <h2 className="text-3xl font-bold text-center mb-12">Our Clients</h2>
+  <div className="grid gap-10">
+    {clientData.map((category, idx) => (
+      <ClientCategory
+        key={idx}
+        title={category.title}
+        logos={category.logos}
+      />
+    ))}
+  </div>
+</section>
  <section className="bg-white text-[#082846] py-20 px-4" id="kontak">
   <div className="max-w-7xl mx-auto">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
