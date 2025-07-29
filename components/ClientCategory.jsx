@@ -67,6 +67,7 @@ const clientData = [
       { src: "/client-logos/texmaco.png", alt: "Texmaco Group" },
       { src: "/client-logos/panbrothers.png", alt: "PT Pan Brothers Tbk" },
     ],
+  },
     {
     title: "Manfucature",
     logos: [
