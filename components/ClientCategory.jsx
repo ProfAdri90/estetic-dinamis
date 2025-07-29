@@ -81,14 +81,22 @@ const clientData = [
 }
 
 
-export default function OurClients() {
+export default function ClientCategory({ title, logos }) {
   return (
-    <div className="bg-white py-16 px-4 text-[#082846]">
-      <div className="max-w-7xl mx-auto">
-        {clientData.map((group, index) => (
-          <ClientCategory key={index} title={group.title} logos={group.logos} />
+    <section className="mb-12">
+      <h3 className="text-lg md:text-xl font-bold uppercase text-[#082846] text-center mb-6">
+        {title}
+      </h3>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center justify-items-center">
+        {logos.map((logo, i) => (
+          <img
+            key={i}
+            src={logo.src}
+            alt={logo.alt}
+            className="h-12 object-contain grayscale hover:grayscale-0 transition"
+          />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
