@@ -279,16 +279,16 @@ export default function Home() {
       {lang === "id"
         ? <>Di dunia yang penuh hiruk-pikuk, kami percaya setiap brand layak untuk didengar.
           <br />
-          <span className="font-semibold">Sejak 1997</span>, Estetic Communication didorong oleh keyakinan bahwa cerita membangun reputasi—dan reputasi membangun warisan.</>
+          <span className="font-semibold">Sejak 1997</span>, Estetic Communication didorong oleh keyakinan bahwa cerita membangun reputasi dan reputasi membangun warisan.</>
         : <>In a world full of noise, we believe every brand deserves to be heard.
           <br />
-          <span className="font-semibold">Since 1997</span>, Estetic Communication has been driven by the belief that stories shape reputations—and reputations build legacies.</>
+          <span className="font-semibold">Since 1997</span>, Estetic Communication has been driven by the belief that stories shape reputations and reputations build legacies.</>
       }
     </p>
     <p className="text-lg">
       {lang === "id"
-        ? "Kami memulai dari sebuah ruangan kecil di pojok, mendampingi brand melewati kemenangan sunyi maupun badai di depan publik. Kami belajar bahwa kepercayaan tidak dimenangkan dengan berteriak paling keras, tapi dengan mendengarkan, memahami, dan selalu hadir—berulang kali."
-        : "We started from a small corner room, standing by brands through quiet victories and public storms. We’ve learned that trust isn’t won by shouting the loudest, but by listening, understanding, and showing up—again and again."
+        ? "Kami memulai dari sebuah ruangan kecil di pojok, mendampingi brand melewati kemenangan sunyi maupun badai di depan publik. Kami belajar bahwa kepercayaan tidak dimenangkan dengan berteriak paling keras, tapi dengan mendengarkan, memahami, dan selalu hadir berulang kali."
+        : "We started from a small corner room, standing by brands through quiet victories and public storms. We’ve learned that trust isn’t won by shouting the loudest, but by listening, understanding, and showing up again and again."
       }
     </p>
     <p className="text-lg">
