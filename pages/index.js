@@ -60,11 +60,6 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  // VALUES
-  const values = lang === "id"
-    ? ["Adaptif", "Profesionalisme", "Kreativitas Strategis", "Kolaboratif", "Terpercaya", "Berkelanjutan"]
-    : ["Adaptive", "Professionalism", "Strategic Creativity", "Collaborative", "Trusted", "Sustainable"];
-
   // SUCCESS STORY
   const successStories = [
   {
@@ -286,14 +281,6 @@ export default function Home() {
               ? "Estetic Communication adalah perusahaan konsultan komunikasi yang berdiri sejak tahun 1997, berkomitmen untuk menjadi mitra strategis dalam membangun reputasi dan kepercayaan publik. Dengan pengalaman panjang dalam public relations, media relations, dan event management, kami telah menjadi bagian dari berbagai proyek komunikasi nasional dari sektor korporasi, pemerintahan, hingga organisasi publik."
               : "Estetic Communication is a communication consultancy established in 1997, committed to being a strategic partner in building public trust and reputation. With a long-standing experience in public relations, media relations, and event management, we’ve been involved in numerous national-level communication projects across corporate, government, and public sectors."}
           </p>
-          <div className="py-10 bg-[#d7b940] rounded-2xl shadow-md">
-            <h3 className="text-2xl font-bold text-center mb-6 text-[#082846]">{lang === "id" ? "Nilai Perusahaan" : "Company Values"}</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {values.map((val, idx) => (
-                <span key={idx} className="bg-[#082846] text-white px-6 py-3 rounded-lg font-medium text-sm min-w-[140px] text-center">{val}</span>
-              ))}
-            </div>
-          </div>
           <PartnerMedia lang={lang} />
         </div>
       </section>
