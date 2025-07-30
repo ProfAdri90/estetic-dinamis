@@ -307,8 +307,8 @@ export default function Home() {
       </span>
       <span className="block text-lg mt-1">
         {lang === "id"
-          ? "Mari ciptakan sesuatu yang tak terlupakan—bersama."
-          : "Let’s create something unforgettable—together."}
+          ? "Mari ciptakan sesuatu yang tak terlupakan bersama."
+          : "Let’s create something unforgettable together."}
       </span>
     </div>
   </div>
